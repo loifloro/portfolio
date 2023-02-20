@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/" as *;
+
+.triangle {
+  display: inline-block;
+  margin-left: 0.3rem;
+
+  width: 0;
+  height: 0;
+  border-width: 5px 0 5px 10px;
+  border-color: transparent transparent transparent $black-2;
+  border-style: solid;
+
+  position: relative;
+  transition: transform 400ms ease-in;
+}

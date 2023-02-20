@@ -1,0 +1,315 @@
+@use "../abstracts/" as *;
+
+.about-me {
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+
+  margin: 1rem 7vw;
+
+  @media (max-width: map-get($breakpoints, "medium")) {
+    // Medium smartphone
+    margin-top: 20vh;
+  }
+
+  &__column {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      flex-direction: column;
+    }
+  }
+  &__img {
+    width: 300px;
+    height: 400px;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  &__bio {
+    margin-top: 3rem;
+    width: 60%;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      width: 100%;
+    }
+
+    p {
+      color: $black-3;
+      width: 80%;
+
+      @media (max-width: map-get($breakpoints, "medium")) {
+        // Medium smartphone
+        margin-top: 1rem;
+        text-align: end;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.story {
+  margin: 0 7vw;
+
+  p {
+    color: $black-3;
+    width: 80%;
+    margin-bottom: 2rem;
+    // margin-left: auto;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      width: 100%;
+    }
+  }
+}
+
+.work {
+  margin: 1rem 7vw 5vw 7vw;
+
+  p {
+    color: $black-3;
+    width: 80%;
+    margin-bottom: 2rem;
+    margin-right: auto;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      width: 100%;
+    }
+  }
+}
+
+.experience {
+  margin: 5rem 7vw 2vh 7vw;
+
+  &__column {
+    display: flex;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+    margin-top: 2rem;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    height: 70px;
+    width: 70px;
+    -o-object-fit: contain;
+    object-fit: contain;
+
+    &--white {
+      mix-blend-mode: difference;
+    }
+  }
+
+  .education {
+    margin-left: 1rem;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      margin-left: unset;
+    }
+
+    &__item {
+      margin-bottom: 1.5rem;
+      margin-left: 2rem;
+
+      @media (max-width: map-get($breakpoints, "medium")) {
+        // Medium smartphone
+        margin-inline: 2vw;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        background: $white-4;
+        height: 1px;
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+      }
+    }
+
+    &__name {
+      color: $black-2;
+
+      width: 80%;
+      margin-bottom: 0.2rem;
+    }
+
+    &__info {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    &__school {
+      color: $black-3;
+      width: 60%;
+    }
+
+    &__date {
+      font-size: 0.8rem;
+      color: $black-4;
+    }
+  }
+
+  .experiences {
+    width: 40%;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      width: 100%;
+    }
+
+    &__list {
+      margin-left: 2rem;
+
+      @media (max-width: map-get($breakpoints, "medium")) {
+        // Medium smartphone
+        margin-left: unset;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      -moz-column-gap: 0.5rem;
+      column-gap: 0.5rem;
+      margin-top: 2rem;
+      //   width: 9rem;
+      //   outline: 1px solid white;
+
+      border-bottom: 1px solid $white-4;
+      padding-bottom: 1rem;
+
+      p {
+        color: $black-2;
+        // text-align: center;
+        font-size: 0.9rem;
+      }
+    }
+
+    &__date {
+      color: $black-4 !important;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__role {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.skills {
+  padding: 4rem 7vw;
+  // background: $white-2;
+
+  color: $black-1;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__column {
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 2rem;
+
+    @media (max-width: map-get($breakpoints, "medium")) {
+      // Medium smartphone
+      flex-direction: column;
+      row-gap: 1rem;
+      margin-left: unset;
+    }
+
+    & > * {
+      flex-basis: 100%;
+    }
+  }
+
+  .soft-skills {
+    &__list {
+      display: flex;
+    }
+  }
+
+  .software {
+    &__list {
+      display: flex;
+      -moz-column-gap: 3rem;
+      column-gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      row-gap: 1.5rem;
+
+      @media (max-width: map-get($breakpoints, "medium")) {
+        // Medium smartphone
+        margin-left: unset;
+      }
+    }
+
+    &__item {
+      display: grid;
+      place-items: center;
+      min-width: 90px;
+
+      @media (max-width: map-get($breakpoints, "medium")) {
+        // Medium smartphone
+      }
+
+      &__img {
+        height: 50px;
+        margin-bottom: 0.5rem;
+
+        path {
+          fill: $black-1;
+        }
+      }
+
+      &__title {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.chapter {
+  color: $black-4;
+  font-size: 1.5rem !important;
+  font-family: Circular, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: auto;
+  // margin-bottom: 1rem;
+  text-align: right;
+
+  &__name {
+    font-size: 1.2rem;
+  }
+}
