@@ -1319,8 +1319,12 @@ select {
 
 .swiper-button-prev::after {
   content: url(../assets/img/arrow-preview.svg);
-  -webkit-filter: invert(1);
-  filter: invert(1);
+}
+@media (prefers-color-scheme: dark) {
+  .swiper-button-prev::after {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
 }
 
 .swiper-buttons {

@@ -60,8 +60,10 @@
 
 .swiper-button-prev::after {
   content: url(../assets/img/arrow-preview.svg);
-  -webkit-filter: invert(1);
-  filter: invert(1);
+  @media (prefers-color-scheme: dark) {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
 }
 
 .swiper-buttons {
