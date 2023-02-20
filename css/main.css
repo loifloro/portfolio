@@ -1309,8 +1309,12 @@ select {
 
 .swiper-button-next::after {
   content: url(../assets/img/arrow-next.svg);
-  -webkit-filter: invert(1);
-  filter: invert(1);
+}
+@media (prefers-color-scheme: dark) {
+  .swiper-button-next::after {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
 }
 
 .swiper-button-prev::after {
