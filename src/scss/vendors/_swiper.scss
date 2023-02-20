@@ -13,7 +13,7 @@
   width: 100% !important;
   /* text-align: center; */
   font-size: 18px;
-  background: #fff;
+  background: $white-1;
 
   /* Center slide text vertically */
   display: flex;
@@ -50,11 +50,15 @@
 }
 
 .swiper-button-next::after {
-  content: url(/assets/img/arrow-next.svg);
+  content: url(../assets/img/arrow-next.svg);
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 .swiper-button-prev::after {
-  content: url(/assets/img/arrow-preview.svg);
+  content: url(../assets/img/arrow-preview.svg);
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 .swiper-buttons {
