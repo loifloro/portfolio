@@ -692,6 +692,8 @@ a::selection {
 .about-me__img {
   width: 300px;
   height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 48rem) {
   .about-me__img {
