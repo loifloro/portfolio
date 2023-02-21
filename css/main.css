@@ -532,13 +532,20 @@ a::selection {
   }
 }
 .hero__img__label p {
-  margin-bottom: -0.3rem;
   margin-left: 0.5rem;
-  color: var(--black-4);
+  mix-blend-mode: difference;
+  font-weight: 900;
+  padding: 0.1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 1;
+  color: var(--white-1);
+  background: var(--black-1);
 }
 .hero__img__label h3 {
-  color: #ffffff;
-  background: #000000;
+  color: var(--black-1);
+  background: var(--white-1);
   padding: 0.2rem;
   line-height: 1;
 }
