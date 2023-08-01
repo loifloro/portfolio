@@ -202,6 +202,7 @@
   }
 
   &__img {
-    width: 100%;
+    width: calc(100% - 14vw);
+    margin: 2vw 7vw;
   }
 }

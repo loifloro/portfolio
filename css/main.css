@@ -1116,7 +1116,8 @@ a::selection {
   margin: 7vw 7vw 3vw 7vw;
 }
 .result__img {
-  width: 100%;
+  width: calc(100% - 14vw);
+  margin: 2vw 7vw;
 }
 
 .work__list {
