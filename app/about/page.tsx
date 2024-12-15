@@ -1,9 +1,9 @@
-import CareerBackground from "./_components/CareerBackground";
-import Description from "./_components/Description";
+import CareerBackground from "./components/CareerBackground";
+import Description from "./components/Description";
 import React from "react";
-import SoftSkills from "./_components/SoftSkills";
-import Tools from "./_components/Tools";
-import WorkProcess from "./_components/WorkProcess";
+import SoftSkills from "./components/SoftSkills";
+import Tools from "./components/Tools";
+import WorkProcess from "./components/WorkProcess";
 
 export default function About() {
     return (

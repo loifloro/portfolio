@@ -6,7 +6,7 @@ type ArrowLinkProps = {
     name: string;
     isWithArrow?: boolean;
     className?: string;
-    url: string;
+    url: URL | string;
 };
 
 export default function ArrowLink({

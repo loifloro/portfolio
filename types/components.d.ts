@@ -1,4 +1,4 @@
-export type gradientLineType =
+export type GradientDirection =
     | "centered"
     | "space-between"
     | "to-right"
