@@ -5,10 +5,10 @@ import Heading from "@/components/display/Heading";
 import Subtitle from "@/components/display/Subtitle";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 export default function Gallery() {
-    const [activeImg, setActiveImg] = useState<string>("");
+    // const [activeImg, setActiveImg] = useState<string>("");
 
     return (
         <Container withDivider dividerType="space-between">
