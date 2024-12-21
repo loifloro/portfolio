@@ -1,13 +1,13 @@
-import React, { ReactNode } from "react";
-import GradientLine from "../GradientLine";
-import { gradientLineType } from "types";
+import { GradientDirection } from "types/components";
 import { isEqual } from "lodash";
+import GradientLine from "../GradientLine";
+import React, { ReactNode } from "react";
 
 type ContainerProps = {
     children: ReactNode;
     fullWidth?: boolean;
     withDivider?: boolean;
-    dividerType?: gradientLineType;
+    dividerType?: GradientDirection;
     dividerPosition?: "top" | "bottom";
 };
 

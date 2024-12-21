@@ -1,9 +1,9 @@
-import { gradientLineType } from "types";
+import { GradientDirection } from "types/components";
 import React from "react";
 
 type GradientLineProps = {
-    type: gradientLineType;
-    onMobile?: gradientLineType;
+    type: GradientDirection;
+    onMobile?: GradientDirection;
 };
 
 export default function GradientLine({ type, onMobile }: GradientLineProps) {

@@ -8,10 +8,10 @@ type SubtitleProps = {
 
 export default function Subtitle({ name, size = "md" }: SubtitleProps) {
     return (
-        <h2
+        <span
             className={`${isEqual(size, "sm") && "text-sm"} font-light font-mono uppercase tracking-wider text-raisin-black mb-2`}
         >
             {name}
-        </h2>
+        </span>
     );
 }

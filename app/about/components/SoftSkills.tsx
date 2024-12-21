@@ -1,5 +1,6 @@
 import { isUndefined } from "lodash";
 import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
 import React from "react";
 import Subtitle from "@/components/display/Subtitle";
 
@@ -24,12 +25,15 @@ export default function SoftSkills() {
     ];
 
     return (
-        <Container withDivider dividerType="space-between">
+        <Container>
             <div className="text-center mb-36">
                 <Subtitle name="Lorem Ipsum" size="sm" />
-                <h3 className="uppercase text-heading-3 leading-heading-3 tracking-widest text-rich-black">
+                <Heading
+                    element="h2"
+                    className="uppercase text-heading-3 leading-heading-3 tracking-widest text-rich-black"
+                >
                     Soft Skills
-                </h3>
+                </Heading>
             </div>
             <div className="flex justify-center mb-20">
                 {softSkills.map(({ name, focus }) => (
@@ -45,7 +49,7 @@ export default function SoftSkills() {
                     </div>
                 ))}
             </div>
-            <p className="max-w-[40%] mx-auto text-center text-battleship-gray mb-36">
+            <p className="max-w-[40%] mx-auto text-center text-battleship-gray">
                 Nisl et sit ultrices ac. Vitae risus nibh malesuada nulla nibh
                 in gravida ut. Sem nibh integer libero nulla id morbi elit
                 dictum.

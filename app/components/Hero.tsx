@@ -17,7 +17,7 @@ export default function Hero() {
                         {data.currentJob} at {data.currentCompany}
                     </p>
                 </div>
-                <h1 className="uppercase text-heading-1 font-semibold tracking-[30px]">
+                <h1 className="uppercase text-center text-heading-1 font-semibold tracking-[.4em] ml-[.4em]">
                     {data.headline}
                 </h1>
                 <p className="text-battleship-gray font-light max-w-screen-lg mx-auto">

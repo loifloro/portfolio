@@ -9,7 +9,7 @@ export default function WorkProcess() {
                 <div className="max-w-[50%]">
                     <Subtitle name="How I Work" size="sm" />
                     <h3 className="uppercase text-heading-3 leading-heading-3 tracking-widest text-rich-black mb-10">
-                        Career Tech Stack
+                        Lois n the workplace
                     </h3>
                     <p className="text-battleship-gray">
                         A viverra ut eget urna amet cras pharetra. Risus vitae

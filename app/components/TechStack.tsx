@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "./container/Container";
 
+type T = "heading-2" | "heading-3" | "normal" | "mono";
+
 export default function TechStack() {
     const data = [
         "Ui Design",
@@ -43,7 +45,7 @@ export default function TechStack() {
                                             Math.random() *
                                                 Object.keys(styles).length
                                         )
-                                    ]
+                                    ] as T
                                 ]
                             }
                         >

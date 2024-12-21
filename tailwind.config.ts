@@ -33,9 +33,9 @@ export default {
                 "heading-2": "var(--heading-2)",
                 "heading-3": "var(--heading-3)",
                 "heading-4": "var(--heading-4)",
-                "text-xs": "var(--text-xs)",
-                "text-sm": "var(--text-sm)",
-                "text-base": "var(--text-base)",
+                xs: "var(--text-xs)",
+                sm: "var(--text-sm)",
+                base: "var(--text-base)",
             },
             lineHeight: {
                 base: "var(--text-base)",

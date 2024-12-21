@@ -1,20 +1,17 @@
+import { navigationBarItems } from "datasets/navigation";
 import ArrowLink from "../button/ArrowLink";
 import GradientLine from "../GradientLine";
 import Link from "next/link";
 import Logo from "../Logo";
-import MobileMenu from "./MobileMenu";
+import MobileNavigation from "./MobileNavigation";
 
-type NavigationBarItemProps = {
+type HeaderItemProps = {
     name: string;
     isComingSoon?: boolean;
     url: string;
 };
 
-function NavigationBarItem({
-    name,
-    isComingSoon = false,
-    url,
-}: NavigationBarItemProps) {
+function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
     return (
         <li className="text-sm uppercase font-light tracking-widest text-night relative">
             <Link
@@ -32,30 +29,7 @@ function NavigationBarItem({
     );
 }
 
-export default function NavigationBar() {
-    const navigationBarItems = [
-        {
-            name: "Home",
-            comingSoon: false,
-            url: "/",
-        },
-        {
-            name: "Projects",
-            comingSoon: false,
-            url: "/projects",
-        },
-        {
-            name: "About",
-            comingSoon: false,
-            url: "/about",
-        },
-        {
-            name: "Blog",
-            comingSoon: true,
-            url: "/blog",
-        },
-    ];
-
+export default function Header() {
     return (
         <header className="px-8 py-6 dark:mix-blend-difference top-0 absolute w-full">
             <nav className="flex justify-between mb-4">
@@ -64,7 +38,7 @@ export default function NavigationBar() {
                 </div>
                 <ul className="lg:flex hidden gap-16">
                     {navigationBarItems.map(({ name, comingSoon, url }) => (
-                        <NavigationBarItem
+                        <HeaderItem
                             key={url}
                             name={name}
                             isComingSoon={comingSoon}
@@ -75,9 +49,9 @@ export default function NavigationBar() {
                 <ArrowLink
                     className="lg:flex hidden"
                     name="Get in Touch"
-                    url=""
+                    url="/#contact"
                 />
-                <MobileMenu />
+                <MobileNavigation />
             </nav>
             <GradientLine type="centered" onMobile="space-between" />
         </header>

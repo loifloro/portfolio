@@ -1,9 +1,9 @@
-import CareerBackground from "./_components/CareerBackground";
-import Description from "./_components/Description";
+import CareerBackground from "./components/CareerBackground";
+import Description from "./components/Description";
 import React from "react";
-import SoftSkills from "./_components/SoftSkills";
-import Tools from "./_components/Tools";
-import WorkProcess from "./_components/WorkProcess";
+import SoftSkills from "./components/SoftSkills";
+import WorkProcess from "./components/WorkProcess";
+import CareerTechStack from "./components/CareerTechStack";
 
 export default function About() {
     return (
@@ -11,8 +11,8 @@ export default function About() {
             <Description />
             <CareerBackground />
             <WorkProcess />
+            <CareerTechStack />
             <SoftSkills />
-            <Tools />
         </div>
     );
 }
