@@ -1,9 +1,9 @@
 import "./globals.css";
+import { Footer } from "./components/Footer";
 import { GeistSans } from "geist/font/sans";
 import { Inter, Space_Mono } from "next/font/google";
-import NavigationBar from "./components/menu/NavigationBar";
+import Header from "./components/menu/Header";
 import type { Metadata } from "next";
-import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
     title: "Lois Floro | Portfolio",
@@ -36,7 +36,7 @@ export default function RootLayout({
             className={`${GeistSans.variable} ${space_mono.variable} ${inter.variable}`}
         >
             <body className="relative">
-                <NavigationBar />
+                <Header />
                 <main>{children}</main>
                 <Footer />
             </body>

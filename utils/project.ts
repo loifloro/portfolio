@@ -1,6 +1,6 @@
 import { isUndefined } from "lodash";
 import { Project } from "types/project";
-import { projects } from "projects";
+import { projects } from "datasets/projects";
 
 /**
  * Get the project object based on the projectName
@@ -17,4 +17,8 @@ export function getProjectBySlug(slug: string): Project | null {
     }
 
     return null;
+}
+
+export function getProjects() {
+    return projects;
 }

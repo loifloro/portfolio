@@ -6,7 +6,7 @@ import React from "react";
 
 type ProjectHeroProps = {
     name: string;
-    tags: string[];
+    tags: { id: number; name: string }[];
     liveUrl: URL | string;
     githubUrl: URL | string;
     mainImg: URL | string;
@@ -22,7 +22,7 @@ export default function ProjectHero({
     const background = `bg-[url('/png/${mainImg}')]`;
 
     return (
-        <Container fullWidth>
+        <Container fullWidth withDivider>
             <div
                 className={`min-h-screen grid items-end p-7 bg-cover bg-no-repeat ${background}`}
             >
@@ -44,11 +44,11 @@ export default function ProjectHero({
                     </div>
                     <div className="flex flex-col items-end ml-auto w-4/6 justify-between">
                         <div className="flex gap-2 flex-wrap flex-row-reverse">
-                            {tags.map((tag) => (
-                                <Tag key={tag} name={tag} />
+                            {tags.map(({ id, name }) => (
+                                <Tag key={id} name={name} />
                             ))}
                         </div>
-                        <div className="flex flex-col gap-2 items-end text-text-sm">
+                        <div className="flex flex-col gap-2 items-end text-sm">
                             <ArrowLink
                                 name="Visit Live Project"
                                 url={liveUrl}

@@ -4,7 +4,26 @@ import GradientLine from "./GradientLine";
 import React from "react";
 import Subtitle from "./display/Subtitle";
 
-export default function Footer() {
+export function SocialLinks() {
+    return (
+        <div className="flex gap-4 mb-5 text-rich-black">
+            <ArrowLink name="linkedin" url="" />
+            <ArrowLink name="dribble" url="" />
+            <ArrowLink name="instagram" url="" />
+            <ArrowLink name="github" url="" />
+        </div>
+    );
+}
+
+export function Credits() {
+    return (
+        <p className="font-mono uppercase text-sm text-battleship-gray">
+            Created by Lois Floro
+        </p>
+    );
+}
+
+export function Footer() {
     return (
         <footer id="get-in-touch" className="mt-32">
             <Container withDivider dividerType="centered" dividerPosition="top">
@@ -21,20 +40,13 @@ export default function Footer() {
                             jloisfloro@gmail.com
                         </h3>
                     </div>
-                    <div className="flex gap-4 mb-5 text-rich-black">
-                        <ArrowLink name="linkedin" url="" />
-                        <ArrowLink name="dribble" url="" />
-                        <ArrowLink name="instagram" url="" />
-                        <ArrowLink name="github" url="" />
-                    </div>
+                    <SocialLinks />
                     <GradientLine type="space-between" />
-                    <div className="flex justify-between mt-6 text-raisin-black">
-                        <p className="font-mono uppercase text-sm">
+                    <div className="flex justify-between mt-6">
+                        <p className="font-mono uppercase text-sm text-battleship-gray">
                             All Rights Reserved - {new Date().getUTCFullYear()}
                         </p>
-                        <p className="font-mono uppercase text-sm">
-                            Created by Lois Floro
-                        </p>
+                        <Credits />
                     </div>
                 </div>
             </Container>

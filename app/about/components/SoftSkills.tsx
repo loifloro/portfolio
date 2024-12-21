@@ -25,7 +25,7 @@ export default function SoftSkills() {
     ];
 
     return (
-        <Container withDivider dividerType="space-between">
+        <Container>
             <div className="text-center mb-36">
                 <Subtitle name="Lorem Ipsum" size="sm" />
                 <Heading
@@ -49,7 +49,7 @@ export default function SoftSkills() {
                     </div>
                 ))}
             </div>
-            <p className="max-w-[40%] mx-auto text-center text-battleship-gray mb-36">
+            <p className="max-w-[40%] mx-auto text-center text-battleship-gray">
                 Nisl et sit ultrices ac. Vitae risus nibh malesuada nulla nibh
                 in gravida ut. Sem nibh integer libero nulla id morbi elit
                 dictum.

@@ -1,68 +1,90 @@
-import { Fragment } from "react";
-import Tag from "./display/Tag";
-import Subtitle from "./display/Subtitle";
-import GradientLine from "./GradientLine";
+"use client";
+
+import { Fragment, useState } from "react";
+import { getProjects } from "utils/project";
 import ArrowLink from "./button/ArrowLink";
 import Container from "./container/Container";
+import GradientLine from "./GradientLine";
+import Subtitle from "./display/Subtitle";
+import Tag from "./display/Tag";
+import Image from "next/image";
+import Link from "next/link";
+
+type RecentProjectItemProps = {
+    id: number;
+    name: string;
+    description: string;
+    shortDescription: string;
+    tags: { id: number; name: string }[];
+    slug: string;
+};
+
+function RecentProjectItem({
+    id,
+    name,
+    description,
+    shortDescription,
+    tags,
+    slug,
+}: RecentProjectItemProps) {
+    const [isShown, setIsShown] = useState(false);
+    const projectPage = `projects\/${slug}`;
+
+    const handleMouseEnter = () => {
+        setIsShown(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsShown(false);
+    };
+
+    return (
+        <Fragment key={id}>
+            <div
+                id="projects"
+                className="flex gap-2 justify-between items-center mt-11 mb-4 md:max-h-[110px] max-h-none"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <div className="max-w-[55%]">
+                    <h3 className="uppercase text-rich-black md:text-heading-3 text-heading-4 tracking-widest font-normal mb-2">
+                        {name}
+                    </h3>
+                    <div className="text-battleship-gray font-light text-base">
+                        <p className="md:block hidden">{description}</p>
+                        <p className="md:hidden block">{shortDescription}</p>
+                    </div>
+                </div>
+                <Link href={projectPage}>
+                    <div
+                        className={`hidden md:block z-10 -mt-14 transition-opacity ease-in duration-300 ${isShown ? "opacity-100" : "opacity-0"}`}
+                    >
+                        <Image
+                            src="/png/project-img-placeholder.png"
+                            alt=""
+                            height={200}
+                            width={365}
+                        />
+                    </div>
+                </Link>
+                <div className="flex flex-col items-end gap-8">
+                    <div className="flex flex-col items-end gap-2">
+                        {tags
+                            .filter(({}, index) => index < 2)
+                            .map(({ id, name }) => (
+                                <Tag key={id} name={name} />
+                            ))}
+                    </div>
+                    <ArrowLink name="View Project" url={projectPage} />
+                </div>
+            </div>
+            <GradientLine type="space-between" />
+        </Fragment>
+    );
+}
 
 export default function RecentProjects() {
-    const data = [
-        {
-            id: 1,
-            name: "Youtube Playlist Calculator",
-            description:
-                "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist. The application offers time conversion for the total minute, hours, or the ISO 8601 time format.",
-            tags: [
-                { id: 1, name: "Ui Design" },
-                { id: 2, name: "Web Development" },
-            ],
-            link: "youtube-playlist-calculator",
-        },
-        {
-            id: 2,
-            name: "Patient Record Management System",
-            description:
-                "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-            tags: [
-                { id: 1, name: "Ui Design" },
-                { id: 2, name: "Responsive Design" },
-            ],
-            link: "patient-record-management-system",
-        },
-        {
-            id: 3,
-            name: "Random Advice Generator",
-            description:
-                "A Frontend Mentor Challenge that randomly showcases advice using Advice Slip API. This simple project aims to showcase the ability to convert a pixel perfect conversion from the design to the actual web app.",
-            tags: [
-                { id: 1, name: "Ui Design" },
-                { id: 2, name: "Responsive Design" },
-            ],
-            link: "random-advice-generator",
-        },
-        {
-            id: 4,
-            name: "IP Address Tracker",
-            description:
-                "A Frontend Mentor Challenge that randomly showcases advice using Advice Slip API. This simple project aims to showcase the ability to convert a pixel perfect conversion from the design to the actual web app.",
-            tags: [
-                { id: 1, name: "Ui Design" },
-                { id: 2, name: "Responsive Design" },
-            ],
-            link: "ip-address-tracker",
-        },
-        {
-            id: 5,
-            name: "CSS Zen Garden",
-            description:
-                "A Frontend Mentor Challenge that randomly showcases advice using Advice Slip API. This simple project aims to showcase the ability to convert a pixel perfect conversion from the design to the actual web app.",
-            tags: [
-                { id: 1, name: "Ui Design" },
-                { id: 2, name: "Responsive Design" },
-            ],
-            link: "css-zen-garden",
-        },
-    ];
+    const projects = getProjects();
 
     return (
         <Container>
@@ -70,29 +92,19 @@ export default function RecentProjects() {
             <h3 className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[20px] text-rich-black mb-24">
                 Projects
             </h3>
-            {data.map(({ id, name, description, tags, link }) => (
-                <Fragment key={id}>
-                    <div className="flex justify-between mt-11 mb-4">
-                        <div className="max-w-[60%]">
-                            <h3 className="uppercase text-rich-black text-heading-3 tracking-widest font-normal mb-2">
-                                {name}
-                            </h3>
-                            <p className="text-battleship-gray font-light text-base">
-                                {description}
-                            </p>
-                        </div>
-                        <div className="flex flex-col items-end gap-8">
-                            <div className="flex flex-col items-end gap-2">
-                                {tags.map(({ id, name }) => (
-                                    <Tag key={id} name={name} />
-                                ))}
-                            </div>
-                            <ArrowLink name="View Project" url={link} />
-                        </div>
-                    </div>
-                    <GradientLine type="space-between" />
-                </Fragment>
-            ))}
+            {projects.map(
+                ({ id, name, description, shortDescription, tags, slug }) => (
+                    <RecentProjectItem
+                        key={id}
+                        id={id}
+                        name={name}
+                        description={description}
+                        shortDescription={shortDescription}
+                        tags={tags}
+                        slug={slug}
+                    />
+                )
+            )}
         </Container>
     );
 }
