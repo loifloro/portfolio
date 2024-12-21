@@ -8,8 +8,12 @@ import ProjectHero from "./components/ProjectHero";
 import React from "react";
 import Rationale from "./components/Rationale";
 
-export default function Page({ params }: { params: { projectName: string } }) {
-    const project = getProjectBySlug(params.projectName);
+export default async function Page({
+    params,
+}: {
+    params: Promise<{ projectName: string }>;
+}) {
+    const project = getProjectBySlug((await params).projectName);
 
     if (isNull(project)) {
         return notFound();
