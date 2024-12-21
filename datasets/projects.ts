@@ -5,9 +5,17 @@ export const projects = <ProjectList>[
         id: 1,
         slug: "youtube-playlist-calculator",
         name: "Youtube Playlist Calculator",
+        shortDescription:
+            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
         description:
             "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist. The application offers time conversion for the total minute, hours, or the ISO 8601 time format.",
-        tags: ["Web Development", "UI Design", "React JS", "API", "Vercel"],
+        tags: [
+            { id: 1, name: "Web Development" },
+            { id: 2, name: "UI Design" },
+            { id: 3, name: "React JS" },
+            { id: 4, name: "API" },
+            { id: 5, name: "Vercel" },
+        ],
         liveUrl: "",
         githubUrl: "",
         thumbnail: "",
@@ -39,11 +47,19 @@ export const projects = <ProjectList>[
     },
     {
         id: 2,
-        slug: "patient-record-management-system",
-        name: "Patient Record Management System",
+        slug: "patient-record-system",
+        name: "Patient Record System",
+        shortDescription:
+            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
         description:
             "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-        tags: ["Ui Design", "Responsive Design"],
+        tags: [
+            { id: 1, name: "Web Development" },
+            { id: 2, name: "UI Design" },
+            { id: 3, name: "React JS" },
+            { id: 4, name: "API" },
+            { id: 5, name: "Vercel" },
+        ],
         liveUrl: "",
         githubUrl: "",
         thumbnail: "",
@@ -77,9 +93,17 @@ export const projects = <ProjectList>[
         id: 3,
         slug: "css-zen-garden",
         name: "CSS Zen Garden",
+        shortDescription:
+            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
         description:
             "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-        tags: ["Ui Design", "Responsive Design"],
+        tags: [
+            { id: 1, name: "Web Development" },
+            { id: 2, name: "UI Design" },
+            { id: 3, name: "React JS" },
+            { id: 4, name: "API" },
+            { id: 5, name: "Vercel" },
+        ],
         liveUrl: "",
         githubUrl: "",
         thumbnail: "",
@@ -110,12 +134,20 @@ export const projects = <ProjectList>[
         ],
     },
     {
-        id: 3,
+        id: 4,
         slug: "quizzard",
         name: "Quizzard",
+        shortDescription:
+            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
         description:
             "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-        tags: ["Ui Design", "Responsive Design"],
+        tags: [
+            { id: 1, name: "Web Development" },
+            { id: 2, name: "UI Design" },
+            { id: 3, name: "React JS" },
+            { id: 4, name: "API" },
+            { id: 5, name: "Vercel" },
+        ],
         liveUrl: "",
         githubUrl: "",
         thumbnail: "",
@@ -146,12 +178,20 @@ export const projects = <ProjectList>[
         ],
     },
     {
-        id: 3,
+        id: 5,
         slug: "web-flow-project",
         name: "Web Flow Project",
+        shortDescription:
+            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
         description:
             "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-        tags: ["Ui Design", "Responsive Design"],
+        tags: [
+            { id: 1, name: "Web Development" },
+            { id: 2, name: "UI Design" },
+            { id: 3, name: "React JS" },
+            { id: 4, name: "API" },
+            { id: 5, name: "Vercel" },
+        ],
         liveUrl: "",
         githubUrl: "",
         thumbnail: "",
