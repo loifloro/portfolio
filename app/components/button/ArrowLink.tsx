@@ -18,7 +18,7 @@ export default function ArrowLink({
     return (
         <Link
             href={url}
-            className={`flex text-rich-black items-center gap-1 uppercase font-light tracking-widest font-mono min-w-fit ${className && className}`}
+            className={`flex text-rich-black items-center gap-1 uppercase font-light tracking-widest font-mono min-w-fit text- ${className && className}`}
         >
             <span>{name}</span> {isWithArrow && <ArrowUpRight size={22} />}
         </Link>
