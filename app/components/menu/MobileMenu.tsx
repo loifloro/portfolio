@@ -2,8 +2,9 @@
 
 import { createPortal } from "react-dom";
 import { Credits } from "../Footer";
-import { isEqual } from "lodash";
+import { isEqual, isNull } from "lodash";
 import { navigationBarItems } from "datasets/navigation";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { X } from "@phosphor-icons/react";
 import GradientLine from "../GradientLine";
@@ -20,10 +21,19 @@ export default function MobileMenu({
     handleClick,
 }: MobileNavigationProps) {
     const pathname = usePathname();
+    const targetRef = useRef<HTMLElement | null>(null);
+
+    useEffect(() => {
+        targetRef.current = document.body;
+    }, []);
+
+    if (isNull(targetRef.current)) {
+        return null;
+    }
 
     return createPortal(
         <div
-            className={`lg:hidden fixed bg-pale-white z-[999] w-full  min-h-screen transition-transform ease-in-out duration-100  ${isOpened ? "-translate-y-0" : "-translate-y-full delay-300"}`}
+            className={`lg:hidden fixed top-0 bg-pale-white z-[999] w-full min-h-screen origin-top transition-transform ease-in-out duration-100 ${isOpened ? "-translate-y-0 top-0" : "-translate-y-full delay-300"}`}
         >
             <div
                 className={`flex flex-col justify-between md:px-8 px-4 py-6 min-h-screen transition-opacity ease-in-out duration-300 ${isOpened ? "opacity-100 delay-300" : "opacity-0"}`}
@@ -69,6 +79,6 @@ export default function MobileMenu({
                 </div>
             </div>
         </div>,
-        document.body
+        targetRef.current
     );
 }
