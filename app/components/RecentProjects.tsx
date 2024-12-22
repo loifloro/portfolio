@@ -49,7 +49,7 @@ function RecentProjectItem({
                 <div className="sm:max-w-[55%]">
                     <Heading
                         element="h4"
-                        className="uppercase text-rich-black text-heading-3 tracking-heading-3 font-normal mb-2"
+                        className="uppercase text-rich-black text-heading-3 tracking-heading-3 sm:font-normal font-medium mb-2"
                     >
                         {name}
                     </Heading>
