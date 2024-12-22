@@ -1,10 +1,9 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { Credits, SocialLinks } from "../Footer";
+import { Credits } from "../Footer";
 import { isEqual } from "lodash";
 import { navigationBarItems } from "datasets/navigation";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { X } from "@phosphor-icons/react";
 import GradientLine from "../GradientLine";
@@ -20,23 +19,14 @@ export default function MobileMenu({
     isOpened,
     handleClick,
 }: MobileNavigationProps) {
-    const [isMounted, setIsMounted] = useState(false);
     const pathname = usePathname();
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    if (!isMounted) {
-        return <></>;
-    }
 
     return createPortal(
         <div
-            className={`lg:hidden fixed bg-pale-white z-[999] w-full transition-transform ease-in-out duration-100  ${isOpened ? "-translate-y-0" : "-translate-y-full delay-300"}`}
+            className={`lg:hidden fixed bg-pale-white z-[999] w-full  min-h-screen transition-transform ease-in-out duration-100  ${isOpened ? "-translate-y-0" : "-translate-y-full delay-300"}`}
         >
             <div
-                className={`flex flex-col justify-between px-8 py-6 min-h-screen transition-opacity ease-in-out duration-300 ${isOpened ? "opacity-100 delay-300" : "opacity-0"}`}
+                className={`flex flex-col justify-between md:px-8 px-4 py-6 min-h-screen transition-opacity ease-in-out duration-300 ${isOpened ? "opacity-100 delay-300" : "opacity-0"}`}
             >
                 <div>
                     <div className="flex justify-between mb-4">
@@ -57,7 +47,7 @@ export default function MobileMenu({
                     {navigationBarItems.map(({ name, url, comingSoon }) => (
                         <li
                             key={url}
-                            className={`relative uppercase font-semibold text-heading-2 leading-heading-2  tracking-[.3em] transition-colors ease-in-out duration-300 hover:text-rich-black ${isEqual(pathname, url) ? "text-rich-black" : "text-battleship-gray"}`}
+                            className={`relative uppercase font-semibold text-heading-2 leading-heading-2 tracking-heading-3 ml-[var(--spacing-heading-3)] transition-colors ease-in-out duration-300 hover:text-rich-black ${isEqual(pathname, url) ? "text-rich-black" : "text-battleship-gray"}`}
                         >
                             <Link
                                 href={url}
@@ -75,7 +65,6 @@ export default function MobileMenu({
                     ))}
                 </ul>
                 <div className="flex flex-col items-center gap-5">
-                    <SocialLinks />
                     <Credits />
                 </div>
             </div>

@@ -9,7 +9,7 @@ type ContainerProps = {
     withDivider?: boolean;
     dividerType?: GradientDirection;
     dividerPosition?: "top" | "bottom";
-};
+} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
 
 export default function Container({
     children,
@@ -17,10 +17,13 @@ export default function Container({
     withDivider = false,
     dividerType = "space-between",
     dividerPosition = "bottom",
+    ...props
 }: ContainerProps) {
     return (
-        //  TODO
-        <section className={`${fullWidth ? "w-full" : "px-8"}`}>
+        <section
+            className={`${fullWidth ? "w-full" : "md:px-8 px-4"}`}
+            {...props}
+        >
             {withDivider && isEqual(dividerPosition, "top") && (
                 <GradientLine type={dividerType} />
             )}

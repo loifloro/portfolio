@@ -44,6 +44,10 @@ export default {
                 "heading-3": "var(--line-height-heading-3)",
                 "heading-4": "var(--line-height-heading-4)",
             },
+            letterSpacing: {
+                "heading-1": "var(--spacing-heading-1)",
+                "heading-3": "var(--spacing-heading-3)",
+            },
         },
     },
     plugins: [],
