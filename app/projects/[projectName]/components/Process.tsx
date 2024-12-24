@@ -85,7 +85,7 @@ export default function Process() {
     return (
         <Container withDivider dividerType="space-between">
             <div className="text-center">
-                <Subtitle name="Project Cycle" size="sm" />
+                <Subtitle size="sm">Project Journey</Subtitle>
                 <Heading
                     element="h2"
                     className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-24"

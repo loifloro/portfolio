@@ -18,46 +18,36 @@
     --line-height-base: clamp(0.875rem, 0.8386rem + 0.1794vw, 1rem);
     --line-height-heading-1: clamp(2.5rem, 1.7958rem + 3.0047vw, 4.5rem);
     --line-height-heading-2: clamp(3.2rem, 2.9668rem + 1.148vw, 4rem);
-    --line-height-heading-3: clamp(1.125rem, 0.8169rem + 1.3146vw, 2rem);
+    --line-height-heading-3: clamp(1.75rem, 1.3979rem + 1.5023vw, 2.75rem);
     --line-height-heading-4: clamp(1.125rem, 1.0886rem + 0.1794vw, 1.25rem);
     --spacing-heading-1: clamp(0.2em, 0.25em, 0.3em);
     --spacing-heading-3: clamp(0.1em, 0.15em, 0.2em);
-    --gradient-centered: linear-gradient(
-        to right,
-        #fdfdfd 0%,
-        #8e8e9065 15%,
-        #000000 50%,
-        #8e8e9065 85%,
-        #fdfdfd 100%
-    );
-    --gradient-space-between: linear-gradient(
-        to right,
-        #0a0a0a30 0%,
-        #8e8e9065 25%,
-        #fdfdfd 50%,
-        #8e8e9065 65%,
-        #0a0a0a30 100%
-    );
-    --gradient-horizontal: linear-gradient(
-        to top,
-        #0a0a0a 0%,
-        #8e8e9065 25%,
-        #ffffff 50%,
-        #8e8e9065 75%,
-        #0a0a0a 100%
-    );
-    --gradient-to-left: linear-gradient(
-        to left,
-        #fdfdfd 0%,
-        #8e8e9065 45%,
-        #0a0a0a30 100%
-    );
-    --gradient-to-right: linear-gradient(
-        to right,
-        #fdfdfd 0%,
-        #8e8e9065 45%,
-        #0a0a0a30 100%
-    );
+    --gradient-centered: linear-gradient(to right,
+            #fdfdfd 0%,
+            #8e8e9065 15%,
+            #000000 50%,
+            #8e8e9065 85%,
+            #fdfdfd 100%);
+    --gradient-space-between: linear-gradient(to right,
+            #0a0a0a30 0%,
+            #8e8e9065 25%,
+            #fdfdfd 50%,
+            #8e8e9065 65%,
+            #0a0a0a30 100%);
+    --gradient-horizontal: linear-gradient(to top,
+            #0a0a0a 0%,
+            #8e8e9065 25%,
+            #ffffff 50%,
+            #8e8e9065 75%,
+            #0a0a0a 100%);
+    --gradient-to-left: linear-gradient(to left,
+            #fdfdfd 0%,
+            #8e8e9065 45%,
+            #0a0a0a30 100%);
+    --gradient-to-right: linear-gradient(to right,
+            #fdfdfd 0%,
+            #8e8e9065 45%,
+            #0a0a0a30 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,42 +57,32 @@
         --battleship-gray: #8e8e90;
         --raisin-black: #f5f5f7;
         --rich-black: #ffffff;
-        --gradient-centered: linear-gradient(
-            to right,
-            #0a0a0a30 0%,
-            #8e8e9065 25%,
-            #fdfdfd 50%,
-            #8e8e9065 65%,
-            #0a0a0a30 100%
-        );
-        --gradient-space-between: linear-gradient(
-            to right,
-            #fdfdfd 0%,
-            #8e8e9065 15%,
-            #0a0a0a30 50%,
-            #8e8e9065 85%,
-            #fdfdfd 100%
-        );
-        --gradient-horizontal: linear-gradient(
-            to top,
-            #0a0a0a30 0%,
-            #8e8e9065 15%,
-            #fdfdfd 50%,
-            #8e8e9065 85%,
-            #0a0a0a30 100%
-        );
-        --gradient-to-left: linear-gradient(
-            to left,
-            #0a0a0a30 0%,
-            #8e8e9065 45%,
-            #fdfdfd 100%
-        );
-        --gradient-to-right: linear-gradient(
-            to right,
-            #0a0a0a30 0%,
-            #8e8e9065 45%,
-            #fdfdfd 100%
-        );
+        --gradient-centered: linear-gradient(to right,
+                #0a0a0a30 0%,
+                #8e8e9065 25%,
+                #fdfdfd 50%,
+                #8e8e9065 65%,
+                #0a0a0a30 100%);
+        --gradient-space-between: linear-gradient(to right,
+                #fdfdfd 0%,
+                #8e8e9065 15%,
+                #0a0a0a30 50%,
+                #8e8e9065 85%,
+                #fdfdfd 100%);
+        --gradient-horizontal: linear-gradient(to top,
+                #0a0a0a30 0%,
+                #8e8e9065 15%,
+                #fdfdfd 50%,
+                #8e8e9065 85%,
+                #0a0a0a30 100%);
+        --gradient-to-left: linear-gradient(to left,
+                #0a0a0a30 0%,
+                #8e8e9065 45%,
+                #fdfdfd 100%);
+        --gradient-to-right: linear-gradient(to right,
+                #0a0a0a30 0%,
+                #8e8e9065 45%,
+                #fdfdfd 100%);
     }
 
     body {
@@ -118,6 +98,5 @@
         }
     }
 
-    @layer components {
-    }
+    @layer components {}
 }

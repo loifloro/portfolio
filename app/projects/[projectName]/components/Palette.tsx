@@ -69,7 +69,7 @@ export default function Pallette() {
         <Container withDivider dividerType="space-between">
             <div className="grid grid-cols-2 mb-36 items-center">
                 <div>
-                    <Subtitle name="Project Colors" size="sm" />
+                    <Subtitle size="sm">Project Colors</Subtitle>
                     <Heading
                         element="h2"
                         className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-24"

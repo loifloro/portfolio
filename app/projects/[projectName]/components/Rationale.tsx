@@ -12,7 +12,7 @@ export default function Rationale({ description, reason }: RationaleProps) {
     return (
         <Container withDivider dividerType="space-between">
             <div className="text-center mb-24">
-                <Subtitle name="Project Rationale" size="sm" />
+                <Subtitle size="sm">Project Rationale</Subtitle>
                 <Heading
                     element="h2"
                     className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-24"

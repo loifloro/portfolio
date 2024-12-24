@@ -18,9 +18,9 @@ function CareerTechStackLogo({ name, logo }: CareerTechStackLogoProps) {
     const Tag = logo;
 
     return (
-        <div className="flex flex-col gap-3 items-center min-w-32">
-            <Tag size={82} />
-            <p className="font-mono uppercase text-sm font-normal leading-heading-4 tracking-wider">
+        <div className="flex flex-col gap-3 items-center sm:w-32 w-24">
+            <Tag className="md:h-20 md:w-20 sm:h-14 sm:w-14 h-8 w-8" />
+            <p className="font-mono uppercase md:text-sm text-xs text-center font-normal leading-heading-4 tracking-wider md:text-raisin-black text-battleship-gray">
                 {name}
             </p>
         </div>
@@ -58,8 +58,8 @@ export default function CareerTechStack() {
 
     return (
         <Container withDivider>
-            <div className="text-center mb-36">
-                <Subtitle name="Tools Used" size="sm" />
+            <div className="text-center mb-24">
+                <Subtitle size="sm">Tools Used</Subtitle>
                 <Heading
                     element="h3"
                     className="uppercase text-heading-3 leading-heading-3 tracking-widest text-rich-black"
@@ -67,7 +67,7 @@ export default function CareerTechStack() {
                     Career Tech Stack
                 </Heading>
             </div>
-            <div className="grid grid-cols-[auto_1fr] gap-32 mb-36">
+            <div className="md:grid hidden grid-cols-[auto_1fr] gap-32 mb-36">
                 <div>
                     {tabs.map(({ id, name, tab }, index) => (
                         <div key={id} className="mb-16">
@@ -98,6 +98,27 @@ export default function CareerTechStack() {
                         <CareerTechStackLogo key={id} name={name} logo={logo} />
                     ))}
                 </div>
+            </div>
+            <div className="md:hidden flex flex-col gap-24 mb-36">
+                {tabs.map(({ id, name, tab }) => (
+                    <div key={id}>
+                        <Heading
+                            element="h4"
+                            className="uppercase text-center text-heading-4 leading-4 tracking-widest mb-12"
+                        >
+                            {name}
+                        </Heading>
+                        <div className="flex flex-wrap justify-center gap-x-2 gap-y-6">
+                            {tab.map(({ id, logo, name }) => (
+                                <CareerTechStackLogo
+                                    key={id}
+                                    name={name}
+                                    logo={logo}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </Container>
     );

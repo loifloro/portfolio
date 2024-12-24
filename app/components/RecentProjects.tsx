@@ -91,7 +91,7 @@ export default function RecentProjects() {
 
     return (
         <Container id="projects">
-            <Subtitle name="Five Most Recent Works" />
+            <Subtitle>Five Most Recent Works</Subtitle>
             <Heading
                 element="h3"
                 className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[.25em] text-rich-black mb-24"
