@@ -17,7 +17,7 @@ export function Footer() {
         <footer id="get-in-touch" className="mt-32">
             <Container withDivider dividerType="centered" dividerPosition="top">
                 <div className="mt-24 mb-6">
-                    <Subtitle name="Get in Touch" />
+                    <Subtitle>Get in Touch</Subtitle>
                     <Heading
                         element="h2"
                         className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-heading-3 text-rich-black mb-24 md:max-w-[50%]"

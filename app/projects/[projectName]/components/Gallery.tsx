@@ -12,7 +12,7 @@ export default function Gallery() {
 
     return (
         <Container withDivider dividerType="space-between">
-            <Subtitle name="Project Shots" size="sm" />
+            <Subtitle size="sm">Project Shots</Subtitle>
             <Heading
                 element="h2"
                 className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-12"

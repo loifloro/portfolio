@@ -43,7 +43,7 @@ export default function FrontendMentor() {
 
     return (
         <div className="text-center">
-            <Subtitle name="Design to Develop Challenges" />
+            <Subtitle>Design to Develop Challenges</Subtitle>
             <h3 className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-heading-3 text-rich-black mb-24">
                 Frontend Mentor
             </h3>

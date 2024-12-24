@@ -8,10 +8,10 @@ type GradientLineProps = {
 
 export default function GradientLine({ type, onMobile }: GradientLineProps) {
     const _type = {
-        centered: "lg:bg-gradient-centered",
-        "space-between": "lg:bg-gradient-space-between",
-        "to-right": "lg:bg-gradient-to-right",
-        "to-left": "lg:bg-gradient-to-left",
+        centered: "md:bg-gradient-centered",
+        "space-between": "md:bg-gradient-space-between",
+        "to-right": "md:bg-gradient-to-right",
+        "to-left": "md:bg-gradient-to-left",
     };
     const _onMobile = {
         centered: "bg-gradient-centered",
