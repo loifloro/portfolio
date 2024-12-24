@@ -116,7 +116,7 @@ export default function CareerBackground() {
                         dateEnded,
                     }) => (
                         <div key={id} className="mt-8">
-                            <div className="flex justify-between items-center mb-5 gap-4">
+                            <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-4">
                                 <div>
                                     <p className="text-heading-4 mb-2">
                                         {institutionName}
