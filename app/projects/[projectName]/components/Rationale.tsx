@@ -19,7 +19,7 @@ export default function Rationale({ description, reason }: RationaleProps) {
                 >
                     The Background
                 </Heading>
-                <div className="w-1/2 mx-auto text-battleship-gray">
+                <div className="md:w-1/2 sm:w-10/12 mx-auto text-battleship-gray">
                     <p className="mb-10">{description}</p>
                     <p>{reason}</p>
                 </div>
