@@ -32,9 +32,12 @@ export default async function Page({
                 description={project.description}
                 reason={project.reason}
             />
-            <Pallette />
-            <Process />
-            <Gallery />
+            <Pallette
+                description={project.palletteDescription}
+                palette={project.pallette}
+            />
+            <Process processes={project.process} />
+            <Gallery items={project.gallery} />
         </div>
     );
 }

@@ -6,19 +6,29 @@ import React from "react";
 type PaletteItemProps = {
     name: string;
     strokeColor: string;
-    midColor: string;
+    color: string;
 };
 
-function PaletteItem({ name, strokeColor, midColor }: PaletteItemProps) {
+type PaletteProps = {
+    description: string;
+    palette: {
+        id: number;
+        name: string;
+        colorCode: string;
+        strokeCode: string;
+    }[];
+};
+
+function PaletteItem({ name, strokeColor, color }: PaletteItemProps) {
     const _strokeColor = `#${strokeColor}`;
-    const _midColor = `#${midColor}`;
+    const _color = `#${color}`;
 
     return (
         <div
-            className="flex flex-col min-h-[430px] justify-end w-[150px] p-2"
+            className="flex flex-col min-h-[430px] justify-end w-full p-2"
             style={{
                 borderTop: `5px solid ${_strokeColor}`,
-                background: `linear-gradient(to top, rgba(17, 17, 17, 0) 0.05%, rgba(31, 31, 35, 0.2) 7.35%, ${_midColor} 78.87%, ${_midColor} 99.95%)`,
+                background: `linear-gradient(to top, rgba(17, 17, 17, 0) 0.05%, rgba(31, 31, 35, 0.2) 7.35%, ${_color} 78.87%, ${_color} 99.95%)`,
             }}
         >
             <div>
@@ -27,7 +37,7 @@ function PaletteItem({ name, strokeColor, midColor }: PaletteItemProps) {
                 </p>
                 <p
                     className="font-mono text-sm uppercase"
-                    style={{ color: _midColor }}
+                    style={{ color: _color }}
                 >
                     {strokeColor}
                 </p>
@@ -36,38 +46,10 @@ function PaletteItem({ name, strokeColor, midColor }: PaletteItemProps) {
     );
 }
 
-export default function Pallette() {
-    const data = [
-        {
-            name: "Gold",
-            strokeColor: "FFD500",
-            midColor: "AA931E",
-        },
-        {
-            name: "Rose Ebony",
-            strokeColor: "392020",
-            midColor: "543636",
-        },
-        {
-            name: "Misty Rose",
-            strokeColor: "FFFFFF",
-            midColor: "EBD2D2",
-        },
-        {
-            name: "Blood Red",
-            strokeColor: "500000",
-            midColor: "6E0909",
-        },
-        {
-            name: "Rosy Brown",
-            strokeColor: "AC7070",
-            midColor: "B88A8A",
-        },
-    ];
-
+export default function Pallette({ description, palette }: PaletteProps) {
     return (
         <Container withDivider dividerType="space-between">
-            <div className="grid grid-cols-2 mb-36 items-center">
+            <div className="grid md:grid-cols-2 md:grid-rows-1 grid-rows-[auto_1fr] gap-y-16 mb-36 items-center">
                 <div>
                     <Subtitle size="sm">Project Colors</Subtitle>
                     <Heading
@@ -76,23 +58,17 @@ export default function Pallette() {
                     >
                         The Palette
                     </Heading>
-                    <p className="text-battleship-gray font-light max-w-[80%]">
-                        A viverra ut eget urna amet cras pharetra. Risus vitae
-                        quam libero pellentesque. Vitae nibh mollis platea sem
-                        justo dis ultrices. Aliquet non sit accumsan placerat
-                        varius diam nec. Scelerisque odio nunc pharetra felis
-                        leo sem est pharetra. Adipiscing nisl at eget feugiat
-                        senectus id aliquet. At feugiat est turpis posuere
-                        lorem.
+                    <p className="text-battleship-gray font-light sm:w-10/12">
+                        {description}
                     </p>
                 </div>
-                <div className="flex justify-end">
-                    {data.map(({ name, strokeColor, midColor }) => (
+                <div className="flex md:justify-end">
+                    {palette.map(({ id, name, colorCode, strokeCode }) => (
                         <PaletteItem
-                            key={strokeColor}
+                            key={id}
                             name={name}
-                            strokeColor={strokeColor}
-                            midColor={midColor}
+                            strokeColor={strokeCode}
+                            color={colorCode}
                         />
                     ))}
                 </div>

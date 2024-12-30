@@ -5,15 +5,20 @@ export type Project = {
     description: string;
     shortDescription: string;
     tags: { id: number; name: string }[];
-    liveUrl: URL | string;
-    githubUrl: URL | string;
-    thumbnail: URL | string;
-    mainImg: URL | string;
+    liveUrl: string;
+    githubUrl: string;
+    thumbnail: string;
+    mainImg: string;
     reason: string;
-    pallette: { name: string; hexCode: string }[];
+    pallette: {
+        id: number;
+        name: string;
+        colorCode: string;
+        strokeCode: string;
+    }[];
     palletteDescription: string;
-    process: { id: number; name: string; description: string }[];
-    gallery: { imgId: number; imgName: string; imgUrl: string }[];
+    process: { id: number; title: string; description: string }[];
+    gallery: { id: number; name: string; fileName: string }[];
 };
 
 export type ProjectList = Project[];

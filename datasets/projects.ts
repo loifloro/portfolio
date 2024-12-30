@@ -23,8 +23,34 @@ export const projects = <ProjectList>[
         mainImg: "project-current-img-placeholder.png",
         pallette: [
             {
+                id: 1,
                 name: "Gold",
-                hexCode: "55t6224",
+                strokeCode: "FFD500",
+                colorCode: "AA931E",
+            },
+            {
+                id: 2,
+                name: "Rose Ebony",
+                strokeCode: "392020",
+                colorCode: "543636",
+            },
+            {
+                id: 3,
+                name: "Misty Rose",
+                strokeCode: "FFFFFF",
+                colorCode: "EBD2D2",
+            },
+            {
+                id: 4,
+                name: "Blood Red",
+                strokeCode: "500000",
+                colorCode: "6E0909",
+            },
+            {
+                id: 5,
+                name: "Rosy Brown",
+                strokeCode: "AC7070",
+                colorCode: "B88A8A",
             },
         ],
         palletteDescription:
@@ -32,16 +58,65 @@ export const projects = <ProjectList>[
         process: [
             {
                 id: 1,
-                name: "Mood Boarding",
+                title: "Mood Boarding",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 2,
+                title: "Nunc tempor",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 3,
+                title: "Id felis",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 4,
+                title: "Sociis urna diam",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 5,
+                title: "Vitae nunc at",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
             },
         ],
         gallery: [
             {
-                imgId: 1,
-                imgName: "",
-                imgUrl: "",
+                id: 1,
+                name: "",
+                fileName: "youtube-playlist-calculator-1.png",
+            },
+            {
+                id: 2,
+                name: "",
+                fileName: "youtube-playlist-calculator-2.png",
+            },
+            {
+                id: 3,
+                name: "",
+                fileName: "youtube-playlist-calculator-2.png",
+            },
+            {
+                id: 4,
+                name: "",
+                fileName: "youtube-playlist-calculator-2.png",
+            },
+            {
+                id: 5,
+                name: "",
+                fileName: "youtube-playlist-calculator-2.png",
             },
         ],
     },
@@ -67,8 +142,34 @@ export const projects = <ProjectList>[
         reason: "",
         pallette: [
             {
+                id: 1,
                 name: "Gold",
-                hexCode: "55t6224",
+                strokeCode: "FFD500",
+                colorCode: "AA931E",
+            },
+            {
+                id: 2,
+                name: "Rose Ebony",
+                strokeCode: "392020",
+                colorCode: "543636",
+            },
+            {
+                id: 3,
+                name: "Misty Rose",
+                strokeCode: "FFFFFF",
+                colorCode: "EBD2D2",
+            },
+            {
+                id: 4,
+                name: "Blood Red",
+                strokeCode: "500000",
+                colorCode: "6E0909",
+            },
+            {
+                id: 5,
+                name: "Rosy Brown",
+                strokeCode: "AC7070",
+                colorCode: "B88A8A",
             },
         ],
         palletteDescription:
@@ -76,16 +177,36 @@ export const projects = <ProjectList>[
         process: [
             {
                 id: 1,
-                name: "Mood Boarding",
+                title: "Mood Boarding",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
             },
         ],
         gallery: [
             {
-                imgId: 1,
-                imgName: "",
-                imgUrl: "",
+                id: 1,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 2,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 3,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 5,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 6,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
             },
         ],
     },
@@ -111,8 +232,34 @@ export const projects = <ProjectList>[
         reason: "",
         pallette: [
             {
+                id: 1,
                 name: "Gold",
-                hexCode: "55t6224",
+                strokeCode: "FFD500",
+                colorCode: "AA931E",
+            },
+            {
+                id: 2,
+                name: "Rose Ebony",
+                strokeCode: "392020",
+                colorCode: "543636",
+            },
+            {
+                id: 3,
+                name: "Misty Rose",
+                strokeCode: "FFFFFF",
+                colorCode: "EBD2D2",
+            },
+            {
+                id: 4,
+                name: "Blood Red",
+                strokeCode: "500000",
+                colorCode: "6E0909",
+            },
+            {
+                id: 5,
+                name: "Rosy Brown",
+                strokeCode: "AC7070",
+                colorCode: "B88A8A",
             },
         ],
         palletteDescription:
@@ -120,16 +267,65 @@ export const projects = <ProjectList>[
         process: [
             {
                 id: 1,
-                name: "Mood Boarding",
+                title: "Mood Boarding",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 2,
+                title: "Nunc tempor",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 3,
+                title: "Id felis",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 4,
+                title: "Sociis urna diam",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 5,
+                title: "Vitae nunc at",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
             },
         ],
         gallery: [
             {
-                imgId: 1,
-                imgName: "",
-                imgUrl: "",
+                id: 1,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 2,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 3,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 5,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 6,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
             },
         ],
     },
@@ -155,8 +351,34 @@ export const projects = <ProjectList>[
         reason: "",
         pallette: [
             {
+                id: 1,
                 name: "Gold",
-                hexCode: "55t6224",
+                strokeCode: "FFD500",
+                colorCode: "AA931E",
+            },
+            {
+                id: 2,
+                name: "Rose Ebony",
+                strokeCode: "392020",
+                colorCode: "543636",
+            },
+            {
+                id: 3,
+                name: "Misty Rose",
+                strokeCode: "FFFFFF",
+                colorCode: "EBD2D2",
+            },
+            {
+                id: 4,
+                name: "Blood Red",
+                strokeCode: "500000",
+                colorCode: "6E0909",
+            },
+            {
+                id: 5,
+                name: "Rosy Brown",
+                strokeCode: "AC7070",
+                colorCode: "B88A8A",
             },
         ],
         palletteDescription:
@@ -164,16 +386,65 @@ export const projects = <ProjectList>[
         process: [
             {
                 id: 1,
-                name: "Mood Boarding",
+                title: "Mood Boarding",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 2,
+                title: "Nunc tempor",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 3,
+                title: "Id felis",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 4,
+                title: "Sociis urna diam",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 5,
+                title: "Vitae nunc at",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
             },
         ],
         gallery: [
             {
-                imgId: 1,
-                imgName: "",
-                imgUrl: "",
+                id: 1,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 2,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 3,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 5,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 6,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
             },
         ],
     },
@@ -199,8 +470,34 @@ export const projects = <ProjectList>[
         reason: "",
         pallette: [
             {
+                id: 1,
                 name: "Gold",
-                hexCode: "55t6224",
+                strokeCode: "FFD500",
+                colorCode: "AA931E",
+            },
+            {
+                id: 2,
+                name: "Rose Ebony",
+                strokeCode: "392020",
+                colorCode: "543636",
+            },
+            {
+                id: 3,
+                name: "Misty Rose",
+                strokeCode: "FFFFFF",
+                colorCode: "EBD2D2",
+            },
+            {
+                id: 4,
+                name: "Blood Red",
+                strokeCode: "500000",
+                colorCode: "6E0909",
+            },
+            {
+                id: 5,
+                name: "Rosy Brown",
+                strokeCode: "AC7070",
+                colorCode: "B88A8A",
             },
         ],
         palletteDescription:
@@ -208,16 +505,65 @@ export const projects = <ProjectList>[
         process: [
             {
                 id: 1,
-                name: "Mood Boarding",
+                title: "Mood Boarding",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 2,
+                title: "Nunc tempor",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 3,
+                title: "Id felis",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
+            },
+            {
+                id: 4,
+                title: "Sociis urna diam",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "left",
+            },
+            {
+                id: 5,
+                title: "Vitae nunc at",
+                description:
+                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                side: "right",
             },
         ],
         gallery: [
             {
-                imgId: 1,
-                imgName: "",
-                imgUrl: "",
+                id: 1,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 2,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 3,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 5,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
+            },
+            {
+                id: 6,
+                name: "",
+                fileName: "project-current-img-placeholder.png",
             },
         ],
     },
