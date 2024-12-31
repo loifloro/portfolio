@@ -3,6 +3,7 @@ import { Footer } from "./components/Footer";
 import { GeistSans } from "geist/font/sans";
 import { Inter, Space_Mono } from "next/font/google";
 import Header from "./components/menu/Header";
+import ProgressBarProvider from "utils/providers/ProgressBarProvider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -36,9 +37,11 @@ export default function RootLayout({
             className={`${GeistSans.variable} ${space_mono.variable} ${inter.variable}`}
         >
             <body className="relative">
-                <Header />
-                <main>{children}</main>
-                <Footer />
+                <ProgressBarProvider>
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
+                </ProgressBarProvider>
             </body>
         </html>
     );
