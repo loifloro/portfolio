@@ -25,7 +25,9 @@ export default function MobileMenu({
 
     useEffect(() => {
         targetRef.current = document.body;
-    }, []);
+
+        targetRef.current.style.overflow = isOpened ? "hidden" : "auto";
+    }, [isOpened]);
 
     if (isNull(targetRef.current)) {
         return null;
