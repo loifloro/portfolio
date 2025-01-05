@@ -3,6 +3,7 @@ import Container from "@/components/container/Container";
 import GradientLine from "@/components/GradientLine";
 import React, { ReactNode } from "react";
 import Subtitle from "@/components/display/Subtitle";
+import Heading from "@/components/display/Heading";
 
 type CareerBackgroundSectionProps = {
     name: string;
@@ -17,15 +18,18 @@ function CareerBackgroundSection({
 }: CareerBackgroundSectionProps) {
     return (
         <div className="my-36">
-            <div className="grid grid-cols-3">
-                <span>
+            <div className="grid md:grid-cols-3">
+                <span className="text-raisin-black">
                     {number < 10 && "0"}
                     {number}
                 </span>
                 <div className="col-span-2">
-                    <h3 className="uppercase text-heading-3 leading-heading-3 font-normal tracking-widest text-rich-black mb-20">
+                    <Heading
+                        element="h3"
+                        className="uppercase text-heading-3 leading-heading-3 font-normal tracking-widest text-rich-black mb-20"
+                    >
                         {name}
-                    </h3>
+                    </Heading>
                     {children}
                 </div>
             </div>
@@ -69,28 +73,34 @@ export default function CareerBackground() {
 
     return (
         <Container withDivider dividerType="space-between">
-            <Subtitle name="Career Resume" size="sm" />
-            <h3 className="uppercase text-heading-3 leading-heading-3 font-normal tracking-widest text-rich-black">
+            <Subtitle size="sm">Career Resume</Subtitle>
+            <Heading
+                element="h3"
+                className="uppercase text-heading-3 leading-heading-3 font-normal tracking-widest text-rich-black"
+            >
                 Career Background
-            </h3>
+            </Heading>
             <CareerBackgroundSection number={1} name="Experience">
                 {workExperience.map(
                     ({ id, companyName, position, dateStarted, dateEnded }) => (
                         <div key={id} className="mt-8">
-                            <div className="flex justify-between items-center mb-5">
+                            <div className="flex justify-between items-center mb-5 gap-4">
                                 <p className="text-heading-4">
                                     {companyName} - &nbsp;
                                     <span className="font-light text-battleship-gray">
                                         {position}
                                     </span>
                                 </p>
-                                <p className="uppercase tracking-widest">
+                                <p className="uppercase tracking-widest text-right">
                                     {dateStarted}{" "}
                                     {!isUndefined(dateEnded) && "- "}
                                     {!isNull(dateEnded) && dateEnded}
                                 </p>
                             </div>
-                            <GradientLine type="centered" />
+                            <GradientLine
+                                type="centered"
+                                onMobile="space-between"
+                            />
                         </div>
                     )
                 )}
@@ -106,9 +116,9 @@ export default function CareerBackground() {
                         dateEnded,
                     }) => (
                         <div key={id} className="mt-8">
-                            <div className="flex justify-between items-center mb-5">
+                            <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-4">
                                 <div>
-                                    <p className="text-heading-4">
+                                    <p className="text-heading-4 mb-2">
                                         {institutionName}
                                         <span className="font-light text-battleship-gray">
                                             {!isUndefined(award) &&
@@ -119,13 +129,16 @@ export default function CareerBackground() {
                                         {course}
                                     </p>
                                 </div>
-                                <p className="uppercase tracking-widest">
+                                <p className="uppercase tracking-widest text-right">
                                     {dateStarted}{" "}
                                     {!isUndefined(dateEnded) && "- "}
                                     {!isNull(dateEnded) && dateEnded}
                                 </p>
                             </div>
-                            <GradientLine type="centered" />
+                            <GradientLine
+                                type="centered"
+                                onMobile="space-between"
+                            />
                         </div>
                     )
                 )}

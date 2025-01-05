@@ -43,23 +43,24 @@ export default function FrontendMentor() {
 
     return (
         <div className="text-center">
-            <Subtitle name="Design to Develop Challenges" />
-            <h3 className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[20px] text-rich-black mb-24">
+            <Subtitle>Design to Develop Challenges</Subtitle>
+            <h3 className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-heading-3 text-rich-black mb-24">
                 Frontend Mentor
             </h3>
             <div className="flex items-end overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-mandatory snap-x">
                 {data.map(({ id, name }) => (
-                    <div key={id} className="min-w-[300px] snap-center">
+                    <div key={id} className="snap-center">
                         <p className="font-mono text-start mb-10">{id}</p>
                         <h4 className="text-heading-4 uppercase text-start font-light tracking-wider max-w-[90%] mb-2 h-14 text-rich-black">
                             {name}
                         </h4>
-                        <Image
-                            src="/png/frontend-mentor-placeholder.png"
-                            alt="name"
-                            width={310}
-                            height={340}
-                        />
+                        <div className="relative md:h-[340px] md:w-[310px] w-[250px] h-[270px]">
+                            <Image
+                                src="/png/frontend-mentor-placeholder.png"
+                                alt={name}
+                                fill
+                            />
+                        </div>
                     </div>
                 ))}
             </div>

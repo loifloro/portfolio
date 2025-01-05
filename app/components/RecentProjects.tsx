@@ -5,10 +5,11 @@ import { getProjects } from "utils/project";
 import ArrowLink from "./button/ArrowLink";
 import Container from "./container/Container";
 import GradientLine from "./GradientLine";
-import Subtitle from "./display/Subtitle";
-import Tag from "./display/Tag";
+import Heading from "./display/Heading";
 import Image from "next/image";
 import Link from "next/link";
+import Subtitle from "./display/Subtitle";
+import Tag from "./display/Tag";
 
 type RecentProjectItemProps = {
     id: number;
@@ -41,23 +42,25 @@ function RecentProjectItem({
     return (
         <Fragment key={id}>
             <div
-                id="projects"
-                className="flex gap-2 justify-between items-center mt-11 mb-4 md:max-h-[110px] max-h-none"
+                className="flex sm:flex-row flex-col gap-2 justify-between items-center sm:mt-11 mt-4 mb-4 md:max-h-[110px]"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="max-w-[55%]">
-                    <h3 className="uppercase text-rich-black md:text-heading-3 text-heading-4 tracking-widest font-normal mb-2">
+                <div className="sm:max-w-[55%]">
+                    <Heading
+                        element="h4"
+                        className="uppercase text-rich-black text-heading-3 tracking-heading-3 sm:font-normal font-medium mb-2"
+                    >
                         {name}
-                    </h3>
+                    </Heading>
                     <div className="text-battleship-gray font-light text-base">
-                        <p className="md:block hidden">{description}</p>
-                        <p className="md:hidden block">{shortDescription}</p>
+                        <p className="lg:block hidden">{description}</p>
+                        <p className="lg:hidden block">{shortDescription}</p>
                     </div>
                 </div>
                 <Link href={projectPage}>
                     <div
-                        className={`hidden md:block z-10 -mt-14 transition-opacity ease-in duration-300 ${isShown ? "opacity-100" : "opacity-0"}`}
+                        className={`hidden lg:block z-10 -mt-14 transition-opacity ease-in duration-300 ${isShown ? "opacity-100" : "opacity-0"}`}
                     >
                         <Image
                             src="/png/project-img-placeholder.png"
@@ -67,8 +70,8 @@ function RecentProjectItem({
                         />
                     </div>
                 </Link>
-                <div className="flex flex-col items-end gap-8">
-                    <div className="flex flex-col items-end gap-2">
+                <div className="flex sm:flex-col flex-row items-end justify-between gap-8 sm:mt-0 mt-10 sm:w-fit w-full">
+                    <div className="flex flex-col sm:items-end items-start gap-2">
                         {tags
                             .filter(({}, index) => index < 2)
                             .map(({ id, name }) => (
@@ -87,11 +90,14 @@ export default function RecentProjects() {
     const projects = getProjects();
 
     return (
-        <Container>
-            <Subtitle name="Five Most Recent Works" />
-            <h3 className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[20px] text-rich-black mb-24">
+        <Container id="projects">
+            <Subtitle>Five Most Recent Works</Subtitle>
+            <Heading
+                element="h3"
+                className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[.25em] text-rich-black mb-24"
+            >
                 Projects
-            </h3>
+            </Heading>
             {projects.map(
                 ({ id, name, description, shortDescription, tags, slug }) => (
                     <RecentProjectItem
