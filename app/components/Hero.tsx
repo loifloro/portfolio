@@ -6,7 +6,7 @@ export default function Hero() {
         currentCompany: "Business Tree PH",
         headline: "Lois Floro",
         description:
-            "Hi I'm Lois, passionate in converting designs into real life applications with care and commitment. Ever since high school I have loved the process of designing/developing applications and tweaking it to its fullest potential.",
+            "Hi it's Lois, passionate in converting designs into real life applications with care and commitment. Ever since high school he loves the process of designing/developing applications and tweaking it to its fullest potential.",
     };
 
     return (

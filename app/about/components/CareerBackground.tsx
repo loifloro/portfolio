@@ -26,7 +26,7 @@ function CareerBackgroundSection({
                 <div className="col-span-2">
                     <Heading
                         element="h3"
-                        className="uppercase text-heading-3 leading-heading-3 font-normal tracking-widest text-rich-black mb-20"
+                        className="uppercase text-heading-3 leading-heading-3 tracking-heading-3 font-normal text-rich-black mb-20"
                     >
                         {name}
                     </Heading>
@@ -85,7 +85,7 @@ export default function CareerBackground() {
                     ({ id, companyName, position, dateStarted, dateEnded }) => (
                         <div key={id} className="mt-8">
                             <div className="flex justify-between items-center mb-5 gap-4">
-                                <p className="text-heading-4">
+                                <p className="text-heading-4 tracking-wider">
                                     {companyName} - &nbsp;
                                     <span className="font-light text-battleship-gray">
                                         {position}
@@ -118,14 +118,14 @@ export default function CareerBackground() {
                         <div key={id} className="mt-8">
                             <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-4">
                                 <div>
-                                    <p className="text-heading-4 mb-2">
+                                    <p className="text-heading-4 mb-2 tracking-wider">
                                         {institutionName}
                                         <span className="font-light text-battleship-gray">
                                             {!isUndefined(award) &&
                                                 ` - ${award}`}
                                         </span>
                                     </p>
-                                    <p className="font-light text-battleship-gray">
+                                    <p className="font-light text-battleship-gray tracking-wider">
                                         {course}
                                     </p>
                                 </div>
