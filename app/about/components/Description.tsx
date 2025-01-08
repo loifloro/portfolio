@@ -18,9 +18,9 @@ export default function Description() {
                     </Heading>
                     <p className="text-battleship-gray">
                         Lois is a frontend enthusiast through and through,
-                        whether it would be designing and converting designs I
-                        find it very rewarding. To create something with visual
-                        modality is what I enjoy the most.
+                        whether it would be designing and converting designs is
+                        what he finds very rewarding. To create something with
+                        visual modality is what he enjoy the most.
                     </p>
                 </div>
             </div>
