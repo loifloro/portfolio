@@ -32,7 +32,7 @@ function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
 export default function Header() {
     return (
         <header className="md:px-8 px-4 py-6 dark:mix-blend-difference top-0 absolute w-full">
-            <nav className="flex justify-between mb-4">
+            <nav className="flex items-center justify-between mb-4">
                 <div className="min-w-32">
                     <Logo />
                 </div>
