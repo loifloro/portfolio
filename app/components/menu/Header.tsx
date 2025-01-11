@@ -13,7 +13,7 @@ type HeaderItemProps = {
 
 function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
     return (
-        <li className="text-sm uppercase font-light tracking-widest text-night relative">
+        <li className="text-sm uppercase font-light tracking-widest text-rich-black relative">
             <Link
                 href={url}
                 className={`inline-block ${isComingSoon && "pointer-events-none text-battleship-gray before:w-[calc(100%+20px)] before:h-[.6px] before:bg-battleship-gray before:relative before:block before:right-3 before:top-3"}`}
