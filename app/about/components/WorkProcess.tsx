@@ -15,15 +15,12 @@ export default function WorkProcess() {
                     >
                         Lois in the workplace
                     </Heading>
-
                     <p className="text-battleship-gray">
-                        A viverra ut eget urna amet cras pharetra. Risus vitae
-                        quam libero pellentesque. Vitae nibh mollis platea sem
-                        justo dis ultrices. Aliquet non sit accumsan placerat
-                        varius diam nec. Scelerisque odio nunc pharetra felis
-                        leo sem est pharetra. Adipiscing nisl at eget feugiat
-                        senectus id aliquet. At feugiat est turpis posuere
-                        lorem.
+                        My thought process always start with how the users will
+                        consume my work, how hard it would be for them when they
+                        actually use it, whether it would when designing or
+                        developing the designs from other designers I always
+                        incorporate care in everything that I do.
                     </p>
                 </div>
             </div>
