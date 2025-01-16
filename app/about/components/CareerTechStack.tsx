@@ -34,41 +34,21 @@ export default function CareerTechStack() {
     const tabs = [
         {
             id: 1,
-            name: "Languages",
-            tab: languages,
+            name: "Databases & ORMs",
+            tab: databases,
         },
         {
             id: 2,
-            name: "Frameworks & Libraries",
-            tab: frameworks,
-        },
-        {
-            id: 3,
-            name: "Databases & ORMs",
-            tab: databases,
-        },
-        {
-            id: 4,
-            name: "Technologies & Tools",
-            tab: tools,
-        },
-        {
-            id: 5,
             name: "Languages",
             tab: languages,
         },
         {
-            id: 6,
+            id: 3,
             name: "Frameworks & Libraries",
             tab: frameworks,
         },
         {
-            id: 7,
-            name: "Databases & ORMs",
-            tab: databases,
-        },
-        {
-            id: 8,
+            id: 4,
             name: "Technologies & Tools",
             tab: tools,
         },
@@ -87,19 +67,19 @@ export default function CareerTechStack() {
             </div>
             <div className="flex flex-col items-center mb-32">
                 <div
-                    className="w-2/3 relative overflow-hidden before:absolute before:inline-block before:w-1/3 before:h-[50px] before:bg-gradient-to-r before:from-pale-white  before:to-transparent before:z-10
+                    className="sm:w-2/3 w-full relative overflow-hidden before:absolute before:inline-block before:w-1/3 before:h-[50px] before:bg-gradient-to-r before:from-pale-white  before:to-transparent before:z-10
            after:absolute after:inline-block after:right-0 after:w-1/3 after:h-[50px] after:bg-gradient-to-l after:from-pale-white after:z-10 after:to-transparent after:top-0"
                 >
                     <Swiper
                         slidesPerView={"auto"}
                         centeredSlides={true}
                         spaceBetween={30}
-                        loop={true}
                         mousewheel={true}
                         className="!w-full !h-full mr-30"
                         modules={[Mousewheel, Controller]}
-                        onSwiper={setFirstSwiper}
+                        onSwiper={(swiper) => setFirstSwiper(swiper)}
                         controller={{ control: secondSwiper }}
+                        initialSlide={1}
                     >
                         {tabs.map(({ id, name }) => (
                             <SwiperSlide
@@ -108,7 +88,7 @@ export default function CareerTechStack() {
                             >
                                 {({ isActive }) => (
                                     <p
-                                        className={`uppercase font-light text-center !w-max text-heading-4 tracking-widest mt-3 cursor-grab ${isActive ? "text-rich-black" : "text-battleship-gray"}`}
+                                        className={`uppercase font-light text-center !w-max sm:text-heading-4 tracking-widest mt-3 cursor-grab ${isActive ? "text-rich-black" : "text-battleship-gray"}`}
                                     >
                                         {name}
                                     </p>
@@ -117,11 +97,11 @@ export default function CareerTechStack() {
                         ))}
                     </Swiper>
                     <Swiper
-                        loop={true}
                         mousewheel={true}
                         modules={[Controller, Mousewheel]}
-                        onSwiper={setSecondSwiper}
+                        onSwiper={(swiper) => setSecondSwiper(swiper)}
                         controller={{ control: firstSwiper }}
+                        watchSlidesProgress
                     >
                         {tabs.map(({ id, tab }) => (
                             <SwiperSlide key={id}>
