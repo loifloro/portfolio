@@ -25,7 +25,9 @@ export default function MobileMenu({
 
     useEffect(() => {
         targetRef.current = document.body;
-    }, []);
+
+        targetRef.current.style.overflow = isOpened ? "hidden" : "auto";
+    }, [isOpened]);
 
     if (isNull(targetRef.current)) {
         return null;
@@ -45,7 +47,7 @@ export default function MobileMenu({
                         </div>
                         <button
                             onClick={handleClick}
-                            className="flex gap-1 items-center uppercase font-mono tracking-widest text-night font-light"
+                            className="flex gap-1 items-center uppercase font-mono tracking-widest text-rich-black font-light"
                         >
                             Close
                             <X weight="regular" size={25} />

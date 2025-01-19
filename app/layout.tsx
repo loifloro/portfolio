@@ -1,4 +1,6 @@
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/effect-fade";
 import { Footer } from "./components/Footer";
 import { GeistSans } from "geist/font/sans";
 import { Inter, Space_Mono } from "next/font/google";
@@ -10,6 +12,11 @@ export const metadata: Metadata = {
     title: "Lois Floro | Portfolio",
     description:
         "Lois a passionate in converting designs into real life applications with care and commitment.",
+    openGraph: {
+        title: "Lois Floro | Portfolio",
+        description:
+            "Lois a passionate in converting designs into real life applications with care and commitment.",
+    },
 };
 
 const space_mono = Space_Mono({
@@ -34,9 +41,9 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${GeistSans.variable} ${space_mono.variable} ${inter.variable}`}
+            className={`${GeistSans.className} ${space_mono.variable} ${inter.variable}`}
         >
-            <body className="relative">
+            <body className="relative" id="app">
                 <ProgressBarProvider>
                     <Header />
                     <main>{children}</main>
