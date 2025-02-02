@@ -35,11 +35,11 @@
                         #8e8e9065 65%,
                         #0a0a0a30 100%);
         --gradient-horizontal: linear-gradient(to top,
-                        #0a0a0a 0%,
+                        #ffffff 0%,
                         #8e8e9065 25%,
-                        #ffffff 50%,
+                        #0a0a0a 50%,
                         #8e8e9065 75%,
-                        #0a0a0a 100%);
+                        #ffffff 100%);
         --gradient-to-left: linear-gradient(to left,
                         #fdfdfd 0%,
                         #8e8e9065 45%,
