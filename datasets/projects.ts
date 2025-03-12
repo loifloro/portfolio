@@ -16,10 +16,10 @@ export const projects = <ProjectList>[
             { id: 4, name: "API" },
             { id: 5, name: "Vercel" },
         ],
-        liveUrl: "",
-        githubUrl: "",
-        thumbnail: "",
-        reason: "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
+        liveUrl: "https://yt-playlist-calcu-dev.vercel.app/",
+        githubUrl: "https://github.com/loifloro/yt-playlist-duration",
+        thumbnail: "youtube-playlist-calculator-thumbnail.png",
+        reason: "The project idea comes from the many times I've struggle estimating how much time I can priority binging a certain playlist on Youtube, especially crash courses during when they are still relevant for beginners. By this idea, I wonder why Youtube doesn't easily provide it's playlist duration, well I guess it is organic to how Youtube works to engage audience to binge all available playlists. When I realized that, I concluded that I should do my own, for my own sanity. ",
         mainImg: "project-current-img-placeholder.png",
         pallette: [
             {
@@ -95,28 +95,28 @@ export const projects = <ProjectList>[
         gallery: [
             {
                 id: 1,
-                name: "",
-                fileName: "youtube-playlist-calculator-1.png",
+                name: "Landing Page",
+                fileName: "Mobile Shots-2x.png",
             },
             {
                 id: 2,
-                name: "",
+                name: "Result",
                 fileName: "youtube-playlist-calculator-2.png",
             },
             {
                 id: 3,
-                name: "",
-                fileName: "youtube-playlist-calculator-2.png",
+                name: "Error",
+                fileName: "youtube-playlist-calculator-3.png",
             },
             {
                 id: 4,
-                name: "",
-                fileName: "youtube-playlist-calculator-2.png",
+                name: "Filters",
+                fileName: "youtube-playlist-calculator-4.png",
             },
             {
                 id: 5,
-                name: "",
-                fileName: "youtube-playlist-calculator-2.png",
+                name: "Mobile Shots",
+                fileName: "youtube-playlist-calculator-5.png",
             },
         ],
     },
