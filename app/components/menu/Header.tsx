@@ -49,7 +49,7 @@ export default function Header() {
                 <ArrowLink
                     className="lg:flex hidden"
                     name="Get in Touch"
-                    url="/#contact"
+                    url="#get-in-touch"
                 />
                 <MobileNavigation />
             </nav>

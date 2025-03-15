@@ -52,23 +52,27 @@ export default function Gallery({ items }: GalleryProps) {
                 The Gallery
             </Heading>
             <div className="flex flex-col gap-2">
-                <div className="relative h-[80vh]">
+                <div className="relative aspect-video">
                     <Image
-                        alt=""
-                        src={`/png/${items[currentIndex].fileName}`}
+                        alt={items[currentIndex].name}
+                        src={`/webp/${items[currentIndex].fileName}`}
                         fill
                         objectFit="cover"
+                        quality={100}
                     />
                 </div>
                 <div className="flex justify-between">
-                    <button className="font-mono  uppercase">
-                        View Design Comparison
+                    <button className="font-mono uppercase">
+                        {/* View Design Comparison */}
                     </button>
                     <div className="flex gap-3">
-                        <div onClick={handlePrevious}>
+                        <div
+                            onClick={handlePrevious}
+                            className="cursor-pointer"
+                        >
                             <ArrowLeft size={36} weight="thin" />
                         </div>
-                        <div onClick={handleNext}>
+                        <div onClick={handleNext} className="cursor-pointer">
                             <ArrowRight size={36} weight="thin" />
                         </div>
                     </div>
@@ -78,9 +82,14 @@ export default function Gallery({ items }: GalleryProps) {
                         <div
                             key={id}
                             onClick={() => handleClick(index)}
-                            className={`relative h-1/5 aspect-video w-full ${isEqual(index, currentIndex) && "outline outline-offset-4 outline-2 outline-rich-black"}`}
+                            className={`relative h-1/5 aspect-video w-full cursor-pointer ${isEqual(index, currentIndex) && "outline outline-offset-4 outline-2 outline-rich-black"}`}
                         >
-                            <Image alt={name} src={`/png/${fileName}`} fill />
+                            <Image
+                                alt={name}
+                                src={`/webp/${fileName}`}
+                                quality={100}
+                                fill
+                            />
                         </div>
                     ))}
                 </div>

@@ -22,9 +22,9 @@ export default function ProjectHero({
     return (
         <Container fullWidth withDivider>
             <div
-                className={`min-h-screen grid items-end sm:p-7 p-4 bg-cover bg-no-repeat bg-center`}
+                className={`min-h-screen grid items-end sm:p-7 p-4 bg-cover bg-no-repeat bg-center bg-fixed`}
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/png/${mainImg})`,
+                    backgroundImage: `linear-gradient(var(--project-hero-bg-top), var(--project-hero-bg-bottom)), url(/png/${mainImg})`,
                 }}
             >
                 <div className="grid sm:grid-cols-2 grid-cols-1 grid-rows-[auto_1fr] justify-end items-end gap-4">
