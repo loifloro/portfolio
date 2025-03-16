@@ -28,10 +28,10 @@ function PaletteItem({ name, strokeColor, color }: PaletteItemProps) {
             className="flex flex-col min-h-[430px] justify-end w-full p-2"
             style={{
                 borderTop: `5px solid ${_strokeColor}`,
-                background: `linear-gradient(to top, rgba(17, 17, 17, 0) 0.05%, rgba(31, 31, 35, 0.2) 7.35%, ${_color} 78.87%, ${_color} 99.95%)`,
+                background: `linear-gradient(to top,var(--pale-white-palette-bg) 0.05%, var(--anti-flash-white-palette-bg) 7.35%, ${_color} 78.87%, ${_color} 99.95%)`,
             }}
         >
-            <div>
+            <div className="contrast-50">
                 <p className="font-light" style={{ color: _strokeColor }}>
                     {name}
                 </p>

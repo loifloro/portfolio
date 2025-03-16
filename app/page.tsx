@@ -1,5 +1,4 @@
 import Blogs from "./components/Blogs";
-import FrontendMentor from "./components/FrontendMentor";
 import Hero from "./components/Hero";
 import RecentProjects from "./components/RecentProjects";
 import TechStack from "./components/TechStack";
@@ -11,7 +10,6 @@ export default function Home() {
             <TechStack />
             <RecentProjects />
             <Blogs />
-            <FrontendMentor />
         </div>
     );
 }

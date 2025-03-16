@@ -16,6 +16,7 @@ type RecentProjectItemProps = {
     name: string;
     description: string;
     shortDescription: string;
+    thumbnailUrl?: string;
     tags: { id: number; name: string }[];
     slug: string;
 };
@@ -25,6 +26,7 @@ function RecentProjectItem({
     name,
     description,
     shortDescription,
+    thumbnailUrl,
     tags,
     slug,
 }: RecentProjectItemProps) {
@@ -63,10 +65,11 @@ function RecentProjectItem({
                         className={`hidden lg:block z-10 -mt-14 transition-opacity ease-in duration-300 ${isShown ? "opacity-100" : "opacity-0"}`}
                     >
                         <Image
-                            src="/png/project-img-placeholder.png"
+                            src={`/png/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
                             alt=""
                             height={200}
                             width={365}
+                            quality={100}
                         />
                     </div>
                 </Link>
@@ -99,13 +102,22 @@ export default function RecentProjects() {
                 Projects
             </Heading>
             {projects.map(
-                ({ id, name, description, shortDescription, tags, slug }) => (
+                ({
+                    id,
+                    name,
+                    description,
+                    shortDescription,
+                    tags,
+                    slug,
+                    thumbnail,
+                }) => (
                     <RecentProjectItem
                         key={id}
                         id={id}
                         name={name}
                         description={description}
                         shortDescription={shortDescription}
+                        thumbnailUrl={thumbnail}
                         tags={tags}
                         slug={slug}
                     />
