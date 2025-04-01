@@ -22,11 +22,14 @@ export default {
                 "gradient-horizontal": "var(--gradient-horizontal)",
                 "gradient-to-right": "var(--gradient-to-right)",
                 "gradient-to-left": "var(--gradient-to-left)",
+                "gradient-hero-bg": "var(--gradient-hero-bg)",
+                "gradient-footer-bg": "var(--gradient-footer-bg)",
             },
             fontFamily: {
                 sans: ["var(--font-geist-sans)"],
                 mono: ["var(--font-space-mono)"],
                 inter: ["var(--font-inter)"],
+                grotesk: ["var(--font-space-grotesk)"],
             },
             fontSize: {
                 "heading-1": "var(--heading-1)",

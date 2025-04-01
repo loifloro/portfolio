@@ -8,7 +8,7 @@ export default function NotFound() {
         <Container>
             <div className="min-h-screen flex justify-center items-center min-w-[50%]">
                 <div className="flex flex-col gap-16 min-w-[50%]">
-                    <h1 className="text-9xl font-light bg-gradient-centered bg-clip-text text-transparent max-w-fit mx-auto">
+                    <h1 className="text-9xl font-grotesk font-light bg-gradient-centered bg-clip-text text-transparent max-w-fit mx-auto">
                         404
                     </h1>
                     <div className="flex flex-col items-center">

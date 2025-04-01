@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { Footer } from "./components/Footer";
 import { GeistSans } from "geist/font/sans";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter, Space_Mono, Space_Grotesk } from "next/font/google";
 import Header from "./components/menu/Header";
 import ProgressBarProvider from "utils/providers/ProgressBarProvider";
 import type { Metadata } from "next";
@@ -26,6 +26,13 @@ const space_mono = Space_Mono({
     weight: ["400", "700"],
 });
 
+const space_grotesk = Space_Grotesk({
+    subsets: ["latin"],
+    variable: "--font-space-grotesk",
+    display: "swap",
+    weight: ["300"],
+});
+
 const inter = Inter({
     subsets: ["latin"],
     variable: "--font-inter",
@@ -41,7 +48,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${GeistSans.className} ${space_mono.variable} ${inter.variable}`}
+            className={`${GeistSans.className} ${space_mono.variable} ${space_grotesk.variable} ${inter.variable}`}
         >
             <body className="relative" id="app">
                 <ProgressBarProvider>
