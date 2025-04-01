@@ -19,7 +19,7 @@ function CareerBackgroundSection({
     return (
         <div className="my-36">
             <div className="grid md:grid-cols-3">
-                <span className="text-raisin-black">
+                <span className="text-raisin-black font-grotesk">
                     {number < 10 && "0"}
                     {number}
                 </span>

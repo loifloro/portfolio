@@ -19,7 +19,7 @@ export const projects = <ProjectList>[
         liveUrl: "https://yt-playlist-calcu-dev.vercel.app/",
         githubUrl: "https://github.com/loifloro/yt-playlist-duration",
         thumbnail: "youtube-playlist-calculator-thumbnail.png",
-        reason: "The project idea comes from the many times I've struggle estimating how much time I can priority binging a certain playlist on Youtube, especially crash courses during when they are still relevant for beginners. By this idea, I wonder why Youtube doesn't easily provide it's playlist duration, well I guess it is organic to how Youtube works to engage audience to binge all available playlists. When I realized that, I concluded that I should do my own, for my own sanity. ",
+        reason: "The project idea comes from the many times I've struggle estimating how much time I can prioritize binging a certain playlist on Youtube, especially crash courses when they are still relevant for beginners. By this idea, I wonder why Youtube doesn't easily provide it's playlist duration, well I guess it is organic to how Youtube works to engage audience to binge all available playlists. When I realized that, I concluded that I should do my own, for my own sanity. ",
         mainImg: "youtube-playlist-calculator-hero.jpg",
         pallette: [
             {

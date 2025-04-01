@@ -29,7 +29,7 @@ export default function ProjectHero({
             >
                 <div className="grid sm:grid-cols-2 grid-cols-1 grid-rows-[auto_1fr] justify-end items-end gap-4">
                     <div className="flex flex-col gap-8">
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 font-grotesk">
                             <p>01</p>
                             <span>/</span>
                             <p>05</p>
@@ -49,7 +49,7 @@ export default function ProjectHero({
                                 <Tag key={id} name={name} />
                             ))}
                         </div>
-                        <div className="flex flex-col gap-2 sm:items-end text-sm">
+                        <div className="flex flex-col gap-2 mt-4 sm:mt-0 sm:items-end text-sm">
                             <ArrowLink
                                 name="Visit Live Project"
                                 url={liveUrl}
