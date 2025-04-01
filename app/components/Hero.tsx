@@ -26,7 +26,7 @@ export default function Hero() {
                 <p className="text-battleship-gray font-light max-w-screen-md mx-auto text-pretty">
                     {data.description}
                 </p>
-                <div className="flex justify-center gap-5 sm:gap-8 mt-6 sm:mt-9">
+                <div className="flex justify-center gap-5 sm:gap-8 mt-6 mb-2 sm:mb-0 sm:mt-8">
                     <ArrowLink
                         name="LinkedIn"
                         isWithArrow
@@ -54,9 +54,8 @@ export default function Hero() {
                     alt="Lois Floro"
                     style={{ objectFit: "cover" }}
                     quality={100}
-                    className="dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"
+                    className="dark:brightness-[.30] opacity-80 dark:opacity-100 contrast-[1.3] dark:contrast-[1.05] -z-10"
                 />
-                {/* <div className="h-screen w-full bg-[url(/png/hero-bg.png)] bg-no-repeat bg-local bg-cover bg-bottom dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"></div> */}
             </div>
         </div>
     );

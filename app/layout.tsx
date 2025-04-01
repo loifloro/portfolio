@@ -11,11 +11,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Lois Floro | Portfolio",
     description:
-        "Lois a passionate in converting designs into real life applications with care and commitment.",
+        "Lois is passionate in converting designs into real life applications with care and commitment.",
     openGraph: {
         title: "Lois Floro | Portfolio",
         description:
-            "Lois a passionate in converting designs into real life applications with care and commitment.",
+            "Lois is passionate in converting designs into real life applications with care and commitment.",
     },
 };
 
