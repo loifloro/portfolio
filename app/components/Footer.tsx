@@ -1,6 +1,8 @@
+import ArrowLink from "./button/ArrowLink";
 import Container from "./container/Container";
 import GradientLine from "./GradientLine";
 import Heading from "./display/Heading";
+import Image from "next/image";
 import React from "react";
 import Subtitle from "./display/Subtitle";
 
@@ -14,9 +16,9 @@ export function Credits() {
 
 export function Footer() {
     return (
-        <footer id="get-in-touch" className="mt-44">
+        <footer id="get-in-touch" className="mt-44 relative">
             <Container withDivider dividerType="centered" dividerPosition="top">
-                <div className="mt-24 mb-6">
+                <div className="mt-24 pb-6">
                     <Subtitle>Get in Touch</Subtitle>
                     <Heading
                         element="h2"
@@ -32,8 +34,25 @@ export function Footer() {
                             jloisfloro@gmail.com
                         </h3>
                     </div>
+                    <div className="flex gap-5 sm:gap-8 my-6 sm:mt-9">
+                        <ArrowLink
+                            name="LinkedIn"
+                            isWithArrow
+                            url="https://www.linkedin.com/in/jlfloro/"
+                        />
+                        <ArrowLink
+                            name="X / Twitter"
+                            isWithArrow
+                            url="https://x.com/lois_today"
+                        />
+                        <ArrowLink
+                            name="Github"
+                            isWithArrow
+                            url="https://github.com/loifloro"
+                        />
+                    </div>
                     <GradientLine type="space-between" />
-                    <div className="flex justify-between mt-6">
+                    <div className="flex flex-wrap justify-between mt-6">
                         <p className="font-mono uppercase text-sm text-battleship-gray">
                             All Rights Reserved - {new Date().getUTCFullYear()}
                         </p>
@@ -41,6 +60,16 @@ export function Footer() {
                     </div>
                 </div>
             </Container>
+            <div className="hidden absolute min-h-full w-6/12 right-0 bottom-0 md:flex justify-end flex-col -z-10">
+                <div className="absolute h-full w-full bg-gradient-footer-bg flex items-end"></div>
+                <Image
+                    fill
+                    src="/png/footer-bg.png"
+                    alt="Lois Floro"
+                    style={{ objectFit: "cover" }}
+                    className="dark:brightness-[.40] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05]"
+                />
+            </div>
         </footer>
     );
 }

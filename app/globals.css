@@ -13,7 +13,7 @@
         --project-hero-bg-top: rgba(255, 255, 255, 0.05);
         --project-hero-bg-bottom: rgba(255, 255, 255, 0.6);
         --heading-1: clamp(2.375rem, 1.6268rem + 3.1925vw, 4.5rem);
-        --heading-2: clamp(2.25rem, 1.6338rem + 2.6291vw, 4rem);
+        --heading-2: clamp(2.15rem, 1.4986rem + 2.7793vw, 4rem);
         --heading-3: clamp(1.125rem, 0.8169rem + 1.3146vw, 2rem);
         --heading-4: clamp(1.125rem, 1.0886rem + 0.1794vw, 1.25rem);
         --text-xs: clamp(0.625rem, 0.5886rem + 0.1794vw, 0.75rem);
@@ -55,6 +55,9 @@
         --gradient-hero-bg: linear-gradient(to bottom,
                         rgba(0, 0, 0, 0) 20%,
                         var(--pale-white) 100%);
+        --gradient-footer-bg: linear-gradient(to left,
+                        var(--pale-white) 20%,
+                        rgba(0, 0, 0, 0) 100%);
 }
 
 
@@ -98,6 +101,9 @@
                 --gradient-hero-bg: linear-gradient(to bottom,
                                 rgba(0, 0, 0, 0) 45%,
                                 #212121 100%);
+                --gradient-footer-bg: linear-gradient(to left,
+                                #212121 0%,
+                                rgba(0, 0, 0, 0) 100%);
         }
 
 }

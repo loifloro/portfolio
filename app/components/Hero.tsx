@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ArrowLink from "./button/ArrowLink";
 import GradientLine from "./GradientLine";
 import React from "react";
@@ -47,7 +48,14 @@ export default function Hero() {
                 <div className="absolute h-screen w-full bg-gradient-hero-bg flex items-end">
                     <GradientLine type="centered" />
                 </div>
-                <div className="h-screen w-full bg-[url(/png/hero-bg.png)] bg-no-repeat bg-local bg-cover bg-bottom dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"></div>
+                <Image
+                    fill
+                    src="/png/hero-bg.png"
+                    alt="Lois Floro"
+                    style={{ objectFit: "cover" }}
+                    className="dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"
+                />
+                {/* <div className="h-screen w-full bg-[url(/png/hero-bg.png)] bg-no-repeat bg-local bg-cover bg-bottom dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"></div> */}
             </div>
         </div>
     );
