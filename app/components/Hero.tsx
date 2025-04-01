@@ -53,7 +53,7 @@ export default function Hero() {
                     src="/png/hero-bg.png"
                     alt="Lois Floro"
                     style={{ objectFit: "cover" }}
-                    quality={1}
+                    quality={100}
                     className="dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"
                 />
                 {/* <div className="h-screen w-full bg-[url(/png/hero-bg.png)] bg-no-repeat bg-local bg-cover bg-bottom dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"></div> */}

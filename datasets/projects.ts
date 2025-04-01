@@ -49,7 +49,6 @@ export const projects = <ProjectList>[
                 title: "API Implementation",
                 description:
                     "Researching of Youtube API usages onto how it can get to compute the total video durations of an entire playlist.",
-                side: "right",
             },
             {
                 id: 2,
@@ -63,7 +62,6 @@ export const projects = <ProjectList>[
                 title: "Tools Research",
                 description:
                     "One of the goals of this project is to explore new technologies such as the useActionState of React, Tailwind 4.0, Vite etc.",
-                side: "right",
             },
             {
                 id: 4,
@@ -77,7 +75,6 @@ export const projects = <ProjectList>[
                 title: "Deployment",
                 description:
                     "As stated above, one of the goals of this project is to explore technologies I haven't used before, so I decided to deploy this project on Vercel.",
-                side: "right",
             },
         ],
         gallery: [
@@ -168,7 +165,6 @@ export const projects = <ProjectList>[
                 title: "Mood Boarding",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
             },
             {
                 id: 2,
@@ -182,7 +178,6 @@ export const projects = <ProjectList>[
                 title: "Id felis",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
             },
             {
                 id: 4,
@@ -196,7 +191,6 @@ export const projects = <ProjectList>[
                 title: "Vitae nunc at",
                 description:
                     "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
             },
         ],
         gallery: [
@@ -227,332 +221,332 @@ export const projects = <ProjectList>[
             },
         ],
     },
-    {
-        id: 3,
-        slug: "patient-record-system",
-        name: "Patient Record System",
-        shortDescription:
-            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
-        description:
-            "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-        tags: [
-            { id: 1, name: "Web Development" },
-            { id: 2, name: "UI Design" },
-            { id: 3, name: "React JS" },
-            { id: 4, name: "API" },
-            { id: 5, name: "Vercel" },
-        ],
-        liveUrl: "",
-        githubUrl: "",
-        thumbnail: "",
-        mainImg: "project-current-img-placeholder.png",
-        reason: "",
-        pallette: [
-            {
-                id: 1,
-                name: "Gold",
-                strokeCode: "FFD500",
-                colorCode: "AA931E",
-            },
-            {
-                id: 2,
-                name: "Rose Ebony",
-                strokeCode: "392020",
-                colorCode: "543636",
-            },
-            {
-                id: 3,
-                name: "Misty Rose",
-                strokeCode: "FFFFFF",
-                colorCode: "EBD2D2",
-            },
-            {
-                id: 4,
-                name: "Blood Red",
-                strokeCode: "500000",
-                colorCode: "6E0909",
-            },
-            {
-                id: 5,
-                name: "Rosy Brown",
-                strokeCode: "AC7070",
-                colorCode: "B88A8A",
-            },
-        ],
-        palletteDescription:
-            "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
-        process: [
-            {
-                id: 1,
-                title: "Mood Boarding",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-            },
-        ],
-        gallery: [
-            {
-                id: 1,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 2,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 3,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 5,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 6,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-        ],
-    },
-    {
-        id: 4,
-        slug: "css-zen-garden",
-        name: "CSS Zen Garden",
-        shortDescription:
-            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
-        description:
-            "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-        tags: [
-            { id: 1, name: "Web Development" },
-            { id: 2, name: "UI Design" },
-            { id: 3, name: "React JS" },
-            { id: 4, name: "API" },
-            { id: 5, name: "Vercel" },
-        ],
-        liveUrl: "",
-        githubUrl: "",
-        thumbnail: "",
-        mainImg: "project-current-img-placeholder.png",
-        reason: "",
-        pallette: [
-            {
-                id: 1,
-                name: "Gold",
-                strokeCode: "FFD500",
-                colorCode: "AA931E",
-            },
-            {
-                id: 2,
-                name: "Rose Ebony",
-                strokeCode: "392020",
-                colorCode: "543636",
-            },
-            {
-                id: 3,
-                name: "Misty Rose",
-                strokeCode: "FFFFFF",
-                colorCode: "EBD2D2",
-            },
-            {
-                id: 4,
-                name: "Blood Red",
-                strokeCode: "500000",
-                colorCode: "6E0909",
-            },
-            {
-                id: 5,
-                name: "Rosy Brown",
-                strokeCode: "AC7070",
-                colorCode: "B88A8A",
-            },
-        ],
-        palletteDescription:
-            "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
-        process: [
-            {
-                id: 1,
-                title: "Mood Boarding",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
-            },
-            {
-                id: 2,
-                title: "Nunc tempor",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "left",
-            },
-            {
-                id: 3,
-                title: "Id felis",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
-            },
-            {
-                id: 4,
-                title: "Sociis urna diam",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "left",
-            },
-            {
-                id: 5,
-                title: "Vitae nunc at",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
-            },
-        ],
-        gallery: [
-            {
-                id: 1,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 2,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 3,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 5,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 6,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-        ],
-    },
-    {
-        id: 5,
-        slug: "quizzard",
-        name: "Quizzard",
-        shortDescription:
-            "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
-        description:
-            "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-        tags: [
-            { id: 1, name: "Web Development" },
-            { id: 2, name: "UI Design" },
-            { id: 3, name: "React JS" },
-            { id: 4, name: "API" },
-            { id: 5, name: "Vercel" },
-        ],
-        liveUrl: "",
-        githubUrl: "",
-        thumbnail: "",
-        mainImg: "project-current-img-placeholder.png",
-        reason: "",
-        pallette: [
-            {
-                id: 1,
-                name: "Gold",
-                strokeCode: "FFD500",
-                colorCode: "AA931E",
-            },
-            {
-                id: 2,
-                name: "Rose Ebony",
-                strokeCode: "392020",
-                colorCode: "543636",
-            },
-            {
-                id: 3,
-                name: "Misty Rose",
-                strokeCode: "FFFFFF",
-                colorCode: "EBD2D2",
-            },
-            {
-                id: 4,
-                name: "Blood Red",
-                strokeCode: "500000",
-                colorCode: "6E0909",
-            },
-            {
-                id: 5,
-                name: "Rosy Brown",
-                strokeCode: "AC7070",
-                colorCode: "B88A8A",
-            },
-        ],
-        palletteDescription:
-            "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
-        process: [
-            {
-                id: 1,
-                title: "Mood Boarding",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
-            },
-            {
-                id: 2,
-                title: "Nunc tempor",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "left",
-            },
-            {
-                id: 3,
-                title: "Id felis",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
-            },
-            {
-                id: 4,
-                title: "Sociis urna diam",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "left",
-            },
-            {
-                id: 5,
-                title: "Vitae nunc at",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-                side: "right",
-            },
-        ],
-        gallery: [
-            {
-                id: 1,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 2,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 3,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 5,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 6,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-        ],
-    },
+    // {
+    //     id: 3,
+    //     slug: "patient-record-system",
+    //     name: "Patient Record System",
+    //     shortDescription:
+    //         "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
+    //     description:
+    //         "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
+    //     tags: [
+    //         { id: 1, name: "Web Development" },
+    //         { id: 2, name: "UI Design" },
+    //         { id: 3, name: "React JS" },
+    //         { id: 4, name: "API" },
+    //         { id: 5, name: "Vercel" },
+    //     ],
+    //     liveUrl: "",
+    //     githubUrl: "",
+    //     thumbnail: "",
+    //     mainImg: "project-current-img-placeholder.png",
+    //     reason: "",
+    //     pallette: [
+    //         {
+    //             id: 1,
+    //             name: "Gold",
+    //             strokeCode: "FFD500",
+    //             colorCode: "AA931E",
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "Rose Ebony",
+    //             strokeCode: "392020",
+    //             colorCode: "543636",
+    //         },
+    //         {
+    //             id: 3,
+    //             name: "Misty Rose",
+    //             strokeCode: "FFFFFF",
+    //             colorCode: "EBD2D2",
+    //         },
+    //         {
+    //             id: 4,
+    //             name: "Blood Red",
+    //             strokeCode: "500000",
+    //             colorCode: "6E0909",
+    //         },
+    //         {
+    //             id: 5,
+    //             name: "Rosy Brown",
+    //             strokeCode: "AC7070",
+    //             colorCode: "B88A8A",
+    //         },
+    //     ],
+    //     palletteDescription:
+    //         "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
+    //     process: [
+    //         {
+    //             id: 1,
+    //             title: "Mood Boarding",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //         },
+    //     ],
+    //     gallery: [
+    //         {
+    //             id: 1,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 3,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 5,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 6,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: 4,
+    //     slug: "css-zen-garden",
+    //     name: "CSS Zen Garden",
+    //     shortDescription:
+    //         "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
+    //     description:
+    //         "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
+    //     tags: [
+    //         { id: 1, name: "Web Development" },
+    //         { id: 2, name: "UI Design" },
+    //         { id: 3, name: "React JS" },
+    //         { id: 4, name: "API" },
+    //         { id: 5, name: "Vercel" },
+    //     ],
+    //     liveUrl: "",
+    //     githubUrl: "",
+    //     thumbnail: "",
+    //     mainImg: "project-current-img-placeholder.png",
+    //     reason: "",
+    //     pallette: [
+    //         {
+    //             id: 1,
+    //             name: "Gold",
+    //             strokeCode: "FFD500",
+    //             colorCode: "AA931E",
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "Rose Ebony",
+    //             strokeCode: "392020",
+    //             colorCode: "543636",
+    //         },
+    //         {
+    //             id: 3,
+    //             name: "Misty Rose",
+    //             strokeCode: "FFFFFF",
+    //             colorCode: "EBD2D2",
+    //         },
+    //         {
+    //             id: 4,
+    //             name: "Blood Red",
+    //             strokeCode: "500000",
+    //             colorCode: "6E0909",
+    //         },
+    //         {
+    //             id: 5,
+    //             name: "Rosy Brown",
+    //             strokeCode: "AC7070",
+    //             colorCode: "B88A8A",
+    //         },
+    //     ],
+    //     palletteDescription:
+    //         "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
+    //     process: [
+    //         {
+    //             id: 1,
+    //             title: "Mood Boarding",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //
+    //         },
+    //         {
+    //             id: 2,
+    //             title: "Nunc tempor",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //             side: "left",
+    //         },
+    //         {
+    //             id: 3,
+    //             title: "Id felis",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //
+    //         },
+    //         {
+    //             id: 4,
+    //             title: "Sociis urna diam",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //             side: "left",
+    //         },
+    //         {
+    //             id: 5,
+    //             title: "Vitae nunc at",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //
+    //         },
+    //     ],
+    //     gallery: [
+    //         {
+    //             id: 1,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 3,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 5,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 6,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: 5,
+    //     slug: "quizzard",
+    //     name: "Quizzard",
+    //     shortDescription:
+    //         "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
+    //     description:
+    //         "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
+    //     tags: [
+    //         { id: 1, name: "Web Development" },
+    //         { id: 2, name: "UI Design" },
+    //         { id: 3, name: "React JS" },
+    //         { id: 4, name: "API" },
+    //         { id: 5, name: "Vercel" },
+    //     ],
+    //     liveUrl: "",
+    //     githubUrl: "",
+    //     thumbnail: "",
+    //     mainImg: "project-current-img-placeholder.png",
+    //     reason: "",
+    //     pallette: [
+    //         {
+    //             id: 1,
+    //             name: "Gold",
+    //             strokeCode: "FFD500",
+    //             colorCode: "AA931E",
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "Rose Ebony",
+    //             strokeCode: "392020",
+    //             colorCode: "543636",
+    //         },
+    //         {
+    //             id: 3,
+    //             name: "Misty Rose",
+    //             strokeCode: "FFFFFF",
+    //             colorCode: "EBD2D2",
+    //         },
+    //         {
+    //             id: 4,
+    //             name: "Blood Red",
+    //             strokeCode: "500000",
+    //             colorCode: "6E0909",
+    //         },
+    //         {
+    //             id: 5,
+    //             name: "Rosy Brown",
+    //             strokeCode: "AC7070",
+    //             colorCode: "B88A8A",
+    //         },
+    //     ],
+    //     palletteDescription:
+    //         "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
+    //     process: [
+    //         {
+    //             id: 1,
+    //             title: "Mood Boarding",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //
+    //         },
+    //         {
+    //             id: 2,
+    //             title: "Nunc tempor",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //             side: "left",
+    //         },
+    //         {
+    //             id: 3,
+    //             title: "Id felis",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //
+    //         },
+    //         {
+    //             id: 4,
+    //             title: "Sociis urna diam",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //             side: "left",
+    //         },
+    //         {
+    //             id: 5,
+    //             title: "Vitae nunc at",
+    //             description:
+    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+    //
+    //         },
+    //     ],
+    //     gallery: [
+    //         {
+    //             id: 1,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 3,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 5,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //         {
+    //             id: 6,
+    //             name: "",
+    //             fileName: "project-current-img-placeholder.png",
+    //         },
+    //     ],
+    // },
 ];
