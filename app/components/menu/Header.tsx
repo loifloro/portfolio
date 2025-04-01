@@ -13,25 +13,27 @@ type HeaderItemProps = {
 
 function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
     return (
-        <li className="text-sm uppercase font-light tracking-widest text-rich-black relative">
-            <Link
-                href={url}
+        <Link
+            href={url}
+            className="text-sm uppercase font-light tracking-widest text-rich-black relative"
+        >
+            <li
                 className={`inline-block ${isComingSoon && "pointer-events-none text-battleship-gray before:w-[calc(100%+20px)] before:h-[.6px] before:bg-battleship-gray before:relative before:block before:right-3 before:top-3"}`}
             >
                 {name}
-            </Link>
+            </li>
             {isComingSoon && (
                 <span className="min-w-max absolute float-right font-mono font-thin text-xs bottom-4">
                     Coming Soon!
                 </span>
             )}
-        </li>
+        </Link>
     );
 }
 
 export default function Header() {
     return (
-        <header className="md:px-8 px-4 py-6 dark:mix-blend-difference top-0 absolute w-full">
+        <header className="md:px-8 px-4 py-6 dark:mix-blend-difference top-0 fixed w-full z-10">
             <nav className="flex items-center justify-between mb-4">
                 <div className="min-w-32">
                     <Logo />

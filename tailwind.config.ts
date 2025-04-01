@@ -22,6 +22,7 @@ export default {
                 "gradient-horizontal": "var(--gradient-horizontal)",
                 "gradient-to-right": "var(--gradient-to-right)",
                 "gradient-to-left": "var(--gradient-to-left)",
+                "gradient-hero-bg": "var(--gradient-hero-bg)",
             },
             fontFamily: {
                 sans: ["var(--font-geist-sans)"],
