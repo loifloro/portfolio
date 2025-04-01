@@ -47,7 +47,7 @@ export default function Hero() {
                 <div className="absolute h-screen w-full bg-gradient-hero-bg flex items-end">
                     <GradientLine type="centered" />
                 </div>
-                <div className="h-screen w-full bg-[url(/png/hero-bg.png)] bg-no-repeat bg-local bg-cover bg-bottom dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"></div>
+                <div className="h-screen w-full bg-[url(/png/hero-img-6.png)] bg-no-repeat bg-local bg-cover bg-bottom dark:brightness-[.30] opacity-70 dark:opacity-100 contrast-[1.2] dark:contrast-[1.05] -z-10"></div>
             </div>
         </div>
     );
