@@ -6,7 +6,8 @@ import Heading from "@/components/display/Heading";
 import Image from "next/image";
 import React, { useState } from "react";
 import Subtitle from "@/components/display/Subtitle";
-import { isEqual } from "lodash";
+import { isEqual, last } from "lodash";
+import { usePathname } from "next/navigation";
 
 type GalleryProps = {
     items: {
@@ -18,6 +19,7 @@ type GalleryProps = {
 
 export default function Gallery({ items }: GalleryProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const pathnames = usePathname().split("/");
 
     const handleClick = (index: number) => {
         setCurrentIndex(index);
@@ -55,7 +57,7 @@ export default function Gallery({ items }: GalleryProps) {
                 <div className="relative aspect-video">
                     <Image
                         alt={items[currentIndex].name}
-                        src={`/webp/${items[currentIndex].fileName}`}
+                        src={`/webp/${last(pathnames)}/${items[currentIndex].fileName}`}
                         fill
                         objectFit="cover"
                         quality={100}
@@ -86,7 +88,7 @@ export default function Gallery({ items }: GalleryProps) {
                         >
                             <Image
                                 alt={name}
-                                src={`/webp/${fileName}`}
+                                src={`/webp/${last(pathnames)}/${fileName}`}
                                 quality={100}
                                 fill
                             />

@@ -55,7 +55,7 @@ export default function CareerTechStack() {
     ];
 
     return (
-        <Container withDivider>
+        <Container id="tech-stack" withDivider>
             <div className="text-center mb-24">
                 <Subtitle size="sm">Tools Used</Subtitle>
                 <Heading

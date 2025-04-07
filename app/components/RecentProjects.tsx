@@ -65,8 +65,8 @@ function RecentProjectItem({
                         className={`hidden lg:block z-10 -mt-14 transition-opacity ease-in duration-300 ${isShown ? "opacity-100" : "opacity-0"}`}
                     >
                         <Image
-                            src={`/png/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
-                            alt=""
+                            src={`/webp/${slug}/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
+                            alt={name}
                             height={200}
                             width={365}
                             quality={100}

@@ -17,8 +17,6 @@ export default function ArrowLink({
     url,
     ...props
 }: ArrowLinkProps) {
-    console.log(url, isAbsoluteUrl(url));
-
     return (
         <Link
             href={url}

@@ -36,22 +36,9 @@ export default function Description() {
                     </div>
                     <div className="flex flex-wrap gap-5 sm:gap-8 sm:mt-12">
                         <ArrowLink
-                            name="LinkedIn"
+                            name="View Tech Stack"
                             isWithArrow
-                            url="https://www.linkedin.com/in/jlfloro/"
-                            target="_blank"
-                        />
-                        <ArrowLink
-                            name="X / Twitter"
-                            isWithArrow
-                            url="https://x.com/lois_today"
-                            target="_blank"
-                        />
-                        <ArrowLink
-                            name="Github"
-                            isWithArrow
-                            url="https://github.com/loifloro"
-                            target="_blank"
+                            url="#tech-stack"
                         />
                     </div>
                 </div>
