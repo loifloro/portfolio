@@ -18,7 +18,7 @@ export const projects = <ProjectList>[
         ],
         liveUrl: "https://yt-playlist-calcu-dev.vercel.app/",
         githubUrl: "https://github.com/loifloro/yt-playlist-duration",
-        thumbnail: "youtube-playlist-calculator-thumbnail.png",
+        thumbnail: "thumbnail.webp",
         reason: "The project idea comes from the many times I've struggle estimating how much time I can prioritize binging a certain playlist on Youtube, especially crash courses when they are still relevant for beginners. By this idea, I wonder why Youtube doesn't easily provide it's playlist duration, well I guess it is organic to how Youtube works to engage audience to binge all available playlists. When I realized that, I concluded that I should do my own, for my own sanity. ",
         mainImg: "youtube-playlist-calculator-hero.jpg",
         pallette: [
@@ -42,7 +42,7 @@ export const projects = <ProjectList>[
             },
         ],
         palletteDescription:
-            "The goal of this project is to how it can simple while doing enough to capture the user's attention, as well to build an illusion of credibility by manipulating the Youtube UI Design to this project.",
+            "The goal of this project is to how it can be simple while doing enough to capture the user's attention, as well to build an illusion of credibility by manipulating the Youtube UI Design to this project.",
         process: [
             {
                 id: 1,
@@ -81,27 +81,27 @@ export const projects = <ProjectList>[
             {
                 id: 1,
                 name: "Landing Page",
-                fileName: "youtube-playlist-calculator-1.webp",
+                fileName: "1.webp",
             },
             {
                 id: 2,
                 name: "Result",
-                fileName: "youtube-playlist-calculator-2.webp",
+                fileName: "2.webp",
             },
             {
                 id: 3,
                 name: "Error",
-                fileName: "youtube-playlist-calculator-3.webp",
+                fileName: "3.webp",
             },
             {
                 id: 4,
                 name: "Filters",
-                fileName: "youtube-playlist-calculator-4.webp",
+                fileName: "4.webp",
             },
             {
                 id: 5,
                 name: "Mobile Shots",
-                fileName: "youtube-playlist-calculator-5.webp",
+                fileName: "5.webp",
             },
         ],
     },
@@ -110,114 +110,103 @@ export const projects = <ProjectList>[
         slug: "space-tourism",
         name: "Space Tourism",
         shortDescription:
-            "A Frontend Mentor challenge that focuses on building a responsive website and animations.",
+            "A Frontend Mentor challenge that focuses on building a responsive website and powered by animations.",
         description:
-            "A Frontend Mentor challenge that focuses on building a responsive website and animations. This challenge explores the routing in React and the use of Github Actions for deployment.",
+            "A Frontend Mentor challenge that focuses on building a responsive website and powered by animations. This challenge explores the routing in React and the use of Github Actions for deployment.",
         tags: [
             { id: 1, name: "Responsive Design" },
             { id: 2, name: "Animation" },
             { id: 3, name: "Github Action" },
-            { id: 4, name: "React Router" },
-            { id: 5, name: "Frontend Mentor" },
+            { id: 4, name: "Github Pages" },
+            { id: 5, name: "React Router" },
+            { id: 6, name: "Axios" },
         ],
-        liveUrl: "",
-        githubUrl: "",
-        thumbnail: "",
-        mainImg: "project-current-img-placeholder.png",
-        reason: "",
+        liveUrl: "https://loifloro.github.io/space-tourism/",
+        githubUrl: "https://github.com/loifloro/space-tourism",
+        thumbnail: "thumbnail.webp",
+        mainImg: "space-tourism-hero.jpg",
+        reason: "The goal of this project is to build a fully responsive website at the same time consuming a json file to populate the page and be able to toggle between the tabs to see new information.",
         pallette: [
             {
                 id: 1,
-                name: "Gold",
-                strokeCode: "FFD500",
-                colorCode: "AA931E",
+                name: "Rich Black",
+                strokeCode: "162053",
+                colorCode: "0B0D17",
             },
             {
                 id: 2,
-                name: "Rose Ebony",
-                strokeCode: "392020",
-                colorCode: "543636",
+                name: "Periwinkle",
+                strokeCode: "91A0F6",
+                colorCode: "D0D6F9",
             },
             {
                 id: 3,
-                name: "Misty Rose",
-                strokeCode: "FFFFFF",
-                colorCode: "EBD2D2",
-            },
-            {
-                id: 4,
-                name: "Blood Red",
-                strokeCode: "500000",
-                colorCode: "6E0909",
-            },
-            {
-                id: 5,
-                name: "Rosy Brown",
-                strokeCode: "AC7070",
-                colorCode: "B88A8A",
+                name: "White",
+                strokeCode: "FFF7F7",
+                colorCode: "FFFFFF",
             },
         ],
         palletteDescription:
-            "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
+            "The pallette uses space colors to emulate the feel that the user is traveling in space. It gives illusion of dark night skies with the stars shining through.",
         process: [
             {
                 id: 1,
-                title: "Mood Boarding",
+                title: "React Router Setup",
                 description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                    "This is my first time using React Router and was quite overwhelmed how different it was as a framework. I had a struggle deploying it to Github Pages via Github Actions but was resolved by configuring it for client side rendering and updating the project basename.",
             },
             {
                 id: 2,
-                title: "Nunc tempor",
+                title: "Mobile First Workflow",
                 description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                    "When developing this project, my goal is to fully utilize mobile first workflow to have an advantage adjusting the layout when the viewport width increases.",
                 side: "left",
             },
             {
                 id: 3,
-                title: "Id felis",
+                title: "Fetching Using Axios",
                 description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                    "One of the goals of this project is to learn the basics of a Github Workflow, so I created a Github Action for deployment to Github Pages. I have learned different parts that consist a Github Action.",
             },
             {
                 id: 4,
-                title: "Sociis urna diam",
+                title: "Creating Github Workflow",
                 description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+                    "One of the goals of this project is to learn the basics of a Github Workflow, so I created a Github Action for deployment to Github Pages. I have learned different parts that consist a Github Action.",
                 side: "left",
             },
-            {
-                id: 5,
-                title: "Vitae nunc at",
-                description:
-                    "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-            },
+            // {
+            //     id: 5,
+            //     title: "Vitae nunc at",
+            //     description:
+            //         "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
+            // },
         ],
         gallery: [
             {
                 id: 1,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
+                name: "Home",
+                fileName: "1.webp",
             },
             {
                 id: 2,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
+                name: "Destination",
+                fileName: "2.webp",
             },
             {
                 id: 3,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
+                name: "Crew",
+                fileName: "3.webp",
+            },
+            {
+                id: 4,
+                name: "Destination",
+                fileName: "4.webp",
             },
             {
                 id: 5,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
-            },
-            {
-                id: 6,
-                name: "",
-                fileName: "project-current-img-placeholder.png",
+                name: "Mobile Shots",
+                fileName: "5.webp",
             },
         ],
     },

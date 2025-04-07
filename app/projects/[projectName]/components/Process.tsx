@@ -24,7 +24,7 @@ export default function Process({ processes }: ProcessProps) {
                 {processes.map(({ id, title, description }, index) => (
                     <div
                         key={id}
-                        className="grid grid-rows-1 sm:gap-10 row-start-1 sm:grid-cols-[1fr_auto_1fr] grid-cols-[auto_1fr]"
+                        className="grid grid-rows-1 mb-4 sm:gap-10 row-start-1 sm:grid-cols-[1fr_auto_1fr] grid-cols-[auto_1fr]"
                     >
                         <div className="col-start-2 flex flex-col">
                             <div className="col-start-2 h-11 w-11 rounded-full overflow-hidden p-px bg-gradient-centered">
@@ -43,7 +43,7 @@ export default function Process({ processes }: ProcessProps) {
                         >
                             <Heading
                                 element="h4"
-                                className="text-heading-4 leading-heading-4 tracking-widest"
+                                className="text-heading-4 leading-heading-3 tracking-widest"
                             >
                                 {title}
                             </Heading>
