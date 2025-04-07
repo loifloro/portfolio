@@ -124,7 +124,7 @@ export const projects = <ProjectList>[
         liveUrl: "https://loifloro.github.io/space-tourism/",
         githubUrl: "https://github.com/loifloro/space-tourism",
         thumbnail: "thumbnail.webp",
-        mainImg: "project-current-img-placeholder.png",
+        mainImg: "space-tourism-hero.jpg",
         reason: "The goal of this project is to build a fully responsive website at the same time consuming a json file to populate the page and be able to toggle between the tabs to see new information.",
         pallette: [
             {
