@@ -22,7 +22,7 @@ export default function ProjectHero({
     return (
         <Container fullWidth withDivider>
             <div
-                className="min-h-screen grid items-end sm:p-7 p-4 bg-cover bg-no-repeat bg-center bg-fixed"
+                className="min-h-screen grid items-end sm:p-7 p-4 bg-cover bg-no-repeat bg-center bg-local"
                 style={{
                     backgroundImage: `linear-gradient(var(--project-hero-bg-top), var(--project-hero-bg-bottom)), url(/png/${mainImg})`,
                 }}
