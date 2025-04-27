@@ -43,7 +43,7 @@ export default function Process({ processes }: ProcessProps) {
                         >
                             <Heading
                                 element="h4"
-                                className="text-heading-4 leading-heading-3 tracking-widest"
+                                className="text-heading-4 leading-heading-3 md:leading-heading-4 tracking-widest mb-4"
                             >
                                 {title}
                             </Heading>

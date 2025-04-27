@@ -34,11 +34,15 @@ function RecentProjectItem({
     const projectPage = `projects\/${slug}`;
 
     const handleMouseEnter = () => {
-        setIsShown(true);
+        setTimeout(() => {
+            setIsShown(true);
+        }, 400);
     };
 
     const handleMouseLeave = () => {
-        setIsShown(false);
+        setTimeout(() => {
+            setIsShown(false);
+        }, 400);
     };
 
     return (
@@ -48,7 +52,7 @@ function RecentProjectItem({
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="sm:max-w-[55%]">
+                <div className="sm:max-w-[55%] mb-10 md:mb-0">
                     <Heading
                         element="h4"
                         className="uppercase text-rich-black text-heading-3 tracking-heading-3 sm:font-normal font-medium mb-2"
@@ -62,7 +66,7 @@ function RecentProjectItem({
                 </div>
                 <Link href={projectPage}>
                     <div
-                        className={`hidden lg:block z-10 -mt-14 transition-opacity ease-in duration-300 ${isShown ? "opacity-100" : "opacity-0"}`}
+                        className={`sm:hidden lg:block z-10 md:-mt-14 transition-opacity ease-in duration-300 ${isShown ? "lg:opacity-100" : "lg:opacity-0"}`}
                     >
                         <Image
                             src={`/webp/${slug}/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}

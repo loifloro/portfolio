@@ -4,6 +4,7 @@ import GradientLine from "@/components/GradientLine";
 import React, { ReactNode } from "react";
 import Subtitle from "@/components/display/Subtitle";
 import Heading from "@/components/display/Heading";
+import Image from "next/image";
 
 type CareerBackgroundSectionProps = {
     name: string;
@@ -41,16 +42,18 @@ export default function CareerBackground() {
     const workExperience = [
         {
             id: 1,
-            companyName: "Business Tree PH",
+            companyName: "The Golden Bell Future",
             position: "Frontend Developer / Designer",
             dateStarted: 2023,
             dateEnded: "Present",
+            logoPath: "/svg/golden-bell-future-logo.svg",
         },
         {
             id: 2,
             companyName: "Axandra Ventures",
             position: "QA Intern",
             dateStarted: 2023,
+            logoPath: "/png/axadra-logo.png",
         },
     ];
     const educationBackground = [
@@ -61,6 +64,7 @@ export default function CareerBackground() {
             award: "Cum Laude",
             dateStarted: 2019,
             dateEnded: 2023,
+            logoPath: "/png/cvsu-logo.png",
         },
         {
             id: 2,
@@ -68,6 +72,7 @@ export default function CareerBackground() {
             course: "TVL Strand  of Computer Programming",
             dateStarted: 2017,
             dateEnded: 2019,
+            logoPath: "/png/pcu-logo.png",
         },
     ];
 
@@ -82,16 +87,35 @@ export default function CareerBackground() {
             </Heading>
             <CareerBackgroundSection number={1} name="Experience">
                 {workExperience.map(
-                    ({ id, companyName, position, dateStarted, dateEnded }) => (
-                        <div key={id} className="mt-8">
-                            <div className="flex justify-between items-center mb-5 gap-4">
-                                <p className="text-heading-4 tracking-wider">
-                                    {companyName} - &nbsp;
-                                    <span className="font-light text-battleship-gray">
-                                        {position}
-                                    </span>
-                                </p>
-                                <p className="uppercase tracking-widest text-right">
+                    ({
+                        id,
+                        companyName,
+                        position,
+                        dateStarted,
+                        dateEnded,
+                        logoPath,
+                    }) => (
+                        <div key={id} className="mt-10">
+                            <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-16">
+                                <div>
+                                    <Image
+                                        src={logoPath}
+                                        alt={companyName}
+                                        width={64}
+                                        height={64}
+                                        className="mb-4 drop-shadow-xl grayscale-[.25]"
+                                    />
+                                    <p className="text-heading-4 tracking-wider">
+                                        {companyName}{" "}
+                                        <span className="hidden md:inline">
+                                            - &nbsp;
+                                        </span>
+                                        <span className="font-light text-battleship-gray block md:inline">
+                                            {position}
+                                        </span>
+                                    </p>
+                                </div>
+                                <p className="uppercase tracking-widest text-right font-grotesk">
                                     {dateStarted}{" "}
                                     {!isUndefined(dateEnded) && "- "}
                                     {!isNull(dateEnded) && dateEnded}
@@ -114,10 +138,18 @@ export default function CareerBackground() {
                         course,
                         dateStarted,
                         dateEnded,
+                        logoPath,
                     }) => (
-                        <div key={id} className="mt-8">
-                            <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-4">
+                        <div key={id} className="mt-10">
+                            <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-16">
                                 <div>
+                                    <Image
+                                        src={logoPath}
+                                        alt={institutionName}
+                                        width={64}
+                                        height={64}
+                                        className="mb-4 drop-shadow-xl grayscale-[.25]"
+                                    />
                                     <p className="text-heading-4 mb-2 tracking-wider">
                                         {institutionName}
                                         <span className="font-light text-battleship-gray">
@@ -129,7 +161,7 @@ export default function CareerBackground() {
                                         {course}
                                     </p>
                                 </div>
-                                <p className="uppercase tracking-widest text-right">
+                                <p className="uppercase tracking-widest text-right font-grotesk">
                                     {dateStarted}{" "}
                                     {!isUndefined(dateEnded) && "- "}
                                     {!isNull(dateEnded) && dateEnded}
