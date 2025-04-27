@@ -13,7 +13,7 @@ export default function Hero() {
     };
 
     return (
-        <div className="min-h-svh text-center grid items-end md:p-12 p-4 relative">
+        <div className="h-svh text-center grid items-end md:p-12 p-4 relative">
             <div>
                 <div className="flex gap-3 sm:gap-2 justify-center items-center">
                     <p className="before:inline-block before:h-8 before:w-px before:bg-gradient-horizontal font-light font-mono uppercase tracking-wider flex gap-2 justify-center items-center md:text-base text-sm">
