@@ -46,6 +46,7 @@ export default async function Page({ params }: Props) {
                 githubUrl={project.githubUrl}
                 liveUrl={project.liveUrl}
                 mainImg={project.mainImg}
+                id={project.id}
             />
             <Rationale
                 description={project.description}

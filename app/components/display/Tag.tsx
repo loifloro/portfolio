@@ -6,7 +6,7 @@ type TagProps = {
 
 export default function Tag({ name }: TagProps) {
     return (
-        <div className="uppercase font-inter text-rich-black font-light md:text-base text-sm leading-base tracking-wide border-solid border-rich-black border-[.5px] rounded-full px-2 py-[2px] max-w-fit">
+        <div className="uppercase font-inter text-rich-black font-light md:text-base text-sm leading-base tracking-wide border-solid border-rich-black border-[.5px] rounded-full px-2 py-[2px] max-w-fit text-nowrap">
             {name}
         </div>
     );

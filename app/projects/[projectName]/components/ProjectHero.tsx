@@ -10,6 +10,7 @@ type ProjectHeroProps = {
     liveUrl: string;
     githubUrl: string;
     mainImg: string;
+    id: number;
 };
 
 export default function ProjectHero({
@@ -18,6 +19,7 @@ export default function ProjectHero({
     liveUrl,
     mainImg,
     tags,
+    id,
 }: ProjectHeroProps) {
     return (
         <Container fullWidth withDivider>
@@ -30,7 +32,7 @@ export default function ProjectHero({
                 <div className="grid sm:grid-cols-2 grid-cols-1 grid-rows-[auto_1fr] justify-end items-end gap-4">
                     <div className="flex flex-col gap-8">
                         <div className="flex gap-4 font-grotesk">
-                            <p>01</p>
+                            <p>0{id}</p>
                             <span>/</span>
                             <p>05</p>
                         </div>

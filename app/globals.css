@@ -116,6 +116,17 @@ body {
         text-wrap: pretty;
 }
 
+::-moz-selection {
+        background: var(--rich-black);
+        color: var(--anti-flash-white);
+
+}
+
+::selection {
+        background: var(--rich-black);
+        color: var(--anti-flash-white);
+}
+
 @layer utilities {
         .text-balance {
                 text-wrap: balance;

@@ -34,21 +34,25 @@ function RecentProjectItem({
     const projectPage = `projects\/${slug}`;
 
     const handleMouseEnter = () => {
-        setIsShown(true);
+        setTimeout(() => {
+            setIsShown(true);
+        }, 400);
     };
 
     const handleMouseLeave = () => {
-        setIsShown(false);
+        setTimeout(() => {
+            setIsShown(false);
+        }, 400);
     };
 
     return (
         <Fragment key={id}>
             <div
-                className="flex sm:flex-row flex-col gap-2 justify-between items-center sm:mt-11 mt-4 mb-4 md:max-h-[110px]"
+                className="flex sm:flex-row flex-col gap-2 justify-between items-center sm:mt-11 my-8 md:my-4 md:max-h-[110px]"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="sm:max-w-[55%]">
+                <div className="sm:max-w-[55%] mb-10 md:mb-0">
                     <Heading
                         element="h4"
                         className="uppercase text-rich-black text-heading-3 tracking-heading-3 sm:font-normal font-medium mb-2"
@@ -62,7 +66,7 @@ function RecentProjectItem({
                 </div>
                 <Link href={projectPage}>
                     <div
-                        className={`hidden lg:block z-10 -mt-14 transition-opacity ease-in duration-300 ${isShown ? "opacity-100" : "opacity-0"}`}
+                        className={`sm:hidden lg:block z-10 md:-mt-14 transition-opacity ease-in duration-300 ${isShown ? "lg:opacity-100" : "lg:opacity-0"} pointer-events-none`}
                     >
                         <Image
                             src={`/webp/${slug}/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
@@ -73,7 +77,7 @@ function RecentProjectItem({
                         />
                     </div>
                 </Link>
-                <div className="flex sm:flex-col flex-row items-end justify-between gap-8 sm:mt-0 mt-10 sm:w-fit w-full">
+                <div className="flex sm:flex-col flex-row items-end justify-between gap-8 sm:mt-0 mt-10 w-full sm:w-fit lg:w-[14%]">
                     <div className="flex flex-col sm:items-end items-start gap-2">
                         {tags
                             .filter(({}, index) => index < 2)

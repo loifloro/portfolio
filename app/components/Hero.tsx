@@ -6,14 +6,14 @@ import React from "react";
 export default function Hero() {
     const data = {
         currentJob: "Frontend Developer",
-        currentCompany: "Business Tree PH",
+        currentCompany: "Golden Bell Future",
         headline: "Lois Floro",
         description:
             "Lois is passionate in converting designs into real life applications with care and commitment. He loves the process of designing/developing applications and tweaking it to its fullest potential.",
     };
 
     return (
-        <div className="min-h-screen text-center grid items-end md:p-12 p-4 relative">
+        <div className="min-h-dvh text-center grid items-end md:p-12 p-4 relative">
             <div>
                 <div className="flex gap-3 sm:gap-2 justify-center items-center">
                     <p className="before:inline-block before:h-8 before:w-px before:bg-gradient-horizontal font-light font-mono uppercase tracking-wider flex gap-2 justify-center items-center md:text-base text-sm">
@@ -44,8 +44,8 @@ export default function Hero() {
                     />
                 </div>
             </div>
-            <div className="absolute min-h-screen w-full flex justify-end flex-col -z-10">
-                <div className="absolute h-screen w-full bg-gradient-hero-bg flex items-end">
+            <div className="absolute min-h-dvh w-full flex justify-end flex-col -z-10">
+                <div className="absolute h-dvh w-full bg-gradient-hero-bg flex items-end">
                     <GradientLine type="centered" />
                 </div>
                 <Image
