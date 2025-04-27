@@ -20,7 +20,7 @@ export default function ArrowLink({
     return (
         <Link
             href={url}
-            className={`flex text-rich-black md:text-base text-sm items-center gap-1 uppercase font-light tracking-widest font-mono min-w-fit text- ${className && className}`}
+            className={`flex text-rich-black md:text-base text-sm items-center gap-1 uppercase font-light tracking-widest font-mono min-w-fit text-nowrap text- ${className && className}`}
             target={isAbsoluteUrl(url) ? "_blank" : "_self"}
             {...props}
         >

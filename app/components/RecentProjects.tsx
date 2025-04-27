@@ -48,7 +48,7 @@ function RecentProjectItem({
     return (
         <Fragment key={id}>
             <div
-                className="flex sm:flex-row flex-col gap-2 justify-between items-center sm:mt-11 mt-4 mb-4 md:max-h-[110px]"
+                className="flex sm:flex-row flex-col gap-2 justify-between items-center sm:mt-11 my-8 md:my-4 md:max-h-[110px]"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
@@ -66,7 +66,7 @@ function RecentProjectItem({
                 </div>
                 <Link href={projectPage}>
                     <div
-                        className={`sm:hidden lg:block z-10 md:-mt-14 transition-opacity ease-in duration-300 ${isShown ? "lg:opacity-100" : "lg:opacity-0"}`}
+                        className={`sm:hidden lg:block z-10 md:-mt-14 transition-opacity ease-in duration-300 ${isShown ? "lg:opacity-100" : "lg:opacity-0"} pointer-events-none`}
                     >
                         <Image
                             src={`/webp/${slug}/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
@@ -77,7 +77,7 @@ function RecentProjectItem({
                         />
                     </div>
                 </Link>
-                <div className="flex sm:flex-col flex-row items-end justify-between gap-8 sm:mt-0 mt-10 sm:w-fit w-full">
+                <div className="flex sm:flex-col flex-row items-end justify-between gap-8 sm:mt-0 mt-10 w-full sm:w-fit lg:w-[14%]">
                     <div className="flex flex-col sm:items-end items-start gap-2">
                         {tags
                             .filter(({}, index) => index < 2)

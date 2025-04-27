@@ -1,12 +1,12 @@
-import Image from "next/image";
 import ArrowLink from "./button/ArrowLink";
 import GradientLine from "./GradientLine";
+import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
     const data = {
         currentJob: "Frontend Developer",
-        currentCompany: "Business Tree PH",
+        currentCompany: "The Golden Bell Future",
         headline: "Lois Floro",
         description:
             "Lois is passionate in converting designs into real life applications with care and commitment. He loves the process of designing/developing applications and tweaking it to its fullest potential.",
@@ -44,8 +44,8 @@ export default function Hero() {
                     />
                 </div>
             </div>
-            <div className="absolute min-h-screen w-full flex justify-end flex-col -z-10">
-                <div className="absolute h-screen w-full bg-gradient-hero-bg flex items-end">
+            <div className="absolute min-h-dvh w-full flex justify-end flex-col -z-10">
+                <div className="absolute h-dvh w-full bg-gradient-hero-bg flex items-end">
                     <GradientLine type="centered" />
                 </div>
                 <Image
