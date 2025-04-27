@@ -1,12 +1,12 @@
+import Image from "next/image";
 import ArrowLink from "./button/ArrowLink";
 import GradientLine from "./GradientLine";
-import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
     const data = {
         currentJob: "Frontend Developer",
-        currentCompany: "The Golden Bell Future",
+        currentCompany: "Golden Bell Future",
         headline: "Lois Floro",
         description:
             "Lois is passionate in converting designs into real life applications with care and commitment. He loves the process of designing/developing applications and tweaking it to its fullest potential.",
