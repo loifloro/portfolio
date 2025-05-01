@@ -108,6 +108,10 @@
 
 }
 
+html {
+        scroll-behavior: smooth !important;
+}
+
 body {
         color: var(--rich-black);
         background: var(--pale-white);

@@ -2,6 +2,13 @@
 
 import { Fragment, useRef, useState } from "react";
 import { getProjects } from "utils/project";
+import { inRange, isNull } from "lodash";
+import {
+    motion,
+    useScroll,
+    useMotionValueEvent,
+    useInView,
+} from "motion/react";
 import ArrowLink from "./button/ArrowLink";
 import Container from "./container/Container";
 import GradientLine from "./GradientLine";
@@ -10,13 +17,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Subtitle from "./display/Subtitle";
 import Tag from "./display/Tag";
-import {
-    motion,
-    useScroll,
-    useMotionValueEvent,
-    useInView,
-} from "motion/react";
-import { inRange, isNull } from "lodash";
 
 type RecentProjectItemProps = {
     id: number;
@@ -39,7 +39,7 @@ function RecentProjectItem({
 }: RecentProjectItemProps) {
     const itemRef = useRef<HTMLDivElement | null>(null);
     const isInView = useInView(itemRef);
-    const [isShown, setIsShown] = useState(false);
+    const [isShown, setIsShown] = useState(true);
     const projectPage = `projects\/${slug}`;
 
     const { scrollY } = useScroll();
@@ -63,6 +63,8 @@ function RecentProjectItem({
 
         if (window.innerWidth < 640) {
             setIsShown(isInView);
+
+            return;
         }
     });
 
