@@ -218,6 +218,8 @@ export const projects = <ProjectList>[
             { id: 3, name: "Express JS" },
             { id: 4, name: "React" },
             { id: 5, name: "Socket.io" },
+            { id: 5, name: "Zustand" },
+            { id: 5, name: "CSS Modules" },
         ],
         liveUrl: "https://rock-paper-scissors-1-mnoe.onrender.com/",
         githubUrl: "https://github.com/loifloro/rock-paper-scissors",
