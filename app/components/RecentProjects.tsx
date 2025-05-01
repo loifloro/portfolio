@@ -63,8 +63,6 @@ function RecentProjectItem({
 
         if (window.innerWidth < 640) {
             setIsShown(isInView);
-
-            return;
         }
     });
 
@@ -93,7 +91,7 @@ function RecentProjectItem({
                         transition={{
                             duration: 2,
                             delay: 0.2,
-                            type: "keyframes",
+                            type: "tween",
                         }}
                     >
                         <Image
