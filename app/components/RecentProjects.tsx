@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { getProjects } from "utils/project";
 import ArrowLink from "./button/ArrowLink";
 import Container from "./container/Container";
@@ -10,6 +10,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Subtitle from "./display/Subtitle";
 import Tag from "./display/Tag";
+import {
+    motion,
+    useScroll,
+    useMotionValueEvent,
+    useInView,
+} from "motion/react";
+import { inRange, isNull } from "lodash";
 
 type RecentProjectItemProps = {
     id: number;
@@ -30,29 +37,42 @@ function RecentProjectItem({
     tags,
     slug,
 }: RecentProjectItemProps) {
+    const itemRef = useRef<HTMLDivElement | null>(null);
+    const isInView = useInView(itemRef);
     const [isShown, setIsShown] = useState(false);
     const projectPage = `projects\/${slug}`;
 
-    const handleMouseEnter = () => {
-        setTimeout(() => {
-            setIsShown(true);
-        }, 400);
-    };
+    const { scrollY } = useScroll();
 
-    const handleMouseLeave = () => {
-        setTimeout(() => {
-            setIsShown(false);
-        }, 400);
-    };
+    useMotionValueEvent(scrollY, "change", () => {
+        if (isNull(itemRef.current)) {
+            return;
+        }
+
+        if (window.innerWidth > 768) {
+            setIsShown(
+                inRange(
+                    window.innerHeight / 2,
+                    itemRef.current.getBoundingClientRect().y - 70,
+                    itemRef.current.getBoundingClientRect().y + 70
+                )
+            );
+
+            return;
+        }
+
+        if (window.innerWidth < 640) {
+            setIsShown(isInView);
+        }
+    });
 
     return (
         <Fragment key={id}>
             <div
-                className="flex sm:flex-row flex-col gap-2 justify-between items-center sm:mt-11 my-8 md:my-4 md:max-h-[110px]"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                className="flex sm:flex-row flex-col gap-2 justify-between sm:items-center sm:mt-11 my-8 md:max-h-[110px]"
+                ref={itemRef}
             >
-                <div className="sm:max-w-[55%] mb-10 md:mb-0">
+                <div className="sm:max-w-[55%] mb-10 sm:mb-0">
                     <Heading
                         element="h4"
                         className="uppercase text-rich-black text-heading-3 tracking-heading-3 sm:font-normal font-medium mb-2"
@@ -64,9 +84,15 @@ function RecentProjectItem({
                         <p className="lg:hidden block">{shortDescription}</p>
                     </div>
                 </div>
-                <Link href={projectPage}>
-                    <div
-                        className={`sm:hidden lg:block z-10 md:-mt-14 transition-opacity ease-in duration-300 ${isShown ? "lg:opacity-100" : "lg:opacity-0"} pointer-events-none`}
+                <Link href={projectPage} className="self-center">
+                    <motion.div
+                        className={`z-10 md:-mt-14 transition-opacity ease-in duration-300 pointer-events-none`}
+                        animate={{ opacity: isShown ? 1 : 0 }}
+                        transition={{
+                            duration: 2,
+                            delay: 0.2,
+                            type: "tween",
+                        }}
                     >
                         <Image
                             src={`/webp/${slug}/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
@@ -75,7 +101,7 @@ function RecentProjectItem({
                             width={365}
                             quality={100}
                         />
-                    </div>
+                    </motion.div>
                 </Link>
                 <div className="flex sm:flex-col flex-row items-end justify-between gap-8 sm:mt-0 mt-10 w-full sm:w-fit lg:w-[14%]">
                     <div className="flex flex-col sm:items-end items-start gap-2">
