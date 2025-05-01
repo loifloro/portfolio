@@ -88,7 +88,7 @@ function RecentProjectItem({
                 </div>
                 <Link href={projectPage} className="self-center">
                     <motion.div
-                        className={`z-10 md:-mt-14 transition-opacity ease-in duration-300 pointer-events-none`}
+                        className={`z-10 md:-mt-14 pointer-events-none`}
                         animate={{ opacity: isShown ? 1 : 0 }}
                         transition={{
                             duration: 2,
