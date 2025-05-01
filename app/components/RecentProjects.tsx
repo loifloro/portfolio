@@ -38,7 +38,7 @@ function RecentProjectItem({
     slug,
 }: RecentProjectItemProps) {
     const itemRef = useRef<HTMLDivElement | null>(null);
-    const isInView = useInView(itemRef);
+    const isInView = useInView(itemRef, { initial: true });
     const [isShown, setIsShown] = useState(true);
     const projectPage = `projects\/${slug}`;
 
