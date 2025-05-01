@@ -14,6 +14,9 @@ export const frameworks: TechStack = [
     { id: 4, name: "Mantine", logo: Si.SiMantine },
     { id: 5, name: "Bootstrap", logo: Si.SiBootstrap },
     { id: 6, name: "Tailwind", logo: Si.SiTailwindcss },
+    { id: 7, name: "Express JS", logo: Si.SiExpress },
+    { id: 8, name: "React Router", logo: Si.SiReactrouter },
+    { id: 9, name: "Framer Motion", logo: Si.SiFramer },
 ];
 
 export const databases: TechStack = [
@@ -33,4 +36,7 @@ export const tools: TechStack = [
     { id: 11, name: "CSS", logo: Si.SiCss3 },
     { id: 12, name: "A. Illustrator", logo: Si.SiAdobeillustrator },
     { id: 13, name: "HTML", logo: Si.SiHtml5 },
+    { id: 14, name: "CSS Modules", logo: Si.SiCssmodules },
+    { id: 15, name: "Socket.io", logo: Si.SiSocketdotio },
+    { id: 16, name: "Node JS", logo: Si.SiNodedotjs },
 ];

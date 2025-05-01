@@ -1,13 +1,14 @@
+import { isUndefined } from "lodash";
 import ArrowLink from "@/components/button/ArrowLink";
 import Container from "@/components/container/Container";
 import Heading from "@/components/display/Heading";
-import Tag from "@/components/display/Tag";
 import React from "react";
+import Tag from "@/components/display/Tag";
 
 type ProjectHeroProps = {
     name: string;
     tags: { id: number; name: string }[];
-    liveUrl: string;
+    liveUrl?: string;
     githubUrl: string;
     mainImg: string;
     id: number;
@@ -52,10 +53,12 @@ export default function ProjectHero({
                             ))}
                         </div>
                         <div className="flex flex-col gap-2 mt-4 sm:mt-0 sm:items-end text-sm">
-                            <ArrowLink
-                                name="Visit Live Project"
-                                url={liveUrl}
-                            />
+                            {!isUndefined(liveUrl) && (
+                                <ArrowLink
+                                    name="Visit Live Project"
+                                    url={liveUrl}
+                                />
+                            )}
                             <ArrowLink
                                 name="Visit Source Code"
                                 url={githubUrl}
