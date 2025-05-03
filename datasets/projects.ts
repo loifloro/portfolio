@@ -107,6 +107,110 @@ export const projects = <ProjectList>[
     },
     {
         id: 2,
+        slug: "patient-record-management-system",
+        name: "Patient Record Management System",
+        shortDescription:
+            "A two player online rock paper scissors game built for realtime connectivity.",
+        description:
+            "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
+        tags: [
+            { id: 1, name: "System Design" },
+            { id: 2, name: "Full Stack App" },
+            { id: 3, name: "PHP" },
+            { id: 4, name: "Sass" },
+            { id: 5, name: "Vanilla Javascript" },
+            { id: 6, name: "Responsive Design" },
+        ],
+        githubUrl: "https://github.com/loifloro/barangay-datu-esmael-rms",
+        thumbnail: "thumbnail.webp",
+        mainImg: "rock-paper-scissors-hero.jpg",
+        reason: "The goal for this project is to practice the usage of a bidirectional data flow utilizing Web Sockets. By implementing a two player feature, a connection handling is crucial for each session for seamless game experience.",
+        pallette: [
+            {
+                id: 1,
+                name: "Cal Poly Green",
+                strokeCode: "04A04A",
+                colorCode: "034A23",
+            },
+            {
+                id: 2,
+                name: "Honey Dew",
+                strokeCode: "CFFADF",
+                colorCode: "ECFCF2",
+            },
+            {
+                id: 3,
+                name: "Mint Green",
+                strokeCode: "B2FFFE",
+                colorCode: "d7fffe",
+            },
+        ],
+        palletteDescription:
+            "The game emphasizes the character pick buttons, with this emphasis the palette uses a lot of blues to avoid players from distraction. The game also uses accent colors for different pick to have different identity with each other and to help create familiarization with game players.",
+        process: [
+            {
+                id: 1,
+                title: "Game against computer",
+                description:
+                    "First step of the development process of this project was to first create it vs. computer where the computation would also be the same when there will be other player connected.",
+            },
+            {
+                id: 2,
+                title: "Server Setup",
+                description:
+                    "After creating the frontend with the computer as the only opponent, the backend server is created using Express JS with Socket IO to implement WebSockets connection.",
+                side: "left",
+            },
+            {
+                id: 3,
+                title: "Implementing opponent connection",
+                description:
+                    "Once the WebSocket connection has been running, the connectivity between two players is now being tested on what are bugs that hey can arise once they start interacting with each other.",
+            },
+            {
+                id: 4,
+                title: "Deploying to Render",
+                description:
+                    "One of the most crucial part of this project is deploying the backend on a web service. Unlike Vercel, Render supports WebSocket connection so this application was deployed to Render. On deploying, I had to figure out the change of URL between production and development.",
+                side: "left",
+            },
+            {
+                id: 5,
+                title: "Playing out with friends",
+                description:
+                    "No project is ever done, this project will always be used and there will be some issues always encountered, some enhancement to be made. With this application I always share it to friends just for fun and ask if they did encounter some issues, you something light and cool to talk about.",
+            },
+        ],
+        gallery: [
+            {
+                id: 1,
+                name: "Selection",
+                fileName: "1.webp",
+            },
+            {
+                id: 2,
+                name: "Won",
+                fileName: "2.webp",
+            },
+            {
+                id: 3,
+                name: "Lose",
+                fileName: "3.webp",
+            },
+            {
+                id: 4,
+                name: "Rules",
+                fileName: "4.webp",
+            },
+            {
+                id: 5,
+                name: "Invitation",
+                fileName: "5.webp",
+            },
+        ],
+    },
+    {
+        id: 3,
         slug: "space-tourism",
         name: "Space Tourism",
         shortDescription:
@@ -205,7 +309,7 @@ export const projects = <ProjectList>[
         ],
     },
     {
-        id: 3,
+        id: 4,
         slug: "rock-paper-scissors",
         name: "Rock Paper Scissors",
         shortDescription:
@@ -310,6 +414,7 @@ export const projects = <ProjectList>[
             },
         ],
     },
+
     // {
     //     id: 3,
     //     slug: "patient-record-system",
