@@ -110,7 +110,7 @@ export const projects = <ProjectList>[
         slug: "patient-record-management-system",
         name: "Patient Record Management System",
         shortDescription:
-            "A two player online rock paper scissors game built for realtime connectivity.",
+            "A patient record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
         description:
             "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
         tags: [
@@ -124,19 +124,19 @@ export const projects = <ProjectList>[
         githubUrl: "https://github.com/loifloro/barangay-datu-esmael-rms",
         thumbnail: "thumbnail.webp",
         mainImg: "rock-paper-scissors-hero.jpg",
-        reason: "The goal for this project is to practice the usage of a bidirectional data flow utilizing Web Sockets. By implementing a two player feature, a connection handling is crucial for each session for seamless game experience.",
+        reason: "The goal of this project is to provided ease of use for both Barangay Health Center staffs and its patient by digitizing all the process record keeping of the health centers. One of the main challenges on creating this application, is how the application would not cause confusion to the patients especially the one who are novice and new to the digital world.",
         pallette: [
             {
                 id: 1,
-                name: "Cal Poly Green",
-                strokeCode: "04A04A",
-                colorCode: "034A23",
-            },
-            {
-                id: 2,
                 name: "Honey Dew",
                 strokeCode: "CFFADF",
                 colorCode: "ECFCF2",
+            },
+            {
+                id: 2,
+                name: "Cal Poly Green",
+                strokeCode: "04A04A",
+                colorCode: "034A23",
             },
             {
                 id: 3,
@@ -146,7 +146,7 @@ export const projects = <ProjectList>[
             },
         ],
         palletteDescription:
-            "The game emphasizes the character pick buttons, with this emphasis the palette uses a lot of blues to avoid players from distraction. The game also uses accent colors for different pick to have different identity with each other and to help create familiarization with game players.",
+            "These colors where extracted from the colors usually seen on City of Dasmariñas, as it brand colors. We modify the colors of the city by incorporating the shades usually used on the medical field such as green and blues. We chose greens to provide sense of peace and want to make the patients that their safe and at peace whenever using the web application.",
         process: [
             {
                 id: 1,
@@ -184,27 +184,27 @@ export const projects = <ProjectList>[
         gallery: [
             {
                 id: 1,
-                name: "Selection",
+                name: "Dashboard",
                 fileName: "1.webp",
             },
             {
                 id: 2,
-                name: "Won",
+                name: "Login",
                 fileName: "2.webp",
             },
             {
                 id: 3,
-                name: "Lose",
+                name: "Add New Consultation",
                 fileName: "3.webp",
             },
             {
                 id: 4,
-                name: "Rules",
+                name: "Patients List",
                 fileName: "4.webp",
             },
             {
                 id: 5,
-                name: "Invitation",
+                name: "Super Admin Profile",
                 fileName: "5.webp",
             },
         ],
