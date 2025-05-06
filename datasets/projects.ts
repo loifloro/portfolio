@@ -123,7 +123,7 @@ export const projects = <ProjectList>[
         ],
         githubUrl: "https://github.com/loifloro/barangay-datu-esmael-rms",
         thumbnail: "thumbnail.webp",
-        mainImg: "rock-paper-scissors-hero.jpg",
+        mainImg: "patient-record-management-system-hero.jpg",
         reason: "The goal of this project is to provided ease of use for both Barangay Health Center staffs and its patient by digitizing all the process record keeping of the health centers. One of the main challenges on creating this application, is how the application would not cause confusion to the patients especially the one who are novice and new to the digital world.",
         pallette: [
             {
