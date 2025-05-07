@@ -150,35 +150,35 @@ export const projects = <ProjectList>[
         process: [
             {
                 id: 1,
-                title: "Game against computer",
+                title: "Requirements Collection",
                 description:
-                    "First step of the development process of this project was to first create it vs. computer where the computation would also be the same when there will be other player connected.",
+                    "Before this project has gone on development, we first collected the all necessary information about the available services of the benificiary health center. We conducted interviews with Barangay Health Workers and assigned City Health Nurse of the barangay.",
             },
             {
                 id: 2,
-                title: "Server Setup",
+                title: "System Design",
                 description:
-                    "After creating the frontend with the computer as the only opponent, the backend server is created using Express JS with Socket IO to implement WebSockets connection.",
+                    "After gathering the data, we identified all issues that needed to be solved and an approach how to overcome this issue. We then designed the system on Figma, we thoroughly created pages and forms according to the current phyiscal forms given by the Barangay Health Center.",
                 side: "left",
             },
             {
                 id: 3,
-                title: "Implementing opponent connection",
+                title: "Technology Research",
                 description:
-                    "Once the WebSocket connection has been running, the connectivity between two players is now being tested on what are bugs that hey can arise once they start interacting with each other.",
+                    "With the limited knowledge and experience of us - as developers, we researched the most common approaches when using vanila PHP scripting, using Sass for styling, and assets to be used. We decided to have an approach where we aim the reusability of components, styles and queries is achieved.",
             },
             {
                 id: 4,
-                title: "Deploying to Render",
+                title: "Collaborative Development",
                 description:
-                    "One of the most crucial part of this project is deploying the backend on a web service. Unlike Vercel, Render supports WebSocket connection so this application was deployed to Render. On deploying, I had to figure out the change of URL between production and development.",
+                    "This is the first I have used Github as a version control on a real project, my partner and I made the development process as collaborative as much as possible. We implemented the knowledge I have on Github with the time of developing this project. We created branches, we created pull requests, we separated the development of backend and frontend to have a better developer experience.",
                 side: "left",
             },
             {
                 id: 5,
-                title: "Playing out with friends",
+                title: "Continued Development",
                 description:
-                    "No project is ever done, this project will always be used and there will be some issues always encountered, some enhancement to be made. With this application I always share it to friends just for fun and ask if they did encounter some issues, you something light and cool to talk about.",
+                    "Now that this project is stable, I am eyeing to recreate this project using Laravel as Backend API or a full stack Javascript application, so that I can practice becoming a Full Stack Developer.",
             },
         ],
         gallery: [
@@ -322,8 +322,8 @@ export const projects = <ProjectList>[
             { id: 3, name: "Express JS" },
             { id: 4, name: "React" },
             { id: 5, name: "Socket.io" },
-            { id: 5, name: "Zustand" },
-            { id: 5, name: "CSS Modules" },
+            { id: 6, name: "Zustand" },
+            { id: 7, name: "CSS Modules" },
         ],
         liveUrl: "https://rock-paper-scissors-1-mnoe.onrender.com/",
         githubUrl: "https://github.com/loifloro/rock-paper-scissors",
