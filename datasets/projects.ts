@@ -107,6 +107,110 @@ export const projects = <ProjectList>[
     },
     {
         id: 2,
+        slug: "patient-record-management-system",
+        name: "Patient Record Management System",
+        shortDescription:
+            "A patient record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
+        description:
+            "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
+        tags: [
+            { id: 1, name: "System Design" },
+            { id: 2, name: "Full Stack App" },
+            { id: 3, name: "PHP" },
+            { id: 4, name: "Sass" },
+            { id: 5, name: "Vanilla Javascript" },
+            { id: 6, name: "Responsive Design" },
+        ],
+        githubUrl: "https://github.com/loifloro/barangay-datu-esmael-rms",
+        thumbnail: "thumbnail.webp",
+        mainImg: "patient-record-management-system-hero.jpg",
+        reason: "The goal of this project is to provided ease of use for both Barangay Health Center staffs and its patient by digitizing all the process record keeping of the health centers. One of the main challenges on creating this application, is how the application would not cause confusion to the patients especially the one who are novice and new to the digital world.",
+        pallette: [
+            {
+                id: 1,
+                name: "Honey Dew",
+                strokeCode: "CFFADF",
+                colorCode: "ECFCF2",
+            },
+            {
+                id: 2,
+                name: "Cal Poly Green",
+                strokeCode: "04A04A",
+                colorCode: "034A23",
+            },
+            {
+                id: 3,
+                name: "Mint Green",
+                strokeCode: "B2FFFE",
+                colorCode: "d7fffe",
+            },
+        ],
+        palletteDescription:
+            "These colors where extracted from the colors usually seen on City of Dasmariñas, as it brand colors. We modify the colors of the city by incorporating the shades usually used on the medical field such as green and blues. We chose greens to provide sense of peace and want to make the patients that their safe and at peace whenever using the web application.",
+        process: [
+            {
+                id: 1,
+                title: "Requirements Collection",
+                description:
+                    "Before this project has gone on development, we first collected the all necessary information about the available services of the benificiary health center. We conducted interviews with Barangay Health Workers and assigned City Health Nurse of the barangay.",
+            },
+            {
+                id: 2,
+                title: "System Design",
+                description:
+                    "After gathering the data, we identified all issues that needed to be solved and an approach how to overcome this issue. We then designed the system on Figma, we thoroughly created pages and forms according to the current phyiscal forms given by the Barangay Health Center.",
+                side: "left",
+            },
+            {
+                id: 3,
+                title: "Technology Research",
+                description:
+                    "With the limited knowledge and experience of us - as developers, we researched the most common approaches when using vanila PHP scripting, using Sass for styling, and assets to be used. We decided to have an approach where we aim the reusability of components, styles and queries is achieved.",
+            },
+            {
+                id: 4,
+                title: "Collaborative Development",
+                description:
+                    "This is the first I have used Github as a version control on a real project, my partner and I made the development process as collaborative as much as possible. We implemented the knowledge I have on Github with the time of developing this project. We created branches, we created pull requests, we separated the development of backend and frontend to have a better developer experience.",
+                side: "left",
+            },
+            {
+                id: 5,
+                title: "Continued Development",
+                description:
+                    "Now that this project is stable, I am eyeing to recreate this project using Laravel as Backend API or a full stack Javascript application, so that I can practice becoming a Full Stack Developer.",
+            },
+        ],
+        gallery: [
+            {
+                id: 1,
+                name: "Dashboard",
+                fileName: "1.webp",
+            },
+            {
+                id: 2,
+                name: "Login",
+                fileName: "2.webp",
+            },
+            {
+                id: 3,
+                name: "Add New Consultation",
+                fileName: "3.webp",
+            },
+            {
+                id: 4,
+                name: "Patients List",
+                fileName: "4.webp",
+            },
+            {
+                id: 5,
+                name: "Super Admin Profile",
+                fileName: "5.webp",
+            },
+        ],
+    },
+    {
+        id: 3,
         slug: "space-tourism",
         name: "Space Tourism",
         shortDescription:
@@ -205,7 +309,7 @@ export const projects = <ProjectList>[
         ],
     },
     {
-        id: 3,
+        id: 4,
         slug: "rock-paper-scissors",
         name: "Rock Paper Scissors",
         shortDescription:
@@ -218,8 +322,8 @@ export const projects = <ProjectList>[
             { id: 3, name: "Express JS" },
             { id: 4, name: "React" },
             { id: 5, name: "Socket.io" },
-            { id: 5, name: "Zustand" },
-            { id: 5, name: "CSS Modules" },
+            { id: 6, name: "Zustand" },
+            { id: 7, name: "CSS Modules" },
         ],
         liveUrl: "https://rock-paper-scissors-1-mnoe.onrender.com/",
         githubUrl: "https://github.com/loifloro/rock-paper-scissors",
@@ -310,6 +414,7 @@ export const projects = <ProjectList>[
             },
         ],
     },
+
     // {
     //     id: 3,
     //     slug: "patient-record-system",

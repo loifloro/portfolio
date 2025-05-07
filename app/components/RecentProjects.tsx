@@ -71,7 +71,7 @@ function RecentProjectItem({
     return (
         <Fragment key={id}>
             <div
-                className="flex sm:flex-row flex-col gap-2 justify-between sm:items-center sm:mt-11 my-8 md:max-h-[110px]"
+                className="flex sm:flex-row flex-col gap-2 justify-between sm:items-center sm:mt-11 my-8"
                 ref={itemRef}
             >
                 <div className="sm:max-w-[55%] mb-10 sm:mb-0">
@@ -88,7 +88,7 @@ function RecentProjectItem({
                 </div>
                 <Link href={projectPage} className="self-center">
                     <motion.div
-                        className={`z-10 md:-mt-14 pointer-events-none`}
+                        className="relative z-10 md:-mt-16 md:top-1/2 md:-translate-y-1/2 pointer-events-none md:max-h-[110px]"
                         animate={{ opacity: isShown ? 1 : 0 }}
                         transition={{
                             duration: 2,
