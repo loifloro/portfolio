@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import Subtitle from "@/components/display/Subtitle";
 import { isEqual, last } from "lodash";
 import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 type GalleryProps = {
     items: {
@@ -84,7 +85,11 @@ export default function Gallery({ items }: GalleryProps) {
                         <div
                             key={id}
                             onClick={() => handleClick(index)}
-                            className={`relative h-1/5 aspect-video w-full cursor-pointer ${isEqual(index, currentIndex) && "outline outline-offset-4 outline-2 outline-rich-black"}`}
+                            className={clsx(
+                                "relative h-1/5 aspect-video w-full cursor-pointer",
+                                isEqual(index, currentIndex) &&
+                                    "outline outline-offset-4 outline-2 outline-rich-black"
+                            )}
                         >
                             <Image
                                 alt={name}
