@@ -1,14 +1,14 @@
 "use client";
 
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { isEqual, last } from "lodash";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 import Container from "@/components/container/Container";
 import Heading from "@/components/display/Heading";
 import Image from "next/image";
 import React, { useState } from "react";
 import Subtitle from "@/components/display/Subtitle";
-import { isEqual, last } from "lodash";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
 
 type GalleryProps = {
     items: {
