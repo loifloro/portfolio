@@ -1,15 +1,15 @@
 "use client";
 
+import { isUndefined } from "lodash";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { navigationBarItems } from "datasets/navigation";
+import { useState } from "react";
 import ArrowLink from "../button/ArrowLink";
+import clsx from "clsx";
 import GradientLine from "../GradientLine";
 import Link from "next/link";
 import Logo from "../Logo";
 import MobileNavigation from "./MobileNavigation";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { isUndefined } from "lodash";
-import { useState } from "react";
-import clsx from "clsx";
 
 type HeaderItemProps = {
     name: string;
@@ -55,6 +55,12 @@ export default function Header() {
         const prev = scrollY.getPrevious();
 
         if (!isUndefined(prev) && prev > latest) {
+            setIsShown(true);
+
+            return;
+        }
+
+        if (latest < 100) {
             setIsShown(true);
 
             return;
