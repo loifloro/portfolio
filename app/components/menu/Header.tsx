@@ -1,9 +1,15 @@
+"use client";
+
 import { navigationBarItems } from "datasets/navigation";
 import ArrowLink from "../button/ArrowLink";
 import GradientLine from "../GradientLine";
 import Link from "next/link";
 import Logo from "../Logo";
 import MobileNavigation from "./MobileNavigation";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { isUndefined } from "lodash";
+import { useState } from "react";
+import clsx from "clsx";
 
 type HeaderItemProps = {
     name: string;
@@ -32,9 +38,43 @@ function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
 }
 
 export default function Header() {
+    const { scrollY } = useScroll();
+    const [isShown, setIsShown] = useState(true);
+
+    const variants = {
+        shown: {
+            top: 0,
+        },
+        hidden: {
+            top: -100,
+            transition: { duration: 1 },
+        },
+    };
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const prev = scrollY.getPrevious();
+
+        if (!isUndefined(prev) && prev > latest) {
+            setIsShown(true);
+
+            return;
+        }
+
+        setIsShown(false);
+    });
+
     return (
-        <header className="md:px-8 px-4 py-6 dark:mix-blend-difference top-0 fixed w-full z-10">
-            <nav className="flex items-center justify-between mb-4">
+        <motion.header
+            className=" fixed w-full z-10"
+            animate={isShown ? "shown" : "hidden"}
+            variants={variants}
+        >
+            <nav
+                className={clsx(
+                    "flex items-center justify-between md:px-8 px-4 py-6 ",
+                    scrollY.get() > 100 && "bg-opacity-[0.002] backdrop-blur-sm"
+                )}
+            >
                 <div className="min-w-32">
                     <Logo />
                 </div>
@@ -56,6 +96,6 @@ export default function Header() {
                 <MobileNavigation />
             </nav>
             <GradientLine type="centered" onMobile="space-between" />
-        </header>
+        </motion.header>
     );
 }
