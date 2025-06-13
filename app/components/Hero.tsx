@@ -13,7 +13,7 @@ export default function Hero() {
     };
 
     return (
-        <div className="h-svh text-center grid items-end md:p-12 p-4 relative ">
+        <div className="supports-[h-svh]:h-svh h-screen text-center grid items-end md:p-12 p-4 relative transition-all transition-discrete duration-700 ease-in-out">
             <div>
                 <div className="flex gap-3 sm:gap-2 justify-center items-center">
                     <p className="before:inline-block before:h-8 before:w-px before:bg-gradient-horizontal font-light font-mono uppercase tracking-wider flex gap-2 justify-center items-center md:text-base text-sm">
@@ -44,8 +44,8 @@ export default function Hero() {
                     />
                 </div>
             </div>
-            <div className="absolute h-svh w-full flex justify-end flex-col -z-10">
-                <div className="absolute h-svh w-full bg-gradient-hero-bg flex items-end">
+            <div className="absolute supports-[h-svh]:h-svh h-screen w-full flex justify-end flex-col -z-10 transition-all transition-discrete duration-700 ease-in-out">
+                <div className="absolute supports-[h-svh]:h-svh h-screen w-full bg-gradient-hero-bg flex items-end transition-all transition-discrete duration-700 ease-in-out">
                     <GradientLine type="centered" />
                 </div>
                 <Image
