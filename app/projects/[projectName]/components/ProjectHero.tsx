@@ -9,7 +9,7 @@ type ProjectHeroProps = {
     name: string;
     tags: { id: number; name: string }[];
     liveUrl?: string;
-    githubUrl: string;
+    githubUrl?: string;
     mainImg: string;
     id: number;
 };
@@ -59,10 +59,12 @@ export default function ProjectHero({
                                     url={liveUrl}
                                 />
                             )}
-                            <ArrowLink
-                                name="Visit Source Code"
-                                url={githubUrl}
-                            />
+                            {!isUndefined(githubUrl) && (
+                                <ArrowLink
+                                    name="Visit Live Project"
+                                    url={githubUrl}
+                                />
+                            )}
                         </div>
                     </div>
                 </div>

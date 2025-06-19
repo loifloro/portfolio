@@ -23,7 +23,7 @@
         --line-height-heading-1: clamp(2.5rem, 1.7958rem + 3.0047vw, 4.5rem);
         --line-height-heading-2: clamp(3.2rem, 2.9668rem + 1.148vw, 4rem);
         --line-height-heading-3: clamp(1.75rem, 1.3979rem + 1.5023vw, 2.75rem);
-        --line-height-heading-4: clamp(1.125rem, 1.0886rem + 0.1794vw, 1.25rem);
+        --line-height-heading-4: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
         --spacing-heading-1: clamp(0.2em, 0.25em, 0.3em);
         --spacing-heading-3: clamp(0.1em, 0.15em, 0.2em);
         --gradient-centered: linear-gradient(to right,
