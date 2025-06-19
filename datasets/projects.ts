@@ -424,7 +424,7 @@ export const projects = <ProjectList>[
             "A marketing website for Casa de Matilda with a built-in booking system, allowing guests to explore the property and schedule visits with ease.",
         tags: [
             { id: 1, name: "Landing Page Design" },
-            { id: 2, name: "Progressive Web App" },
+            { id: 2, name: "PWA" },
             { id: 3, name: "Next JS" },
             { id: 4, name: "MongoDB" },
             { id: 5, name: "AWS Ses" },
