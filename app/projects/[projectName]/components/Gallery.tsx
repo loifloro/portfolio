@@ -1,8 +1,8 @@
 "use client";
 
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
-import { isEqual, last } from "lodash";
-import { usePathname } from "next/navigation";
+import { isEqual } from "lodash";
+import { useParams } from "next/navigation";
 import clsx from "clsx";
 import Container from "@/components/container/Container";
 import Heading from "@/components/display/Heading";
@@ -20,7 +20,7 @@ type GalleryProps = {
 
 export default function Gallery({ items }: GalleryProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const pathnames = usePathname().split("/");
+    const { projectName } = useParams();
 
     const handleClick = (index: number) => {
         setCurrentIndex(index);
@@ -58,7 +58,7 @@ export default function Gallery({ items }: GalleryProps) {
                 <div className="relative aspect-video">
                     <Image
                         alt={items[currentIndex].name}
-                        src={`/webp/${last(pathnames)}/${items[currentIndex].fileName}`}
+                        src={`/${projectName}/${items[currentIndex].fileName}`}
                         fill
                         objectFit="cover"
                         quality={100}
@@ -93,7 +93,7 @@ export default function Gallery({ items }: GalleryProps) {
                         >
                             <Image
                                 alt={name}
-                                src={`/webp/${last(pathnames)}/${fileName}`}
+                                src={`/${projectName}/${fileName}`}
                                 quality={100}
                                 fill
                             />

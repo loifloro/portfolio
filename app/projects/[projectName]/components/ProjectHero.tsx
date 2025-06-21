@@ -1,9 +1,12 @@
+"use client";
+
 import { isUndefined } from "lodash";
 import ArrowLink from "@/components/button/ArrowLink";
 import Container from "@/components/container/Container";
 import Heading from "@/components/display/Heading";
 import React from "react";
 import Tag from "@/components/display/Tag";
+import { useParams } from "next/navigation";
 
 type ProjectHeroProps = {
     name: string;
@@ -22,12 +25,14 @@ export default function ProjectHero({
     tags,
     id,
 }: ProjectHeroProps) {
+    const { projectName } = useParams();
+
     return (
         <Container fullWidth withDivider>
             <div
                 className="min-h-screen grid items-end sm:p-7 p-4 bg-cover bg-no-repeat bg-center bg-local"
                 style={{
-                    backgroundImage: `linear-gradient(var(--project-hero-bg-top), var(--project-hero-bg-bottom)), url(/png/${mainImg})`,
+                    backgroundImage: `linear-gradient(var(--project-hero-bg-top), var(--project-hero-bg-bottom)), url(/${projectName}/${mainImg})`,
                 }}
             >
                 <div className="grid sm:grid-cols-2 grid-cols-1 grid-rows-[auto_1fr] justify-end items-end gap-4">

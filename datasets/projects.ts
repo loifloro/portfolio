@@ -430,9 +430,9 @@ export const projects = <ProjectList>[
             { id: 5, name: "AWS Ses" },
             { id: 6, name: "Material UI" },
         ],
-        liveUrl: "https://rock-paper-scissors-1-mnoe.onrender.com/",
+        liveUrl: "https://casa-de-matilda.vercel.app/",
         thumbnail: "thumbnail.webp",
-        mainImg: "rock-paper-scissors-hero.jpg",
+        mainImg: "casa-de-matilda-hero.jpg",
         reason: "The goal of this project is to build a booking platform for Casa de Matilda, allowing guests to schedule stays while providing admins with tools to manage bookings, events, and gallery content securely and efficiently.",
         pallette: [
             {

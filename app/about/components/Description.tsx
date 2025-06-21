@@ -13,7 +13,7 @@ export default function Description() {
                 <div className="flex flex-col min-h-full justify-evenly xl:max-w-[90%] md:mx-0 mx-auto items-center md:items-start">
                     <div className="flex flex-col items-center md:items-start self-end md:text-left text-center">
                         <Image
-                            src="/jpg/about-img-mobile.jpeg"
+                            src="/about/about-img-mobile.jpeg"
                             alt="Lois Floro"
                             width={100}
                             height={100}
@@ -45,7 +45,7 @@ export default function Description() {
                 <div className="hidden md:flex justify-end xl:justify-center gap-4">
                     {/* <div className="grid grid-cols-2 grid-rows-2 gap-8"> */}
                     {/* <Image
-                            src="/jpg/about-img-1.jpg"
+                            src="/about/about-img-1.jpg"
                             alt="Lois Floro"
                             width={200}
                             height={200}
@@ -53,7 +53,7 @@ export default function Description() {
                             // className="relative right-6 drop-shadow-xl"
                         /> */}
                     <Image
-                        src="/jpg/about-img-2.jpg"
+                        src="/about/about-img-2.jpg"
                         alt="Lois Floro"
                         width={320}
                         height={320}
@@ -62,7 +62,7 @@ export default function Description() {
                         draggable
                     />
                     {/* <Image
-                            src="/jpg/about-img-3.jpg"
+                            src="/about/about-img-3.jpg"
                             alt="Lois Floro"
                             width={200}
                             height={200}
@@ -70,7 +70,7 @@ export default function Description() {
                             // className="relative right-6 top-3 drop-shadow-xl"
                         /> */}
                     <Image
-                        src="/jpg/about-img-4.jpg"
+                        src="/about/about-img-4.jpg"
                         alt="Lois Floro"
                         width={320}
                         height={320}
