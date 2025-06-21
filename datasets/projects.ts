@@ -414,327 +414,102 @@ export const projects = <ProjectList>[
             },
         ],
     },
-
-    // {
-    //     id: 3,
-    //     slug: "patient-record-system",
-    //     name: "Patient Record System",
-    //     shortDescription:
-    //         "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
-    //     description:
-    //         "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-    //     tags: [
-    //         { id: 1, name: "Web Development" },
-    //         { id: 2, name: "UI Design" },
-    //         { id: 3, name: "React JS" },
-    //         { id: 4, name: "API" },
-    //         { id: 5, name: "Vercel" },
-    //     ],
-    //     liveUrl: "",
-    //     githubUrl: "",
-    //     thumbnail: "",
-    //     mainImg: "project-current-img-placeholder.png",
-    //     reason: "",
-    //     pallette: [
-    //         {
-    //             id: 1,
-    //             name: "Gold",
-    //             strokeCode: "FFD500",
-    //             colorCode: "AA931E",
-    //         },
-    //         {
-    //             id: 2,
-    //             name: "Rose Ebony",
-    //             strokeCode: "392020",
-    //             colorCode: "543636",
-    //         },
-    //         {
-    //             id: 3,
-    //             name: "Misty Rose",
-    //             strokeCode: "FFFFFF",
-    //             colorCode: "EBD2D2",
-    //         },
-    //         {
-    //             id: 4,
-    //             name: "Blood Red",
-    //             strokeCode: "500000",
-    //             colorCode: "6E0909",
-    //         },
-    //         {
-    //             id: 5,
-    //             name: "Rosy Brown",
-    //             strokeCode: "AC7070",
-    //             colorCode: "B88A8A",
-    //         },
-    //     ],
-    //     palletteDescription:
-    //         "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
-    //     process: [
-    //         {
-    //             id: 1,
-    //             title: "Mood Boarding",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //         },
-    //     ],
-    //     gallery: [
-    //         {
-    //             id: 1,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 2,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 3,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 5,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 6,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //     ],
-    // },
-    // {
-    //     id: 4,
-    //     slug: "css-zen-garden",
-    //     name: "CSS Zen Garden",
-    //     shortDescription:
-    //         "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
-    //     description:
-    //         "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-    //     tags: [
-    //         { id: 1, name: "Web Development" },
-    //         { id: 2, name: "UI Design" },
-    //         { id: 3, name: "React JS" },
-    //         { id: 4, name: "API" },
-    //         { id: 5, name: "Vercel" },
-    //     ],
-    //     liveUrl: "",
-    //     githubUrl: "",
-    //     thumbnail: "",
-    //     mainImg: "project-current-img-placeholder.png",
-    //     reason: "",
-    //     pallette: [
-    //         {
-    //             id: 1,
-    //             name: "Gold",
-    //             strokeCode: "FFD500",
-    //             colorCode: "AA931E",
-    //         },
-    //         {
-    //             id: 2,
-    //             name: "Rose Ebony",
-    //             strokeCode: "392020",
-    //             colorCode: "543636",
-    //         },
-    //         {
-    //             id: 3,
-    //             name: "Misty Rose",
-    //             strokeCode: "FFFFFF",
-    //             colorCode: "EBD2D2",
-    //         },
-    //         {
-    //             id: 4,
-    //             name: "Blood Red",
-    //             strokeCode: "500000",
-    //             colorCode: "6E0909",
-    //         },
-    //         {
-    //             id: 5,
-    //             name: "Rosy Brown",
-    //             strokeCode: "AC7070",
-    //             colorCode: "B88A8A",
-    //         },
-    //     ],
-    //     palletteDescription:
-    //         "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
-    //     process: [
-    //         {
-    //             id: 1,
-    //             title: "Mood Boarding",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //         },
-    //         {
-    //             id: 2,
-    //             title: "Nunc tempor",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //             side: "left",
-    //         },
-    //         {
-    //             id: 3,
-    //             title: "Id felis",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //         },
-    //         {
-    //             id: 4,
-    //             title: "Sociis urna diam",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //             side: "left",
-    //         },
-    //         {
-    //             id: 5,
-    //             title: "Vitae nunc at",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //         },
-    //     ],
-    //     gallery: [
-    //         {
-    //             id: 1,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 2,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 3,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 5,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 6,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //     ],
-    // },
-    // {
-    //     id: 5,
-    //     slug: "quizzard",
-    //     name: "Quizzard",
-    //     shortDescription:
-    //         "A SPA (Single Page Application) used for computing the total time of a YouTube Playlist.",
-    //     description:
-    //         "An undergraduate capstone project, this record management system focused on digitizing the services of Barangay Health Centers in Dasmariñas, Cavite.",
-    //     tags: [
-    //         { id: 1, name: "Web Development" },
-    //         { id: 2, name: "UI Design" },
-    //         { id: 3, name: "React JS" },
-    //         { id: 4, name: "API" },
-    //         { id: 5, name: "Vercel" },
-    //     ],
-    //     liveUrl: "",
-    //     githubUrl: "",
-    //     thumbnail: "",
-    //     mainImg: "project-current-img-placeholder.png",
-    //     reason: "",
-    //     pallette: [
-    //         {
-    //             id: 1,
-    //             name: "Gold",
-    //             strokeCode: "FFD500",
-    //             colorCode: "AA931E",
-    //         },
-    //         {
-    //             id: 2,
-    //             name: "Rose Ebony",
-    //             strokeCode: "392020",
-    //             colorCode: "543636",
-    //         },
-    //         {
-    //             id: 3,
-    //             name: "Misty Rose",
-    //             strokeCode: "FFFFFF",
-    //             colorCode: "EBD2D2",
-    //         },
-    //         {
-    //             id: 4,
-    //             name: "Blood Red",
-    //             strokeCode: "500000",
-    //             colorCode: "6E0909",
-    //         },
-    //         {
-    //             id: 5,
-    //             name: "Rosy Brown",
-    //             strokeCode: "AC7070",
-    //             colorCode: "B88A8A",
-    //         },
-    //     ],
-    //     palletteDescription:
-    //         "A viverra ut eget urna amet cras pharetra. Risus vitae quam libero pellentesque. Vitae nibh mollis platea sem justo dis ultrices. Aliquet non sit accumsan placerat varius diam nec. Scelerisque odio nunc pharetra felis leo sem est pharetra. Adipiscing nisl at eget feugiat senectus id aliquet. At feugiat est turpis posuere lorem.",
-    //     process: [
-    //         {
-    //             id: 1,
-    //             title: "Mood Boarding",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //         },
-    //         {
-    //             id: 2,
-    //             title: "Nunc tempor",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //             side: "left",
-    //         },
-    //         {
-    //             id: 3,
-    //             title: "Id felis",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //         },
-    //         {
-    //             id: 4,
-    //             title: "Sociis urna diam",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //             side: "left",
-    //         },
-    //         {
-    //             id: 5,
-    //             title: "Vitae nunc at",
-    //             description:
-    //                 "Diam blandit nec placerat habitasse at aliquam risus. Condimentum sit morbi nisl dui et.",
-    //         },
-    //     ],
-    //     gallery: [
-    //         {
-    //             id: 1,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 2,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 3,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 5,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //         {
-    //             id: 6,
-    //             name: "",
-    //             fileName: "project-current-img-placeholder.png",
-    //         },
-    //     ],
-    // },
+    {
+        id: 5,
+        slug: "casa-de-matilda",
+        name: "Casa de Matilda",
+        shortDescription:
+            "A marketing website for Casa de Matilda with a built-in booking system",
+        description:
+            "A marketing website for Casa de Matilda with a built-in booking system, allowing guests to explore the property and schedule visits with ease.",
+        tags: [
+            { id: 1, name: "Landing Page Design" },
+            { id: 2, name: "PWA" },
+            { id: 3, name: "Next JS" },
+            { id: 4, name: "MongoDB" },
+            { id: 5, name: "AWS Ses" },
+            { id: 6, name: "Material UI" },
+        ],
+        liveUrl: "https://casa-de-matilda.vercel.app/",
+        thumbnail: "thumbnail.webp",
+        mainImg: "casa-de-matilda-hero.jpg",
+        reason: "The goal of this project is to build a booking platform for Casa de Matilda, allowing guests to schedule stays while providing admins with tools to manage bookings, events, and gallery content securely and efficiently.",
+        pallette: [
+            {
+                id: 1,
+                name: "Alice Blue",
+                strokeCode: "84D0FF",
+                colorCode: "EFF9FF",
+            },
+            {
+                id: 2,
+                name: "Rich Black",
+                strokeCode: "00324F",
+                colorCode: "051620",
+            },
+            {
+                id: 3,
+                name: "Baby Powder",
+                strokeCode: "EAFCFF",
+                colorCode: "F9FEFF",
+            },
+        ],
+        palletteDescription:
+            "The brand theme of Casa de Matilda revolves around the same theme as Santoriniesque, so I wanted to make sure that it translates the feeling of minimalist, whites, cozy, intimate, and fresh",
+        process: [
+            {
+                id: 1,
+                title: "Creative Direction",
+                description:
+                    "First step that I did on this project was to propose 3 creative direction that Casa de Matilda can go. The lists of direction provided was 1. Minimalist /Santorini, Whites, Brief and Modern. 2. Tropical, Gen Z and millennial combined. 3. Luxurious, Fierce and does have brown accent colors. The first being the choice.",
+            },
+            {
+                id: 2,
+                title: "Marketing Page UI Design",
+                description:
+                    "Upon deciding what direction the brand would take, marketing page ui design is created.",
+                side: "left",
+            },
+            {
+                id: 3,
+                title: "Converting using NextJS and Material UI",
+                description:
+                    "Since Material UI is a popular UI framework, I think it would be better to create a project using this widely documented framework with NextJS to fully utilize its API Routes.",
+            },
+            {
+                id: 4,
+                title: "Development of Admin Side",
+                description:
+                    "Now that the project is in Minimum Viable Product (MVP) and marketing page sufficed its purpose, the booking system is now under",
+                side: "left",
+            },
+        ],
+        gallery: [
+            {
+                id: 1,
+                name: "Hero Section",
+                fileName: "1.webp",
+            },
+            {
+                id: 2,
+                name: "Gallery",
+                fileName: "2.webp",
+            },
+            {
+                id: 3,
+                name: "Amenities",
+                fileName: "3.webp",
+            },
+            {
+                id: 4,
+                name: "Reviews",
+                fileName: "4.webp",
+            },
+            {
+                id: 5,
+                name: "Location",
+                fileName: "5.webp",
+            },
+        ],
+    },
 ];

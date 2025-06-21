@@ -97,7 +97,7 @@ function RecentProjectItem({
                         }}
                     >
                         <Image
-                            src={`/webp/${slug}/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
+                            src={`/${slug}/${thumbnailUrl ? thumbnailUrl : "project-img-placeholder.png"}`}
                             alt={name}
                             height={200}
                             width={365}
