@@ -1,7 +1,7 @@
-import Blogs from "./components/Blogs";
-import Hero from "./components/Hero";
-import RecentProjects from "./components/RecentProjects";
-import TechStack from "./components/TechStack";
+import Blogs from "@/components/Blogs";
+import Hero from "@/components/Hero";
+import RecentProjects from "@/components/RecentProjects";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
     return (

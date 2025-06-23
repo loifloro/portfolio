@@ -1,6 +1,7 @@
-import Image from "next/image";
 import ArrowLink from "./button/ArrowLink";
 import GradientLine from "./GradientLine";
+import heroImg from "@/public/png/hero-bg.png";
+import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
@@ -50,10 +51,11 @@ export default function Hero() {
                 </div>
                 <Image
                     fill
-                    src="/png/hero-bg.png"
+                    src={heroImg}
                     alt="Lois Floro"
                     style={{ objectFit: "cover" }}
                     quality={100}
+                    placeholder="blur"
                     className="dark:brightness-[.30] opacity-80 dark:opacity-100 contrast-[1.3] dark:contrast-[1.05] -z-10"
                 />
             </div>

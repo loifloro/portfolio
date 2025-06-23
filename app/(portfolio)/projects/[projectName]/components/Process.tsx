@@ -1,8 +1,8 @@
 import { isEqual } from "lodash";
-import Container from "@/components/container/Container";
-import Heading from "@/components/display/Heading";
+import Container from "app/components/container/Container";
+import Heading from "app/components/display/Heading";
 import React from "react";
-import Subtitle from "@/components/display/Subtitle";
+import Subtitle from "app/components/display/Subtitle";
 
 type ProcessProps = {
     processes: { id: number; title: string; description: string }[];

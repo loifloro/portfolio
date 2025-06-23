@@ -1,8 +1,8 @@
-import ArrowLink from "@/components/button/ArrowLink";
-import Container from "@/components/container/Container";
-import Heading from "@/components/display/Heading";
-import Subtitle from "@/components/display/Subtitle";
-import GradientLine from "@/components/GradientLine";
+import ArrowLink from "app/components/button/ArrowLink";
+import Container from "app/components/container/Container";
+import Heading from "app/components/display/Heading";
+import Subtitle from "app/components/display/Subtitle";
+import GradientLine from "app/components/GradientLine";
 import Image from "next/image";
 import React from "react";
 

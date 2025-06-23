@@ -1,9 +1,9 @@
 import { isNull, isUndefined } from "lodash";
-import Container from "@/components/container/Container";
-import GradientLine from "@/components/GradientLine";
+import Container from "app/components/container/Container";
+import GradientLine from "app/components/GradientLine";
 import React, { ReactNode } from "react";
-import Subtitle from "@/components/display/Subtitle";
-import Heading from "@/components/display/Heading";
+import Subtitle from "app/components/display/Subtitle";
+import Heading from "app/components/display/Heading";
 import Image from "next/image";
 
 type CareerBackgroundSectionProps = {

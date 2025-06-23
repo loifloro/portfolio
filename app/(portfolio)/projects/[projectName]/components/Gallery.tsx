@@ -4,11 +4,11 @@ import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import { isEqual } from "lodash";
 import { useParams } from "next/navigation";
 import clsx from "clsx";
-import Container from "@/components/container/Container";
-import Heading from "@/components/display/Heading";
+import Container from "app/components/container/Container";
+import Heading from "app/components/display/Heading";
 import Image from "next/image";
 import React, { useState } from "react";
-import Subtitle from "@/components/display/Subtitle";
+import Subtitle from "app/components/display/Subtitle";
 
 type GalleryProps = {
     items: {

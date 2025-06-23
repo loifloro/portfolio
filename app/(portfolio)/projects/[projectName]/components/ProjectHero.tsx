@@ -1,11 +1,11 @@
 "use client";
 
 import { isUndefined } from "lodash";
-import ArrowLink from "@/components/button/ArrowLink";
-import Container from "@/components/container/Container";
-import Heading from "@/components/display/Heading";
+import ArrowLink from "app/components/button/ArrowLink";
+import Container from "app/components/container/Container";
+import Heading from "app/components/display/Heading";
 import React from "react";
-import Tag from "@/components/display/Tag";
+import Tag from "app/components/display/Tag";
 import { useParams } from "next/navigation";
 
 type ProjectHeroProps = {

@@ -5,9 +5,9 @@ import { databases, frameworks, languages, tools } from "datasets/techStack";
 import { IconType } from "@icons-pack/react-simple-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
-import Container from "@/components/container/Container";
-import Heading from "@/components/display/Heading";
-import Subtitle from "@/components/display/Subtitle";
+import Container from "app/components/container/Container";
+import Heading from "app/components/display/Heading";
+import Subtitle from "app/components/display/Subtitle";
 import type { Swiper as SwiperType } from "swiper";
 
 type CareerTechStackLogoProps = {
