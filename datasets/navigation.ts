@@ -16,7 +16,7 @@ export const navigationBarItems = [
     },
     {
         name: "Blog",
-        comingSoon: true,
+        comingSoon: false,
         url: "/blog",
     },
 ];

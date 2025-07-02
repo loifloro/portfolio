@@ -10,7 +10,7 @@ export default function PortfolioLayout({
     return (
         <>
             <Header />
-            {children}
+            <main>{children}</main>
             <Footer />
         </>
     );

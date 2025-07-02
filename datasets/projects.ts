@@ -1,6 +1,6 @@
 import { ProjectList } from "types/project";
 
-export const projects = <ProjectList>[
+export const recentProjects = <ProjectList>[
     {
         id: 1,
         slug: "youtube-playlist-calculator",
@@ -211,105 +211,107 @@ export const projects = <ProjectList>[
     },
     {
         id: 3,
-        slug: "space-tourism",
-        name: "Space Tourism",
+        slug: "casa-de-matilda",
+        name: "Casa de Matilda",
         shortDescription:
-            "A Frontend Mentor challenge focused on building a fully responsive website with smooth UI animations.",
+            "A marketing website for Casa de Matilda with a built-in booking system",
         description:
-            "A Frontend Mentor challenge focused on building a fully responsive website with smooth UI animations. The project emphasizes layout precision, interactive elements, and modern frontend techniques to replicate a professional design spec.",
+            "A marketing website for Casa de Matilda with a built-in booking system, allowing guests to explore the property and schedule visits with ease.",
         tags: [
-            { id: 1, name: "Responsive Design" },
-            { id: 2, name: "Animation" },
-            { id: 3, name: "Github Action" },
-            { id: 4, name: "Github Pages" },
-            { id: 5, name: "React Router" },
-            { id: 6, name: "Axios" },
+            { id: 1, name: "Landing Page" },
+            { id: 2, name: "PWA" },
+            { id: 3, name: "Next JS" },
+            { id: 4, name: "MongoDB" },
+            { id: 5, name: "AWS Ses" },
+            { id: 6, name: "Material UI" },
         ],
-        liveUrl: "https://loifloro.github.io/space-tourism/",
-        githubUrl: "https://github.com/loifloro/space-tourism",
+        liveUrl: "https://casa-de-matilda.vercel.app/",
         thumbnail: "thumbnail.webp",
-        mainImg: "space-tourism-hero.jpg",
-        reason: "The goal of this project is to build a fully responsive website at the same time consuming a json file to populate the page and be able to toggle between the tabs to see new information.",
+        mainImg: "casa-de-matilda-hero.jpg",
+        reason: "The goal of this project is to build a booking platform for Casa de Matilda, allowing guests to schedule stays while providing admins with tools to manage bookings, events, and gallery content securely and efficiently.",
         pallette: [
             {
                 id: 1,
-                name: "Rich Black",
-                strokeCode: "162053",
-                colorCode: "0B0D17",
+                name: "Alice Blue",
+                strokeCode: "84D0FF",
+                colorCode: "EFF9FF",
             },
             {
                 id: 2,
-                name: "Periwinkle",
-                strokeCode: "91A0F6",
-                colorCode: "D0D6F9",
+                name: "Rich Black",
+                strokeCode: "00324F",
+                colorCode: "051620",
             },
             {
                 id: 3,
-                name: "White",
-                strokeCode: "FFF7F7",
-                colorCode: "FFFFFF",
+                name: "Baby Powder",
+                strokeCode: "EAFCFF",
+                colorCode: "F9FEFF",
             },
         ],
         palletteDescription:
-            "The pallette uses space colors to emulate the feel that the user is traveling in space. It gives illusion of dark night skies with the stars shining through.",
+            "The brand theme of Casa de Matilda revolves around the same theme as Santoriniesque, so I wanted to make sure that it translates the feeling of minimalist, whites, cozy, intimate, and fresh",
         process: [
             {
                 id: 1,
-                title: "React Router Setup",
+                title: "Creative Direction",
                 description:
-                    "This is my first time using React Router and was quite overwhelmed how different it was as a framework. I had a struggle deploying it to Github Pages via Github Actions but was resolved by configuring it for client side rendering and updating the project basename.",
+                    "First step that I did on this project was to propose 3 creative direction that Casa de Matilda can go. The lists of direction provided was 1. Minimalist /Santorini, Whites, Brief and Modern. 2. Tropical, Gen Z and millennial combined. 3. Luxurious, Fierce and does have brown accent colors. The first being the choice.",
             },
             {
                 id: 2,
-                title: "Mobile First Workflow",
+                title: "Marketing Page UI Design",
                 description:
-                    "When developing this project, my goal is to fully utilize mobile first workflow to have an advantage adjusting the layout when the viewport width increases.",
+                    "Upon deciding what direction the brand would take, marketing page ui design is created.",
                 side: "left",
             },
             {
                 id: 3,
-                title: "Fetching Using Axios",
+                title: "Converting using NextJS and Material UI",
                 description:
-                    "One of the goals of this project is to learn the basics of a Github Workflow, so I created a Github Action for deployment to Github Pages. I have learned different parts that consist a Github Action.",
+                    "Since Material UI is a popular UI framework, I think it would be better to create a project using this widely documented framework with NextJS to fully utilize its API Routes.",
             },
             {
                 id: 4,
-                title: "Creating Github Workflow",
+                title: "Development of Admin Side",
                 description:
-                    "One of the goals of this project is to learn the basics of a Github Workflow, so I created a Github Action for deployment to Github Pages. I have learned different parts that consist a Github Action.",
+                    "Now that the project is in Minimum Viable Product (MVP) and marketing page sufficed its purpose, the booking system is now under",
                 side: "left",
             },
         ],
         gallery: [
             {
                 id: 1,
-                name: "Home",
+                name: "Hero Section",
                 fileName: "1.webp",
             },
             {
                 id: 2,
-                name: "Destination",
+                name: "Gallery",
                 fileName: "2.webp",
             },
             {
                 id: 3,
-                name: "Crew",
+                name: "Amenities",
                 fileName: "3.webp",
             },
             {
                 id: 4,
-                name: "Destination",
+                name: "Reviews",
                 fileName: "4.webp",
             },
             {
                 id: 5,
-                name: "Mobile Shots",
+                name: "Location",
                 fileName: "5.webp",
             },
         ],
     },
+];
+
+export const frontendMentor = <ProjectList>[
     {
-        id: 4,
+        id: 1,
         slug: "rock-paper-scissors",
         name: "Rock Paper Scissors",
         shortDescription:
@@ -415,99 +417,100 @@ export const projects = <ProjectList>[
         ],
     },
     {
-        id: 5,
-        slug: "casa-de-matilda",
-        name: "Casa de Matilda",
+        id: 3,
+        slug: "space-tourism",
+        name: "Space Tourism",
         shortDescription:
-            "A marketing website for Casa de Matilda with a built-in booking system",
+            "A Frontend Mentor challenge focused on building a fully responsive website with smooth UI animations.",
         description:
-            "A marketing website for Casa de Matilda with a built-in booking system, allowing guests to explore the property and schedule visits with ease.",
+            "A Frontend Mentor challenge focused on building a fully responsive website with smooth UI animations. The project emphasizes layout precision, interactive elements, and modern frontend techniques to replicate a professional design spec.",
         tags: [
-            { id: 1, name: "Landing Page Design" },
-            { id: 2, name: "PWA" },
-            { id: 3, name: "Next JS" },
-            { id: 4, name: "MongoDB" },
-            { id: 5, name: "AWS Ses" },
-            { id: 6, name: "Material UI" },
+            { id: 1, name: "Responsive Design" },
+            { id: 2, name: "Animation" },
+            { id: 3, name: "Github Action" },
+            { id: 4, name: "Github Pages" },
+            { id: 5, name: "React Router" },
+            { id: 6, name: "Axios" },
         ],
-        liveUrl: "https://casa-de-matilda.vercel.app/",
+        liveUrl: "https://loifloro.github.io/space-tourism/",
+        githubUrl: "https://github.com/loifloro/space-tourism",
         thumbnail: "thumbnail.webp",
-        mainImg: "casa-de-matilda-hero.jpg",
-        reason: "The goal of this project is to build a booking platform for Casa de Matilda, allowing guests to schedule stays while providing admins with tools to manage bookings, events, and gallery content securely and efficiently.",
+        mainImg: "space-tourism-hero.jpg",
+        reason: "The goal of this project is to build a fully responsive website at the same time consuming a json file to populate the page and be able to toggle between the tabs to see new information.",
         pallette: [
             {
                 id: 1,
-                name: "Alice Blue",
-                strokeCode: "84D0FF",
-                colorCode: "EFF9FF",
+                name: "Rich Black",
+                strokeCode: "162053",
+                colorCode: "0B0D17",
             },
             {
                 id: 2,
-                name: "Rich Black",
-                strokeCode: "00324F",
-                colorCode: "051620",
+                name: "Periwinkle",
+                strokeCode: "91A0F6",
+                colorCode: "D0D6F9",
             },
             {
                 id: 3,
-                name: "Baby Powder",
-                strokeCode: "EAFCFF",
-                colorCode: "F9FEFF",
+                name: "White",
+                strokeCode: "FFF7F7",
+                colorCode: "FFFFFF",
             },
         ],
         palletteDescription:
-            "The brand theme of Casa de Matilda revolves around the same theme as Santoriniesque, so I wanted to make sure that it translates the feeling of minimalist, whites, cozy, intimate, and fresh",
+            "The pallette uses space colors to emulate the feel that the user is traveling in space. It gives illusion of dark night skies with the stars shining through.",
         process: [
             {
                 id: 1,
-                title: "Creative Direction",
+                title: "React Router Setup",
                 description:
-                    "First step that I did on this project was to propose 3 creative direction that Casa de Matilda can go. The lists of direction provided was 1. Minimalist /Santorini, Whites, Brief and Modern. 2. Tropical, Gen Z and millennial combined. 3. Luxurious, Fierce and does have brown accent colors. The first being the choice.",
+                    "This is my first time using React Router and was quite overwhelmed how different it was as a framework. I had a struggle deploying it to Github Pages via Github Actions but was resolved by configuring it for client side rendering and updating the project basename.",
             },
             {
                 id: 2,
-                title: "Marketing Page UI Design",
+                title: "Mobile First Workflow",
                 description:
-                    "Upon deciding what direction the brand would take, marketing page ui design is created.",
+                    "When developing this project, my goal is to fully utilize mobile first workflow to have an advantage adjusting the layout when the viewport width increases.",
                 side: "left",
             },
             {
                 id: 3,
-                title: "Converting using NextJS and Material UI",
+                title: "Fetching Using Axios",
                 description:
-                    "Since Material UI is a popular UI framework, I think it would be better to create a project using this widely documented framework with NextJS to fully utilize its API Routes.",
+                    "One of the goals of this project is to learn the basics of a Github Workflow, so I created a Github Action for deployment to Github Pages. I have learned different parts that consist a Github Action.",
             },
             {
                 id: 4,
-                title: "Development of Admin Side",
+                title: "Creating Github Workflow",
                 description:
-                    "Now that the project is in Minimum Viable Product (MVP) and marketing page sufficed its purpose, the booking system is now under",
+                    "One of the goals of this project is to learn the basics of a Github Workflow, so I created a Github Action for deployment to Github Pages. I have learned different parts that consist a Github Action.",
                 side: "left",
             },
         ],
         gallery: [
             {
                 id: 1,
-                name: "Hero Section",
+                name: "Home",
                 fileName: "1.webp",
             },
             {
                 id: 2,
-                name: "Gallery",
+                name: "Destination",
                 fileName: "2.webp",
             },
             {
                 id: 3,
-                name: "Amenities",
+                name: "Crew",
                 fileName: "3.webp",
             },
             {
                 id: 4,
-                name: "Reviews",
+                name: "Destination",
                 fileName: "4.webp",
             },
             {
                 id: 5,
-                name: "Location",
+                name: "Mobile Shots",
                 fileName: "5.webp",
             },
         ],

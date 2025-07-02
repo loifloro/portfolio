@@ -18,7 +18,3 @@ export function getProjectBySlug(slug: string): Project | null {
 
     return null;
 }
-
-export function getProjects() {
-    return projects;
-}

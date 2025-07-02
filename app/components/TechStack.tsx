@@ -1,28 +1,18 @@
-import React from "react";
+import { databases, languages, frameworks, tools } from "datasets/techStack";
+import { isString, shuffle } from "lodash";
 import Container from "./container/Container";
 
-type T = "heading-2" | "heading-3" | "normal" | "mono";
-
 export default function TechStack() {
-    const data = [
+    const data = shuffle([
         "Ui Design",
         "Web Development",
-        "React",
-        "CSS",
-        "SASS",
         "Mobile Development",
-        "HTML",
-        "Tailwind",
-        "Prisma",
         "Responsive Design",
-        "Gulp",
-        "Git",
-        "Figma",
-        "WordPress",
-        "Next JS",
-        "Github",
-        "JavaScript",
-    ];
+        ...databases,
+        ...languages,
+        ...frameworks,
+        ...tools,
+    ]);
 
     const styles = {
         "heading-2":
@@ -35,26 +25,24 @@ export default function TechStack() {
 
     return (
         <Container fullWidth>
-            <div className="overflow-auto flex max-h-[950px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                <div className="text-rich-black flex flex-wrap items-center uppercase gap-x-20 gap-y-10 md:gap-y-4 md:gap-x-10 min-w-[120%] justify-around">
-                    {data.map((value) => (
-                        <p
-                            key={value}
+            <div className="overflow-y-hidden max-h-screen overflow-x-auto flex [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                <ul className="text-rich-black flex flex-wrap items-center  uppercase gap-x-20 gap-y-10 md:gap-y-4 md:gap-x-10 min-w-[120%] justify-around">
+                    {data.map((value, index) => (
+                        <li
+                            key={index}
                             className={
-                                styles[
-                                    Object.keys(styles)[
-                                        Math.floor(
-                                            Math.random() *
-                                                Object.keys(styles).length
-                                        )
-                                    ] as T
+                                Object.values(styles)[
+                                    Math.floor(
+                                        Math.random() *
+                                            Object.keys(styles).length
+                                    )
                                 ]
                             }
                         >
-                            {value}
-                        </p>
+                            {isString(value) ? value : value.name}
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </Container>
     );

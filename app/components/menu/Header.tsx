@@ -19,21 +19,23 @@ type HeaderItemProps = {
 
 function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
     return (
-        <Link
-            href={url}
-            className="text-sm uppercase font-light tracking-widest text-rich-black relative"
-        >
-            <li
-                className={`inline-block ${isComingSoon && "pointer-events-none text-battleship-gray before:w-[calc(100%+20px)] before:h-[.6px] before:bg-battleship-gray before:relative before:block before:right-3 before:top-3"}`}
+        <nav>
+            <Link
+                href={url}
+                className="text-sm uppercase font-light tracking-widest text-rich-black relative"
             >
-                {name}
-            </li>
-            {isComingSoon && (
-                <span className="min-w-max absolute float-right font-mono font-thin text-xs bottom-4">
-                    Coming Soon!
-                </span>
-            )}
-        </Link>
+                <li
+                    className={`inline-block ${isComingSoon && "pointer-events-none text-battleship-gray before:w-[calc(100%+20px)] before:h-[.6px] before:bg-battleship-gray before:relative before:block before:right-3 before:top-3"}`}
+                >
+                    {name}
+                </li>
+                {isComingSoon && (
+                    <span className="min-w-max absolute float-right font-mono font-thin text-xs bottom-4">
+                        Coming Soon!
+                    </span>
+                )}
+            </Link>
+        </nav>
     );
 }
 
@@ -75,15 +77,15 @@ export default function Header() {
             animate={isShown ? "shown" : "hidden"}
             variants={variants}
         >
-            <nav
+            <div
                 className={clsx(
                     "flex items-center justify-between md:px-8 px-4 py-6 ",
                     scrollY.get() > 100 && "bg-opacity-[0.002] backdrop-blur-sm"
                 )}
             >
-                <div className="min-w-32">
+                <nav className="min-w-32">
                     <Logo />
-                </div>
+                </nav>
                 <ul className="lg:flex hidden gap-16">
                     {navigationBarItems.map(({ name, comingSoon, url }) => (
                         <HeaderItem
@@ -94,13 +96,15 @@ export default function Header() {
                         />
                     ))}
                 </ul>
-                <ArrowLink
-                    className="lg:flex hidden"
-                    name="Get in Touch"
-                    url="#get-in-touch"
-                />
+                <nav>
+                    <ArrowLink
+                        className="lg:flex hidden"
+                        name="Get in Touch"
+                        url="#get-in-touch"
+                    />
+                </nav>
                 <MobileNavigation />
-            </nav>
+            </div>
             <GradientLine type="centered" onMobile="space-between" />
         </motion.header>
     );

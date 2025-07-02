@@ -49,9 +49,7 @@ export default function RootLayout({
             className={`${GeistSans.className} ${space_mono.variable} ${space_grotesk.variable} ${inter.variable}`}
         >
             <body className="relative" id="app">
-                <ProgressBarProvider>
-                    <main>{children}</main>
-                </ProgressBarProvider>
+                <ProgressBarProvider>{children}</ProgressBarProvider>
             </body>
         </html>
     );

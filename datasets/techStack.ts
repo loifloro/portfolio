@@ -31,7 +31,6 @@ export const tools: TechStack = [
     { id: 6, name: "WordPress", logo: Si.SiWordpress },
     { id: 7, name: "A. Premiere Pro", logo: Si.SiAdobepremierepro },
     { id: 8, name: "A. Photoshop", logo: Si.SiAdobephotoshop },
-    { id: 9, name: "DotEnv", logo: Si.SiDotenv },
     { id: 10, name: "Figma", logo: Si.SiFigma },
     { id: 11, name: "CSS", logo: Si.SiCss3 },
     { id: 12, name: "A. Illustrator", logo: Si.SiAdobeillustrator },
