@@ -53,7 +53,7 @@ export default function Hero() {
                 />
             </div>
             <div className="absolute left-0 top-1/2 z-10 -translate-y-1/2 text-start px-8 hidden md:block">
-                <ul className="font-mono uppercase flex flex-col gap-4 text-xs text-battleship-gray">
+                <ul className="font-mono uppercase flex flex-col gap-4 text-xs text-rich-black opacity-20">
                     <li>UI / UX Design</li>
                     <li>Full Stack Development</li>
                     <li>Frontend Development</li>

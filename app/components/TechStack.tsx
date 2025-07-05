@@ -25,8 +25,8 @@ export default function TechStack() {
 
     return (
         <Container fullWidth>
-            <div className="overflow-y-hidden max-h-screen overflow-x-auto flex [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                <ul className="text-rich-black flex flex-wrap items-center  uppercase gap-x-20 gap-y-10 md:gap-y-4 md:gap-x-10 min-w-[120%] justify-around">
+            <div className="overflow-y-hidden max-h-screen md:max-h-full overflow-x-auto flex [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                <ul className="text-rich-black flex flex-wrap items-center uppercase gap-x-20 gap-y-10 md:gap-y-4 md:gap-x-10 min-w-[120%] justify-around">
                     {data.map((value, index) => (
                         <li
                             key={index}
