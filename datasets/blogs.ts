@@ -15,18 +15,4 @@ export const blogs = <BlogList>[
         mediumUrl:
             "https://medium.com/@jlois.floro/not-so-so-common-tools-i-mostly-use-as-frontend-developer-15d3a1a881a3",
     },
-    {
-        id: 3,
-        title: "Not So So Common Tools I Mostly Use as Frontend Developer",
-        thumbnailPath: "/blogs/blog-1-thumbnail.png",
-        mediumUrl:
-            "https://medium.com/@jlois.floro/not-so-so-common-tools-i-mostly-use-as-frontend-developer-15d3a1a881a3",
-    },
-    {
-        id: 4,
-        title: "Not So So Common Tools I Mostly Use as Frontend Developer",
-        thumbnailPath: "/blogs/blog-2-thumbnail.png",
-        mediumUrl:
-            "https://medium.com/@jlois.floro/not-so-so-common-tools-i-mostly-use-as-frontend-developer-15d3a1a881a3",
-    },
 ];

@@ -42,7 +42,7 @@ export default function Blogs() {
                     Blogs
                 </Heading>
             </div>
-            <div className="overflow-auto flex justify-start xl:justify-center max-h-[950px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <div className="overflow-auto flex justify-start sm:justify-center max-h-[950px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 <div className="text-rich-black flex items-start uppercase">
                     {blogs.map((item) => (
                         <BlogItem
