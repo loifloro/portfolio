@@ -16,7 +16,7 @@ export function Credits() {
 
 export function Footer() {
     return (
-        <footer id="get-in-touch" className="mt-44 relative">
+        <footer id="get-in-touch" className="mt-44 relative z-0">
             <Container withDivider dividerType="centered" dividerPosition="top">
                 <div className="mt-24 pb-6">
                     <Subtitle>Get in Touch</Subtitle>

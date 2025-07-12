@@ -39,7 +39,7 @@ export default async function Page({ params }: Props) {
     }
 
     return (
-        <div className="flex flex-col gap-32">
+        <main className="flex flex-col gap-32">
             <ProjectHero
                 name={project.name}
                 tags={project.tags}
@@ -58,6 +58,6 @@ export default async function Page({ params }: Props) {
             />
             <Process processes={project.process} />
             <Gallery items={project.gallery} />
-        </div>
+        </main>
     );
 }

@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <div className="flex flex-col gap-32">
+        <main className="flex flex-col gap-32">
             <Description />
             <CareerBackground />
             <WorkProcess />
             <CareerTechStack />
             <SoftSkills />
-        </div>
+        </main>
     );
 }

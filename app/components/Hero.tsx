@@ -1,7 +1,6 @@
+import { SiGithub, SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
 import ArrowLink from "./button/ArrowLink";
 import GradientLine from "./GradientLine";
-import heroImg from "@/public/png/hero-bg.png";
-import { SiGithub, SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,7 +15,10 @@ export default function Hero() {
     };
 
     return (
-        <div className="supports-[h-svh]:h-svh h-screen text-center grid items-end md:p-12 p-4 relative transition-all transition-discrete duration-700 ease-in-out text-white">
+        <section
+            aria-label="hero"
+            className="supports-[h-svh]:h-svh h-screen text-center grid items-end md:p-12 p-4 relative transition-all transition-discrete duration-700 ease-in-out text-white z-0"
+        >
             <div>
                 <div className="flex gap-3 sm:gap-2 justify-center items-center">
                     <p className="before:inline-block before:h-8 before:w-px before:bg-gradient-horizontal font-light font-mono uppercase tracking-wider flex gap-2 justify-center items-center md:text-base text-sm">
@@ -44,11 +46,10 @@ export default function Hero() {
                 </div>
                 <Image
                     fill
-                    src={heroImg}
+                    src="/png/hero-bg.png"
                     alt="Lois Floro"
                     style={{ objectFit: "cover" }}
                     quality={100}
-                    placeholder="blur"
                     className="dark:brightness-[.30] opacity-80 dark:opacity-100 contrast-[1.3] dark:contrast-[1.05] -z-10"
                 />
             </div>
@@ -85,6 +86,6 @@ export default function Hero() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
     );
 }

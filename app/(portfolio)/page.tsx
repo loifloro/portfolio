@@ -6,12 +6,12 @@ import TechStack from "@/components/TechStack";
 
 export default function Home() {
     return (
-        <div className="flex flex-col gap-44">
+        <main className="flex flex-col gap-44">
             <Hero />
             <TechStack />
             <RecentProjects />
             <Blogs />
             <FrontendMentor />
-        </div>
+        </main>
     );
 }
