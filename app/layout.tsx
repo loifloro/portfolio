@@ -7,7 +7,6 @@ import ProgressBarProvider from "utils/providers/ProgressBarProvider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Lois Floro | Frontend Developer & Designer",
     description:
         "Lois is passionate in converting designs into real life applications with care and commitment.",
     openGraph: {

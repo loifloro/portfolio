@@ -2,7 +2,7 @@ import React, { HTMLProps } from "react";
 
 type HeadingProps = {
     element: "h1" | "h2" | "h3" | "h4";
-    className: HTMLProps<HTMLElement>["className"];
+    className?: HTMLProps<HTMLElement>["className"];
     children: React.ReactNode;
 };
 export default function Heading({

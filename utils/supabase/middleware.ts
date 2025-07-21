@@ -39,12 +39,18 @@ export async function updateSession(request: NextRequest) {
         data: { user },
     } = await supabase.auth.getUser();
 
+    if (user && request.nextUrl.pathname.match("/login")) {
+        const url = request.nextUrl.clone();
+        url.pathname = "/protected";
+
+        return NextResponse.redirect(url);
+    }
+
     if (!user && request.nextUrl.pathname.startsWith("/protected")) {
         // no user, potentially respond by redirecting the user to the login page
         const url = request.nextUrl.clone();
         url.pathname = "/login";
 
-        console.log("hi");
         return NextResponse.redirect(url);
     }
 
