@@ -1,6 +1,8 @@
-import Image from "next/image";
+import { SiGithub, SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
 import ArrowLink from "./button/ArrowLink";
 import GradientLine from "./GradientLine";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Hero() {
@@ -13,7 +15,10 @@ export default function Hero() {
     };
 
     return (
-        <div className="supports-[h-svh]:h-svh h-screen text-center grid items-end md:p-12 p-4 relative transition-all transition-discrete duration-700 ease-in-out">
+        <section
+            aria-label="hero"
+            className="supports-[h-svh]:h-svh h-screen text-center grid items-end md:p-12 p-4 relative transition-all transition-discrete duration-700 ease-in-out text-white z-0"
+        >
             <div>
                 <div className="flex gap-3 sm:gap-2 justify-center items-center">
                     <p className="before:inline-block before:h-8 before:w-px before:bg-gradient-horizontal font-light font-mono uppercase tracking-wider flex gap-2 justify-center items-center md:text-base text-sm">
@@ -28,19 +33,10 @@ export default function Hero() {
                 </p>
                 <div className="flex justify-center gap-5 sm:gap-8 mt-6 mb-2 sm:mb-0 sm:mt-8">
                     <ArrowLink
-                        name="LinkedIn"
+                        name="View Lois' Background"
                         isWithArrow
-                        url="https://www.linkedin.com/in/jlfloro/"
-                    />
-                    <ArrowLink
-                        name="X / Twitter"
-                        isWithArrow
-                        url="https://x.com/lois_today"
-                    />
-                    <ArrowLink
-                        name="Github"
-                        isWithArrow
-                        url="https://github.com/loifloro"
+                        url="/about"
+                        className="text-white"
                     />
                 </div>
             </div>
@@ -57,6 +53,39 @@ export default function Hero() {
                     className="dark:brightness-[.30] opacity-80 dark:opacity-100 contrast-[1.3] dark:contrast-[1.05] -z-10"
                 />
             </div>
-        </div>
+            <div className="absolute left-0 top-1/2 z-10 -translate-y-1/2 text-start px-8 hidden md:block">
+                <ul className="font-mono uppercase flex flex-col gap-4 text-xs text-rich-black opacity-20">
+                    <li>UI / UX Design</li>
+                    <li>Full Stack Development</li>
+                    <li>Frontend Development</li>
+                    <li>Writing / Blogs</li>
+                </ul>
+            </div>
+            <div className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-start px-10 hidden md:block">
+                <ul className="font-mono uppercase flex flex-col gap-10 text-sm text-battleship-gray">
+                    <li>
+                        <Link
+                            href="https://github.com/loifloro"
+                            target="_blank"
+                        >
+                            <SiGithub />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href="https://www.linkedin.com/in/jlfloro/"
+                            target="_blank"
+                        >
+                            <SiLinkedin />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="https://x.com/lois_today" target="_blank">
+                            <SiX />
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+        </section>
     );
 }

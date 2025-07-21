@@ -34,11 +34,11 @@ export default function MobileMenu({
     }
 
     return createPortal(
-        <div
-            className={`lg:hidden fixed top-0 bg-pale-white z-[999] w-full min-h-screen origin-top transition-transform ease-in-out duration-100 ${isOpened ? "-translate-y-0 top-0" : "-translate-y-full delay-300"}`}
+        <aside
+            className={`lg:hidden fixed top-0 bg-pale-white z-[999] w-full min-h-lvh origin-top transition-transform ease-in-out duration-100 ${isOpened ? "-translate-y-0 top-0" : "-translate-y-full delay-300"}`}
         >
             <div
-                className={`flex flex-col justify-between md:px-8 px-4 py-6 min-h-screen transition-opacity ease-in-out duration-300 ${isOpened ? "opacity-100 delay-300" : "opacity-0"}`}
+                className={`flex flex-col justify-between md:px-8 px-4 py-6 min-h-lvh transition-opacity ease-in-out duration-300 ${isOpened ? "opacity-100 delay-300" : "opacity-0"}`}
             >
                 <div>
                     <div className="flex justify-between mb-4">
@@ -80,7 +80,7 @@ export default function MobileMenu({
                     <Credits />
                 </div>
             </div>
-        </div>,
+        </aside>,
         targetRef.current
     );
 }

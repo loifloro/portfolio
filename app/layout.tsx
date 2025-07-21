@@ -1,19 +1,16 @@
 import "./globals.css";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { Footer } from "./components/Footer";
 import { GeistSans } from "geist/font/sans";
 import { Inter, Space_Mono, Space_Grotesk } from "next/font/google";
-import Header from "./components/menu/Header";
 import ProgressBarProvider from "utils/providers/ProgressBarProvider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Lois Floro | Portfolio",
     description:
         "Lois is passionate in converting designs into real life applications with care and commitment.",
     openGraph: {
-        title: "Lois Floro | Portfolio",
+        title: "Lois Floro | Frontend Developer & Designer",
         description:
             "Lois is passionate in converting designs into real life applications with care and commitment.",
     },
@@ -51,11 +48,7 @@ export default function RootLayout({
             className={`${GeistSans.className} ${space_mono.variable} ${space_grotesk.variable} ${inter.variable}`}
         >
             <body className="relative" id="app">
-                <ProgressBarProvider>
-                    <Header />
-                    <main>{children}</main>
-                    <Footer />
-                </ProgressBarProvider>
+                <ProgressBarProvider>{children}</ProgressBarProvider>
             </body>
         </html>
     );

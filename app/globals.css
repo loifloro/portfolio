@@ -38,12 +38,18 @@
                         #fdfdfd 50%,
                         #8e8e9065 65%,
                         #0a0a0a30 100%);
-        --gradient-horizontal: linear-gradient(to top,
+        /* --gradient-horizontal: linear-gradient(to top,
                         #ffffff10 0%,
                         #8e8e9065 15%,
                         #0a0a0a 50%,
                         #8e8e9065 85%,
-                        #ffffff10 100%);
+                        #ffffff10 100%); */
+        --gradient-horizontal: linear-gradient(to top,
+                        #0a0a0a30 0%,
+                        #8e8e9065 15%,
+                        #fdfdfd 50%,
+                        #8e8e9065 85%,
+                        #0a0a0a30 100%);
         --gradient-to-left: linear-gradient(to left,
                         #fdfdfd 0%,
                         #8e8e9065 45%,
@@ -53,8 +59,7 @@
                         #8e8e9065 45%,
                         #0a0a0a30 100%);
         --gradient-hero-bg: linear-gradient(to bottom,
-                        rgba(0, 0, 0, 0) 40%,
-                        var(--pale-white) 100%);
+                        rgba(0, 0, 0, 0) 20%, #00000051 60%, #000000 100%);
         --gradient-footer-bg: linear-gradient(to left,
                         var(--pale-white) 20%,
                         rgba(0, 0, 0, 0) 100%);
