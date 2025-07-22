@@ -2,11 +2,11 @@ import { getProjectBySlug } from "utils/project";
 import { isNull } from "lodash";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Gallery from "./components/Gallery";
-import Pallette from "./components/Palette";
-import Process from "./components/Process";
-import ProjectHero from "./components/ProjectHero";
-import Rationale from "./components/Rationale";
+import Gallery from "./_components/Gallery";
+import Pallette from "./_components/Palette";
+import Process from "./_components/Process";
+import ProjectHero from "./_components/ProjectHero";
+import Rationale from "./_components/Rationale";
 import React from "react";
 
 type Props = {

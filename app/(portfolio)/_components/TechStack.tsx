@@ -1,6 +1,6 @@
 import { databases, languages, frameworks, tools } from "datasets/techStack";
 import { isString, shuffle } from "lodash";
-import Container from "./container/Container";
+import Container from "@/components/container/Container";
 
 export default function TechStack() {
     const data = shuffle([

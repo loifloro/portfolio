@@ -1,5 +1,5 @@
-import { Footer } from "app/components/Footer";
-import Header from "app/components/menu/Header";
+import { Footer } from "./_components/Footer";
+import Header from "@/components/menu/Header";
 import React from "react";
 import type { Metadata } from "next";
 

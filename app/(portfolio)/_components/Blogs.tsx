@@ -1,11 +1,11 @@
 import { Blog } from "types/blog";
 import { blogs } from "datasets/blogs";
-import ArrowLink from "./button/ArrowLink";
-import Container from "./container/Container";
-import Heading from "./display/Heading";
+import ArrowLink from "@/components/button/ArrowLink";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
 import Image from "next/image";
 import React from "react";
-import Subtitle from "./display/Subtitle";
+import Subtitle from "@/components/display/Subtitle";
 
 function BlogItem({ id, thumbnailPath, title, mediumUrl }: Blog) {
     return (

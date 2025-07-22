@@ -1,6 +1,6 @@
 import { SiGithub, SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
-import ArrowLink from "./button/ArrowLink";
-import GradientLine from "./GradientLine";
+import ArrowLink from "@/components/button/ArrowLink";
+import GradientLine from "@/components/GradientLine";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

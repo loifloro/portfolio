@@ -1,9 +1,9 @@
 import { frontendMentor } from "datasets/projects";
-import Container from "./container/Container";
-import Heading from "./display/Heading";
-import ProjectItem from "./display/ProjectItem";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import ProjectItem from "@/components/display/ProjectItem";
 import React from "react";
-import Subtitle from "./display/Subtitle";
+import Subtitle from "@/components/display/Subtitle";
 
 export default function FrontendMentor() {
     return (

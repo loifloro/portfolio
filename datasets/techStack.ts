@@ -23,6 +23,7 @@ export const databases: TechStack = [
     { id: 1, name: "Prisma", logo: Si.SiPrisma },
     { id: 2, name: "MongoDb", logo: Si.SiMongodb },
     { id: 3, name: "MySQL", logo: Si.SiMysql },
+    { id: 4, name: "Supabase", logo: Si.SiSupabase },
 ];
 
 export const tools: TechStack = [

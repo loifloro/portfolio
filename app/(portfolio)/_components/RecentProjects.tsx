@@ -1,8 +1,8 @@
 import { recentProjects } from "datasets/projects";
-import Container from "./container/Container";
-import Heading from "./display/Heading";
-import ProjectItem from "./display/ProjectItem";
-import Subtitle from "./display/Subtitle";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import ProjectItem from "@/components/display/ProjectItem";
+import Subtitle from "@/components/display/Subtitle";
 
 export default function RecentProjects() {
     return (

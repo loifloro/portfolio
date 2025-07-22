@@ -1,18 +1,10 @@
-import ArrowLink from "./button/ArrowLink";
-import Container from "./container/Container";
-import GradientLine from "./GradientLine";
-import Heading from "./display/Heading";
+import ArrowLink from "@/components/button/ArrowLink";
+import Container from "@/components/container/Container";
+import GradientLine from "@/components/GradientLine";
+import Heading from "@/components/display/Heading";
 import Image from "next/image";
 import React from "react";
-import Subtitle from "./display/Subtitle";
-
-export function Credits() {
-    return (
-        <p className="font-mono uppercase text-sm text-battleship-gray">
-            Lois Floro
-        </p>
-    );
-}
+import Subtitle from "@/components/display/Subtitle";
 
 export function Footer() {
     return (
@@ -56,7 +48,9 @@ export function Footer() {
                         <p className="font-mono uppercase text-sm text-battleship-gray">
                             All Rights Reserved - {new Date().getUTCFullYear()}
                         </p>
-                        <Credits />
+                        <p className="font-mono uppercase text-sm text-battleship-gray">
+                            Lois Floro
+                        </p>
                     </div>
                 </div>
             </Container>

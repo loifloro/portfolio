@@ -1,7 +1,6 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { Credits } from "../Footer";
 import { isEqual, isNull } from "lodash";
 import { navigationBarItems } from "datasets/navigation";
 import { useEffect, useRef } from "react";
@@ -77,7 +76,9 @@ export default function MobileMenu({
                     ))}
                 </ul>
                 <div className="flex flex-col items-center gap-5">
-                    <Credits />
+                    <p className="font-mono uppercase text-sm text-battleship-gray">
+                     Lois Floro
+                    </p>>
                 </div>
             </div>
         </aside>,

@@ -13,7 +13,7 @@ import ActionMenuList, {
 } from "@yoopta/action-menu-list";
 import { createClient } from "./supabase/client";
 import { Elements } from "@yoopta/editor";
-import { kebabCase } from "lodash";
+import { kebabCase, uniqueId } from "lodash";
 import Blockquote from "@yoopta/blockquote";
 import Callout from "@yoopta/callout";
 import Code from "@yoopta/code";
@@ -79,7 +79,7 @@ export const PLUGINS = [
                 const { data } = await supabase.storage
                     .from("blog-assets")
                     .upload(
-                        `${kebabCase(`${file.name}-${new Date().toUTCString()}`).toUpperCase()}`,
+                        `${kebabCase(`${file.name}-${uniqueId()}`).toUpperCase()}`,
                         file
                     );
 
