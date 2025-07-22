@@ -49,8 +49,6 @@
         "prisma": "^6.11.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "react-dropzone": "^14.3.8",
-        "react-editor-js": "^2.1.0",
         "react-hook-form": "^7.60.0",
         "slate": "^0.102.0",
         "slate-react": "^0.102.0",
