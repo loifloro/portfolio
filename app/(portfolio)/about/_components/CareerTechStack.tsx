@@ -3,11 +3,12 @@
 import { Controller, Mousewheel } from "swiper/modules";
 import { databases, frameworks, languages, tools } from "datasets/techStack";
 import { IconType } from "@icons-pack/react-simple-icons";
+import { kebabCase } from "lodash";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
-import Subtitle from "app/components/display/Subtitle";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import Subtitle from "@/components/display/Subtitle";
 import type { Swiper as SwiperType } from "swiper";
 
 type CareerTechStackLogoProps = {
@@ -19,12 +20,12 @@ function CareerTechStackLogo({ name, logo }: CareerTechStackLogoProps) {
     const Tag = logo;
 
     return (
-        <div className="flex flex-col gap-3 items-center sm:w-32 w-24">
+        <li className="flex flex-col gap-3 items-center sm:w-32 w-24">
             <Tag className="md:h-16 md:w-16 sm:h-14 sm:w-14 h-8 w-8" />
             <p className="font-mono uppercase md:text-sm text-xs text-center font-normal leading-heading-4 tracking-wider md:text-raisin-black text-battleship-gray">
                 {name}
             </p>
-        </div>
+        </li>
     );
 }
 
@@ -55,7 +56,7 @@ export default function CareerTechStack() {
     ];
 
     return (
-        <Container id="tech-stack" withDivider>
+        <Container id="tech-stack" aria-label="tech-stack" withDivider>
             <div className="text-center mb-24">
                 <Subtitle size="sm">Tools Used</Subtitle>
                 <Heading
@@ -80,6 +81,7 @@ export default function CareerTechStack() {
                         onSwiper={(swiper) => setFirstSwiper(swiper)}
                         controller={{ control: secondSwiper }}
                         initialSlide={1}
+                        role="list"
                     >
                         {tabs.map(({ id, name }) => (
                             <SwiperSlide
@@ -103,9 +105,12 @@ export default function CareerTechStack() {
                         controller={{ control: firstSwiper }}
                         watchSlidesProgress
                     >
-                        {tabs.map(({ id, tab }) => (
+                        {tabs.map(({ id, tab, name }) => (
                             <SwiperSlide key={id}>
-                                <div className="flex flex-wrap sm:gap-16 gap-x-2 gap-y-12 justify-center mt-32">
+                                <ul
+                                    aria-label={kebabCase(name)}
+                                    className="flex flex-wrap sm:gap-16 gap-x-2 gap-y-12 justify-center mt-32"
+                                >
                                     {tab.map(({ id, name, logo }) => (
                                         <CareerTechStackLogo
                                             key={id}
@@ -113,7 +118,7 @@ export default function CareerTechStack() {
                                             logo={logo}
                                         />
                                     ))}
-                                </div>
+                                </ul>
                             </SwiperSlide>
                         ))}
                     </Swiper>

@@ -1,9 +1,9 @@
-import { isNull, isUndefined } from "lodash";
-import Container from "app/components/container/Container";
-import GradientLine from "app/components/GradientLine";
+import { isNull, isUndefined, kebabCase } from "lodash";
+import Container from "@/components/container/Container";
+import GradientLine from "@/components/GradientLine";
 import React, { ReactNode } from "react";
-import Subtitle from "app/components/display/Subtitle";
-import Heading from "app/components/display/Heading";
+import Subtitle from "@/components/display/Subtitle";
+import Heading from "@/components/display/Heading";
 import Image from "next/image";
 
 type CareerBackgroundSectionProps = {
@@ -18,9 +18,12 @@ function CareerBackgroundSection({
     children,
 }: CareerBackgroundSectionProps) {
     return (
-        <div className="my-36">
+        <div aria-label={kebabCase(name)} className="my-36">
             <div className="grid md:grid-cols-3">
-                <span className="text-raisin-black font-grotesk">
+                <span
+                    role="rowheader"
+                    className="text-raisin-black font-grotesk"
+                >
                     {number < 10 && "0"}
                     {number}
                 </span>
@@ -77,7 +80,11 @@ export default function CareerBackground() {
     ];
 
     return (
-        <Container withDivider dividerType="space-between">
+        <Container
+            aria-label="career-background"
+            withDivider
+            dividerType="space-between"
+        >
             <Subtitle size="sm">Career Resume</Subtitle>
             <Heading
                 element="h3"
@@ -95,7 +102,11 @@ export default function CareerBackground() {
                         dateEnded,
                         logoPath,
                     }) => (
-                        <div key={id} className="mt-10">
+                        <div
+                            key={id}
+                            aria-label={kebabCase(companyName)}
+                            className="mt-10"
+                        >
                             <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-16">
                                 <div>
                                     <Image
@@ -140,7 +151,11 @@ export default function CareerBackground() {
                         dateEnded,
                         logoPath,
                     }) => (
-                        <div key={id} className="mt-10">
+                        <div
+                            key={id}
+                            aria-label={kebabCase(institutionName)}
+                            className="mt-10"
+                        >
                             <div className="flex sm:flex-row flex-col justify-between sm:items-end items-start mb-5 gap-16">
                                 <div>
                                     <Image

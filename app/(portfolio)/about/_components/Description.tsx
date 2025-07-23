@@ -1,14 +1,14 @@
-import ArrowLink from "app/components/button/ArrowLink";
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
-import Subtitle from "app/components/display/Subtitle";
-import GradientLine from "app/components/GradientLine";
+import ArrowLink from "@/components/button/ArrowLink";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import Subtitle from "@/components/display/Subtitle";
+import GradientLine from "@/components/GradientLine";
 import Image from "next/image";
 import React from "react";
 
 export default function Description() {
     return (
-        <Container>
+        <Container aria-label="about">
             <div className="min-h-screen grid md:grid-cols-2 items-center py-4 my-4">
                 <div className="flex flex-col min-h-full justify-evenly xl:max-w-[90%] md:mx-0 mx-auto items-center md:items-start">
                     <div className="flex flex-col items-center md:items-start self-end md:text-left text-center">

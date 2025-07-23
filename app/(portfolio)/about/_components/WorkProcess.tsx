@@ -1,11 +1,11 @@
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
-import Subtitle from "app/components/display/Subtitle";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import Subtitle from "@/components/display/Subtitle";
 import React from "react";
 
 export default function WorkProcess() {
     return (
-        <Container withDivider dividerType="centered">
+        <Container aria-label="work-process" withDivider dividerType="centered">
             <div className="flex justify-center text-center mb-36">
                 <div className="md:max-w-[60%] sm:max-w-[80%]">
                     <Subtitle size="sm">How I Work</Subtitle>

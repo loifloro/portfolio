@@ -77,8 +77,8 @@ export default function MobileMenu({
                 </ul>
                 <div className="flex flex-col items-center gap-5">
                     <p className="font-mono uppercase text-sm text-battleship-gray">
-                     Lois Floro
-                    </p>>
+                        Lois Floro
+                    </p>
                 </div>
             </div>
         </aside>,

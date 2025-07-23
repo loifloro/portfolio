@@ -16,16 +16,16 @@ export default function TechStack() {
 
     const styles = {
         "heading-2":
-            "text-heading-2 tracking-[16px] font-semibold min-w-fit text-nowrap",
+            "h-heading-2 text-heading-2 tracking-[16px] font-semibold min-w-fit text-nowrap",
         "heading-3":
-            "text-heading-3 tracking-[8px] font-normal min-w-fit text-nowrap",
-        normal: "tracking-widest font-semibold min-w-fit",
-        mono: "font-mono min-w-fit tracking-wide",
+            "h-heading-2 text-heading-3 tracking-[8px] font-normal min-w-fit text-nowrap",
+        normal: "h-heading-2 tracking-widest font-semibold min-w-fit",
+        mono: "h-heading-2 font-mono min-w-fit tracking-wide",
     };
 
     return (
-        <Container fullWidth>
-            <div className="overflow-y-hidden max-h-screen md:max-h-full overflow-x-auto flex [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <Container aria-label="tech-stack" fullWidth>
+            <div className="overflow-y-hidden max-h-[calc(var(--heading-2)_*_15_+_2rem)] md:max-h-full overflow-x-auto flex [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 <ul className="text-rich-black flex flex-wrap items-center uppercase gap-x-20 gap-y-10 md:gap-y-4 md:gap-x-10 min-w-[120%] justify-around">
                     {data.map((value, index) => (
                         <li

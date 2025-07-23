@@ -68,6 +68,7 @@ export default function ProjectItem({
     return (
         <Fragment key={id}>
             <div
+                aria-label={slug}
                 className="flex sm:flex-row flex-col gap-2 justify-between sm:items-center sm:mt-11 my-8"
                 ref={itemRef}
             >

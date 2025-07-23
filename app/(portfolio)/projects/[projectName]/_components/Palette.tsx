@@ -1,6 +1,6 @@
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
-import Subtitle from "app/components/display/Subtitle";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import Subtitle from "@/components/display/Subtitle";
 import React from "react";
 
 type PaletteItemProps = {
@@ -24,7 +24,7 @@ function PaletteItem({ name, strokeColor, color }: PaletteItemProps) {
     const _color = `#${color}`;
 
     return (
-        <div
+        <li
             className="flex flex-col min-h-[430px] justify-end w-full p-2"
             style={{
                 borderTop: `5px solid ${_strokeColor}`,
@@ -42,13 +42,13 @@ function PaletteItem({ name, strokeColor, color }: PaletteItemProps) {
                     {strokeColor}
                 </p>
             </div>
-        </div>
+        </li>
     );
 }
 
 export default function Pallette({ description, palette }: PaletteProps) {
     return (
-        <Container withDivider dividerType="space-between">
+        <Container aria-label="palette" withDivider dividerType="space-between">
             <div className="grid md:grid-cols-2 md:grid-rows-1 grid-rows-[auto_1fr] gap-y-16 mb-36 items-center">
                 <div>
                     <Subtitle size="sm">Project Colors</Subtitle>
@@ -62,7 +62,7 @@ export default function Pallette({ description, palette }: PaletteProps) {
                         {description}
                     </p>
                 </div>
-                <div className="flex md:justify-end">
+                <ul className="flex md:justify-end">
                     {palette.map(({ id, name, colorCode, strokeCode }) => (
                         <PaletteItem
                             key={id}
@@ -71,7 +71,7 @@ export default function Pallette({ description, palette }: PaletteProps) {
                             color={colorCode}
                         />
                     ))}
-                </div>
+                </ul>
             </div>
         </Container>
     );

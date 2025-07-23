@@ -1,5 +1,6 @@
 import { Blog } from "types/blog";
 import { blogs } from "datasets/blogs";
+import { kebabCase } from "lodash";
 import ArrowLink from "@/components/button/ArrowLink";
 import Container from "@/components/container/Container";
 import Heading from "@/components/display/Heading";
@@ -9,10 +10,17 @@ import Subtitle from "@/components/display/Subtitle";
 
 function BlogItem({ id, thumbnailPath, title, mediumUrl }: Blog) {
     return (
-        <div className="flex flex-col w-[300px] md:w-[360px]">
-            <p className="font-mono text-raisin-black mb-10">
+        <div
+            aria-label={kebabCase(title)}
+            role="list-item"
+            className="flex flex-col w-[300px] md:w-[360px]"
+        >
+            <span
+                role="directory"
+                className="font-mono text-raisin-black mb-10"
+            >
                 {String(id).padStart(2, "0")}
-            </p>
+            </span>
             <h4 className="font-light md:w-[90%] line-clamp-2">{title}</h4>
             <div className="relative h-[320px] md:h-[340px] my-5 transition filter brightness-[.3] grayscale hover:grayscale-0 hover:brightness-100 duration-700 ease-in-out">
                 <Image
@@ -32,7 +40,7 @@ function BlogItem({ id, thumbnailPath, title, mediumUrl }: Blog) {
 
 export default function Blogs() {
     return (
-        <Container fullWidth id="blogs">
+        <Container id="blogs" aria-label="blogs" fullWidth>
             <div className="text-center mb-32">
                 <Subtitle>Writings</Subtitle>
                 <Heading
@@ -43,7 +51,10 @@ export default function Blogs() {
                 </Heading>
             </div>
             <div className="overflow-auto flex justify-start sm:justify-center max-h-[950px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                <div className="text-rich-black flex items-start uppercase">
+                <div
+                    role="list"
+                    className="text-rich-black flex items-start uppercase"
+                >
                     {blogs.map((item) => (
                         <BlogItem
                             key={item.id}

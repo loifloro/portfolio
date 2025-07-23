@@ -4,11 +4,11 @@ import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import { isEqual } from "lodash";
 import { useParams } from "next/navigation";
 import clsx from "clsx";
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
 import Image from "next/image";
-import React, { useState } from "react";
-import Subtitle from "app/components/display/Subtitle";
+import React, { useEffect, useState } from "react";
+import Subtitle from "@/components/display/Subtitle";
 
 type GalleryProps = {
     items: {
@@ -45,8 +45,31 @@ export default function Gallery({ items }: GalleryProps) {
         setCurrentIndex((c) => c - 1);
     };
 
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            const prevButton = document.querySelector(
+                '[aria-label="previous"]'
+            );
+            const nextButton = document.querySelector('[aria-label="next"]');
+
+            if (e.key === "ArrowLeft" && prevButton instanceof HTMLElement) {
+                prevButton.click();
+            }
+            if (e.key === "ArrowRight" && nextButton instanceof HTMLElement) {
+                nextButton.click();
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, []);
+
     return (
-        <Container withDivider dividerType="space-between">
+        <Container
+            aria-label="project-shots"
+            withDivider
+            dividerType="space-between"
+        >
             <Subtitle size="sm">Project Shots</Subtitle>
             <Heading
                 element="h2"
@@ -64,20 +87,29 @@ export default function Gallery({ items }: GalleryProps) {
                         quality={100}
                     />
                 </div>
-                <div className="flex justify-between">
-                    <button className="font-mono uppercase">
-                        {/* View Design Comparison */}
-                    </button>
+                <div className="flex justify-end">
+                    {/* <button className="font-mono uppercase">
+                        View Design Comparison
+                    </button> */}
                     <div className="flex gap-3">
-                        <div
+                        <button
+                            name="previous"
+                            aria-keyshortcuts="ArrowLeft"
+                            aria-label="previous"
                             onClick={handlePrevious}
                             className="cursor-pointer"
                         >
                             <ArrowLeft size={36} weight="thin" />
-                        </div>
-                        <div onClick={handleNext} className="cursor-pointer">
+                        </button>
+                        <button
+                            name="next"
+                            aria-keyshortcuts="ArrowRight"
+                            aria-label="next"
+                            onClick={handleNext}
+                            className="cursor-pointer"
+                        >
                             <ArrowRight size={36} weight="thin" />
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div className="flex h-1/5 md:gap-4 mb-4 gap-3">

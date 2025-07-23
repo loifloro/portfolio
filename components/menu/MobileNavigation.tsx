@@ -12,16 +12,16 @@ export default function MobileNavigation() {
 
     return (
         <Fragment>
-            <div
+            <nav
                 className="lg:hidden flex uppercase font-mono tracking-widest text-rich-black font-light items-center gap-[6px]"
                 onClick={handleClick}
             >
-                <span>Menu</span>
+                <span role="button">Menu</span>
                 <div className="flex flex-col gap-2">
                     <span className="inline-block w-[25px] bg-rich-black h-[1.5px]"></span>
                     <span className="inline-block w-[25px] bg-rich-black h-[1.5px]"></span>
                 </div>
-            </div>
+            </nav>
             <MobileMenu isOpened={isOpened} handleClick={handleClick} />
         </Fragment>
     );

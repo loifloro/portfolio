@@ -7,7 +7,7 @@ import Subtitle from "@/components/display/Subtitle";
 
 export default function FrontendMentor() {
     return (
-        <Container>
+        <Container aria-label="frontend-mentor">
             <Subtitle>Design to Develop Challenges</Subtitle>
             <Heading
                 element="h3"

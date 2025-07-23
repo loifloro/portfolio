@@ -1,6 +1,6 @@
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
-import Subtitle from "app/components/display/Subtitle";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import Subtitle from "@/components/display/Subtitle";
 import React from "react";
 
 type RationaleProps = {
@@ -10,7 +10,11 @@ type RationaleProps = {
 
 export default function Rationale({ description, reason }: RationaleProps) {
     return (
-        <Container withDivider dividerType="space-between">
+        <Container
+            aria-label="project-rationale"
+            withDivider
+            dividerType="space-between"
+        >
             <div className="text-center mb-24">
                 <Subtitle size="sm">Project Rationale</Subtitle>
                 <Heading

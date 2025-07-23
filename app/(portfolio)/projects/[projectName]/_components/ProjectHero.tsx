@@ -1,12 +1,12 @@
 "use client";
 
 import { isUndefined } from "lodash";
-import ArrowLink from "app/components/button/ArrowLink";
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
-import React from "react";
-import Tag from "app/components/display/Tag";
 import { useParams } from "next/navigation";
+import ArrowLink from "@/components/button/ArrowLink";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
+import React from "react";
+import Tag from "@/components/display/Tag";
 
 type ProjectHeroProps = {
     name: string;
@@ -28,7 +28,7 @@ export default function ProjectHero({
     const { projectName } = useParams();
 
     return (
-        <Container fullWidth withDivider>
+        <Container aria-label="hero" fullWidth withDivider>
             <div
                 className="min-h-screen grid items-end sm:p-7 p-4 bg-cover bg-no-repeat bg-center bg-local"
                 style={{
@@ -37,7 +37,10 @@ export default function ProjectHero({
             >
                 <div className="grid sm:grid-cols-2 grid-cols-1 grid-rows-[auto_1fr] justify-end items-end gap-4">
                     <div className="flex flex-col gap-8">
-                        <div className="flex gap-4 font-grotesk">
+                        <div
+                            role="rowheader"
+                            className="flex gap-4 font-grotesk"
+                        >
                             <p>0{id}</p>
                             <span>/</span>
                             <p>05</p>
@@ -52,7 +55,10 @@ export default function ProjectHero({
                         </div>
                     </div>
                     <div className="flex flex-col sm:items-end sm:ml-auto sm:w-4/6 justify-between gap-6">
-                        <div className="flex gap-2 flex-wrap sm:flex-row-reverse">
+                        <div
+                            role="list"
+                            className="flex gap-2 flex-wrap sm:flex-row-reverse"
+                        >
                             {tags.map(({ id, name }) => (
                                 <Tag key={id} name={name} />
                             ))}
@@ -66,7 +72,7 @@ export default function ProjectHero({
                             )}
                             {!isUndefined(githubUrl) && (
                                 <ArrowLink
-                                    name="Visit Live Project"
+                                    name="View Source Code"
                                     url={githubUrl}
                                 />
                             )}

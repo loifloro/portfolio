@@ -1,8 +1,8 @@
-import { isEqual } from "lodash";
-import Container from "app/components/container/Container";
-import Heading from "app/components/display/Heading";
+import { isEqual, kebabCase } from "lodash";
+import Container from "@/components/container/Container";
+import Heading from "@/components/display/Heading";
 import React from "react";
-import Subtitle from "app/components/display/Subtitle";
+import Subtitle from "@/components/display/Subtitle";
 
 type ProcessProps = {
     processes: { id: number; title: string; description: string }[];
@@ -10,7 +10,11 @@ type ProcessProps = {
 
 export default function Process({ processes }: ProcessProps) {
     return (
-        <Container withDivider dividerType="space-between">
+        <Container
+            aria-label="project-process"
+            withDivider
+            dividerType="space-between"
+        >
             <div className="sm:text-center">
                 <Subtitle size="sm">Project Journey</Subtitle>
                 <Heading
@@ -24,6 +28,7 @@ export default function Process({ processes }: ProcessProps) {
                 {processes.map(({ id, title, description }, index) => (
                     <div
                         key={id}
+                        aria-label={kebabCase(title)}
                         className="grid grid-rows-1 mb-4 sm:gap-10 row-start-1 sm:grid-cols-[1fr_auto_1fr] grid-cols-[auto_1fr]"
                     >
                         <div className="col-start-2 flex flex-col">

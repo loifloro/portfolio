@@ -6,7 +6,7 @@ import Subtitle from "@/components/display/Subtitle";
 
 export default function RecentProjects() {
     return (
-        <Container id="projects">
+        <Container id="projects" aria-label="recent-projects">
             <Subtitle>Most Recent Works</Subtitle>
             <Heading
                 element="h3"
