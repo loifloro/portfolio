@@ -52,8 +52,7 @@ export default function Page() {
         await supabase.auth.signInWithOAuth({
             provider: "google",
             options: {
-                redirectTo:
-                    "http://localhost:3000/api/auth/callback?next=protected",
+                redirectTo: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/auth/callback?next=protected`,
             },
         });
     };

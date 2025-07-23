@@ -1,3 +1,4 @@
+import "../portfolio.css";
 import { Footer } from "./_components/Footer";
 import Header from "@/components/menu/Header";
 import React from "react";

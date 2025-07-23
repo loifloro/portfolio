@@ -113,29 +113,6 @@
 
 }
 
-html {
-        scroll-behavior: smooth !important;
-}
-
-body {
-        color: var(--rich-black);
-        background: var(--pale-white);
-        font-family: Geist, Arial, Helvetica, sans-serif;
-        font-size: var(--text-base);
-        text-wrap: pretty;
-}
-
-::-moz-selection {
-        background: var(--rich-black);
-        color: var(--anti-flash-white);
-
-}
-
-::selection {
-        background: var(--rich-black);
-        color: var(--anti-flash-white);
-}
-
 @layer utilities {
         .text-balance {
                 text-wrap: balance;
