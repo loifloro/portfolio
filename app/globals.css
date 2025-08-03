@@ -120,3 +120,8 @@
 }
 
 @layer components {}
+
+/* overrides */
+.yoo-image-my-0 {
+        height: auto !important;
+}

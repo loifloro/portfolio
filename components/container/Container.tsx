@@ -21,7 +21,7 @@ export default function Container({
 }: ContainerProps) {
     return (
         <section
-            className={`${fullWidth ? "w-full" : "md:px-8 px-4"}`}
+            className={`${fullWidth ? "w-full" : "px-4 md:px-8"}`}
             {...props}
         >
             {withDivider && isEqual(dividerPosition, "top") && (

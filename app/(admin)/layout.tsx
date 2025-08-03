@@ -20,7 +20,7 @@ export default function AdminLayout({
     return (
         <main>
             <HeroUIProvider>
-                <ToastProvider />
+                <ToastProvider placement="top-center" toastOffset={10} />
                 {children}
             </HeroUIProvider>
         </main>

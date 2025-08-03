@@ -9,9 +9,14 @@ export default function Heading({
     element,
     className,
     children,
-}: HeadingProps) {
+    ...props
+}: HeadingProps & HTMLProps<HTMLHeadingElement>) {
     const _styles = `uppercase ${className}`;
     const HeadingTag = element;
 
-    return <HeadingTag className={_styles}>{children}</HeadingTag>;
+    return (
+        <HeadingTag className={_styles} {...props}>
+            {children}
+        </HeadingTag>
+    );
 }
