@@ -26,7 +26,10 @@ export function Footer() {
                             jloisfloro@gmail.com
                         </h3>
                     </div>
-                    <div className="flex gap-5 sm:gap-8 my-6 sm:mt-9">
+                    <nav
+                        aria-label="SOCIAL LINKS"
+                        className="flex gap-5 sm:gap-8 my-6 sm:mt-9"
+                    >
                         <ArrowLink
                             name="LinkedIn"
                             isWithArrow
@@ -42,7 +45,7 @@ export function Footer() {
                             isWithArrow
                             url="https://github.com/loifloro"
                         />
-                    </div>
+                    </nav>
                     <GradientLine type="space-between" />
                     <div className="flex flex-wrap justify-between mt-6">
                         <p className="font-mono uppercase text-sm text-battleship-gray">

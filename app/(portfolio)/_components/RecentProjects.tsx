@@ -6,10 +6,11 @@ import Subtitle from "@/components/display/Subtitle";
 
 export default function RecentProjects() {
     return (
-        <Container id="projects" aria-label="recent-projects">
+        <Container id="projects" aria-labelledby="projects-heading">
             <Subtitle>Most Recent Works</Subtitle>
             <Heading
-                element="h3"
+                id="projects-heading"
+                element="h2"
                 className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[.25em] text-rich-black mb-24"
             >
                 Projects

@@ -66,12 +66,13 @@ export default function Gallery({ items }: GalleryProps) {
 
     return (
         <Container
-            aria-label="project-shots"
+            aria-labelledby="project-shots"
             withDivider
             dividerType="space-between"
         >
             <Subtitle size="sm">Project Shots</Subtitle>
             <Heading
+                id="project-shots"
                 element="h2"
                 className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-12"
             >

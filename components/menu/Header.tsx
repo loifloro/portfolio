@@ -19,23 +19,23 @@ type HeaderItemProps = {
 
 function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
     return (
-        <nav>
+        <li>
             <Link
                 href={url}
                 className="text-sm uppercase font-light tracking-widest text-rich-black relative"
             >
-                <li
+                <span
                     className={`inline-block ${isComingSoon && "pointer-events-none text-battleship-gray before:w-[calc(100%+20px)] before:h-[.6px] before:bg-battleship-gray before:relative before:block before:right-3 before:top-3"}`}
                 >
                     {name}
-                </li>
+                </span>
                 {isComingSoon && (
                     <span className="min-w-max absolute float-right font-mono font-thin text-xs bottom-4">
                         Coming Soon!
                     </span>
                 )}
             </Link>
-        </nav>
+        </li>
     );
 }
 
@@ -77,34 +77,41 @@ export default function Header() {
             animate={isShown ? "shown" : "hidden"}
             variants={variants}
         >
-            <div
-                className={clsx(
-                    "flex items-center justify-between md:px-8 px-4 py-6 ",
-                    scrollY.get() > 100 && "bg-opacity-[0.002] backdrop-blur-sm"
-                )}
-            >
-                <nav className="min-w-32">
-                    <Logo />
-                </nav>
-                <ul className="lg:flex hidden gap-16">
-                    {navigationBarItems.map(({ name, comingSoon, url }) => (
-                        <HeaderItem
-                            key={url}
-                            name={name}
-                            isComingSoon={comingSoon}
-                            url={url}
+            <nav>
+                <ul
+                    className={clsx(
+                        "flex items-center justify-between md:px-8 px-4 py-6 ",
+                        scrollY.get() > 100 &&
+                            "bg-opacity-[0.002] backdrop-blur-sm"
+                    )}
+                >
+                    <li className="min-w-32">
+                        <Logo />
+                    </li>
+                    <li className="lg:block hidden gap-16">
+                        <ul className="flex gap-16">
+                            {navigationBarItems.map(
+                                ({ name, comingSoon, url }) => (
+                                    <HeaderItem
+                                        key={url}
+                                        name={name}
+                                        isComingSoon={comingSoon}
+                                        url={url}
+                                    />
+                                )
+                            )}
+                        </ul>
+                    </li>
+                    <li>
+                        <ArrowLink
+                            className="lg:flex hidden"
+                            name="Get in Touch"
+                            url="#get-in-touch"
                         />
-                    ))}
+                    </li>
+                    <MobileNavigation />
                 </ul>
-                <nav>
-                    <ArrowLink
-                        className="lg:flex hidden"
-                        name="Get in Touch"
-                        url="#get-in-touch"
-                    />
-                </nav>
-                <MobileNavigation />
-            </div>
+            </nav>
             <GradientLine type="centered" onMobile="space-between" />
         </motion.header>
     );

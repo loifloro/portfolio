@@ -48,11 +48,16 @@ function PaletteItem({ name, strokeColor, color }: PaletteItemProps) {
 
 export default function Pallette({ description, palette }: PaletteProps) {
     return (
-        <Container aria-label="palette" withDivider dividerType="space-between">
+        <Container
+            aria-labelledby="palette"
+            withDivider
+            dividerType="space-between"
+        >
             <div className="grid md:grid-cols-2 md:grid-rows-1 grid-rows-[auto_1fr] gap-y-16 mb-36 items-center">
                 <div>
                     <Subtitle size="sm">Project Colors</Subtitle>
                     <Heading
+                        id="palette"
                         element="h2"
                         className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-24"
                     >

@@ -46,11 +46,12 @@ export default async function Blogs() {
     const blogs = await fetchBlogs({ isPublished: true });
 
     return (
-        <Container id="blogs" aria-label="blogs" fullWidth>
+        <Container id="blogs" aria-labelledby="blog-heading" fullWidth>
             <div className="text-center mb-32">
                 <Subtitle>Writings</Subtitle>
                 <Heading
-                    element="h3"
+                    id="blog-heading"
+                    element="h2"
                     className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[.25em] text-rich-black"
                 >
                     Blogs

@@ -5,7 +5,7 @@ const nextConfig = {
             {
                 hostname: process.env.NEXT_PUBLIC_SUPABASE_HOSTNAME,
                 pathname: "/storage/**",
-                port: process.env.NEXT_PUBLIC_SUPABASE_STORAGE_PORT ?? "",
+                port: process.env.NEXT_PUBLIC_SUPABASE_STORAGE_PORT,
             },
         ],
     },

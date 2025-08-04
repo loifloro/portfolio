@@ -11,13 +11,14 @@ type ProcessProps = {
 export default function Process({ processes }: ProcessProps) {
     return (
         <Container
-            aria-label="project-process"
+            aria-labelledby="project-process"
             withDivider
             dividerType="space-between"
         >
             <div className="sm:text-center">
                 <Subtitle size="sm">Project Journey</Subtitle>
                 <Heading
+                    id="project-process"
                     element="h2"
                     className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-24"
                 >

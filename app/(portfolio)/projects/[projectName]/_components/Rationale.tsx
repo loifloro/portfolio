@@ -11,13 +11,14 @@ type RationaleProps = {
 export default function Rationale({ description, reason }: RationaleProps) {
     return (
         <Container
-            aria-label="project-rationale"
+            aria-labelledby="project-rationale"
             withDivider
             dividerType="space-between"
         >
             <div className="text-center mb-24">
                 <Subtitle size="sm">Project Rationale</Subtitle>
                 <Heading
+                    id="project-rationale"
                     element="h2"
                     className="text-heading-3 leading-heading-3 font-sans font-light tracking-widest text-rich-black mb-24"
                 >

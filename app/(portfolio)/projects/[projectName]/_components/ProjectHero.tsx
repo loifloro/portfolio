@@ -28,7 +28,7 @@ export default function ProjectHero({
     const { projectName } = useParams();
 
     return (
-        <Container aria-label="hero" fullWidth withDivider>
+        <Container aria-labelledby="project-title" fullWidth withDivider>
             <div
                 className="min-h-screen grid items-end sm:p-7 p-4 bg-cover bg-no-repeat bg-center bg-local"
                 style={{
@@ -47,6 +47,7 @@ export default function ProjectHero({
                         </div>
                         <div>
                             <Heading
+                                id="project-title"
                                 element="h1"
                                 className="uppercase sm:leading-heading-2 sm:text-heading-2 text-heading-3 leading-heading-3 sm:font-semibold align-middle tracking-widest mt-1"
                             >

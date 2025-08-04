@@ -16,7 +16,7 @@ export default function Hero() {
 
     return (
         <section
-            aria-label="hero"
+            aria-labelledby="hero-title"
             className="supports-[h-svh]:h-svh h-screen text-center grid items-end md:p-12 p-4 relative transition-all transition-discrete duration-700 ease-in-out text-white z-0"
         >
             <div>
@@ -25,7 +25,10 @@ export default function Hero() {
                         {data.currentJob} at {data.currentCompany}
                     </p>
                 </div>
-                <h1 className="uppercase text-center text-heading-1 font-semibold tracking-heading-1 ml-[var(--spacing-heading-1)]">
+                <h1
+                    id="hero-title"
+                    className="uppercase text-center text-heading-1 font-semibold tracking-heading-1 ml-[var(--spacing-heading-1)]"
+                >
                     {data.headline}
                 </h1>
                 <p className="text-battleship-gray font-light max-w-screen-md mx-auto text-pretty">
@@ -61,7 +64,10 @@ export default function Hero() {
                     <li>Writing / Blogs</li>
                 </ul>
             </div>
-            <div className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-start px-10 hidden md:block">
+            <nav
+                aria-label="SOCIAL LINKS"
+                className="absolute right-0 z-10 top-1/2 -translate-y-1/2 text-start px-10 hidden md:block"
+            >
                 <ul className="font-mono uppercase flex flex-col gap-10 text-sm text-battleship-gray">
                     <li>
                         <Link
@@ -85,7 +91,7 @@ export default function Hero() {
                         </Link>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </section>
     );
 }
