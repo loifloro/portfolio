@@ -109,7 +109,9 @@ export default function Header() {
                             url="#get-in-touch"
                         />
                     </li>
-                    <MobileNavigation />
+                    <li>
+                        <MobileNavigation />
+                    </li>
                 </ul>
             </nav>
             <GradientLine type="centered" onMobile="space-between" />

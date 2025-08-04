@@ -74,7 +74,7 @@ export default function ProjectItem({
             >
                 <div className="sm:w-[55%] mb-10 sm:mb-0">
                     <Heading
-                        element="h4"
+                        element="h3"
                         className="uppercase text-rich-black text-heading-3 tracking-heading-3 sm:font-normal font-medium mb-2"
                     >
                         {name}
