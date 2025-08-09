@@ -98,7 +98,7 @@ export default function UpdateBlogForm({
         <form onSubmit={handleSubmit(onSubmit)} id="create-blog-form">
             <section
                 aria-label="blog-description"
-                className="md:w-8/12 mx-auto mt-56 flex flex-col gap-4"
+                className="px-4 md:px-8 md:w-8/12 mx-auto mt-56 flex flex-col gap-4"
             >
                 <Controller
                     control={control}
@@ -115,6 +115,8 @@ export default function UpdateBlogForm({
                             isInvalid={invalid}
                             isDisabled={isLoading}
                             minRows={1}
+                            enterKeyHint="next"
+                            autoComplete="title"
                             {...field}
                         />
                     )}
@@ -132,6 +134,8 @@ export default function UpdateBlogForm({
                             errorMessage={error?.message}
                             validationBehavior="aria"
                             isInvalid={invalid}
+                            enterKeyHint="next"
+                            autoComplete="description"
                             {...field}
                         />
                     )}
@@ -180,7 +184,10 @@ export default function UpdateBlogForm({
                     </div>
                 )}
             />
-            <section aria-label="blog-content" className="md:w-8/12 mx-auto">
+            <section
+                aria-label="blog-content"
+                className="px-4 md:px-8 md:w-8/12 mx-auto"
+            >
                 <Controller
                     control={control}
                     name="content"
@@ -261,6 +268,7 @@ export default function UpdateBlogForm({
                                                         className="max-w-xs cursor-pointer"
                                                         isInvalid={invalid}
                                                         isDisabled={isLoading}
+                                                        enterKeyHint="next"
                                                         isClearable
                                                     />
                                                 </div>
@@ -282,6 +290,7 @@ export default function UpdateBlogForm({
                                                 validationBehavior="aria"
                                                 isInvalid={invalid}
                                                 isDisabled={isLoading}
+                                                enterKeyHint="next"
                                                 {...field}
                                             />
                                         )}
@@ -301,6 +310,7 @@ export default function UpdateBlogForm({
                                                 errorMessage={error?.message}
                                                 validationBehavior="aria"
                                                 isInvalid={invalid}
+                                                enterKeyHint="next"
                                                 {...field}
                                             />
                                         )}
@@ -322,6 +332,7 @@ export default function UpdateBlogForm({
                                                 isDisabled={isLoading}
                                                 validationBehavior="aria"
                                                 isInvalid={invalid}
+                                                enterKeyHint="done"
                                             >
                                                 Show this blog to portfolio?
                                             </Checkbox>

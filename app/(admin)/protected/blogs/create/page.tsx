@@ -77,7 +77,7 @@ export default function Page() {
             <form onSubmit={handleSubmit(onSubmit)} id="create-blog-form">
                 <section
                     aria-label="blog-description"
-                    className="md:w-8/12 mx-auto mt-56 flex flex-col gap-4"
+                    className="px-4 md:px-8 md:w-8/12 mx-auto mt-56 flex flex-col gap-4"
                 >
                     <Controller
                         control={control}
@@ -94,6 +94,8 @@ export default function Page() {
                                 isInvalid={invalid}
                                 isDisabled={isLoading}
                                 minRows={1}
+                                enterKeyHint="next"
+                                autoComplete="title"
                                 {...field}
                             />
                         )}
@@ -111,6 +113,8 @@ export default function Page() {
                                 errorMessage={error?.message}
                                 validationBehavior="aria"
                                 isInvalid={invalid}
+                                enterKeyHint="next"
+                                autoComplete="description"
                                 {...field}
                             />
                         )}
@@ -157,7 +161,7 @@ export default function Page() {
                 />
                 <section
                     aria-label="blog-content"
-                    className="md:w-8/12 mx-auto"
+                    className="px-4 md:px-8 md:w-8/12 mx-auto"
                 >
                     <Controller
                         control={control}

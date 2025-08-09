@@ -96,6 +96,7 @@ export default function Page() {
                                     errorMessage={error?.message}
                                     validationBehavior="aria"
                                     isInvalid={invalid}
+                                    enterKeyHint="next"
                                     {...field}
                                 />
                             )}
@@ -122,6 +123,7 @@ export default function Page() {
                                     errorMessage={error?.message}
                                     validationBehavior="aria"
                                     isInvalid={invalid}
+                                    enterKeyHint="done"
                                     {...field}
                                 />
                             )}
