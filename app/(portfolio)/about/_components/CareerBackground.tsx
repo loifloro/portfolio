@@ -81,12 +81,13 @@ export default function CareerBackground() {
 
     return (
         <Container
-            aria-label="career-background"
+            aria-labelledby="career-heading"
             withDivider
             dividerType="space-between"
         >
             <Subtitle size="sm">Career Resume</Subtitle>
             <Heading
+                id="career-heading"
                 element="h3"
                 className="uppercase text-heading-3 leading-heading-3 font-normal tracking-widest text-rich-black"
             >

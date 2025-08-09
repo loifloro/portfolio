@@ -56,10 +56,15 @@ export default function CareerTechStack() {
     ];
 
     return (
-        <Container id="tech-stack" aria-label="tech-stack" withDivider>
+        <Container
+            id="tech-stack"
+            aria-labelledby="tech-stack-heading"
+            withDivider
+        >
             <div className="text-center mb-24">
                 <Subtitle size="sm">Tools Used</Subtitle>
                 <Heading
+                    id="tech-stack-heading"
                     element="h3"
                     className="uppercase text-heading-3 leading-heading-3 tracking-widest text-rich-black"
                 >

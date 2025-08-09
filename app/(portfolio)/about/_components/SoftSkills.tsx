@@ -13,10 +13,11 @@ export default function SoftSkills() {
     ];
 
     return (
-        <Container aria-label="soft-skills">
+        <Container aria-labelledby="soft-skills-heading">
             <div className="text-center mb-36">
                 <Subtitle size="sm">How I view myself</Subtitle>
                 <Heading
+                    id="soft-skills-heading"
                     element="h2"
                     className="uppercase text-heading-3 leading-heading-3 tracking-widest text-rich-black"
                 >

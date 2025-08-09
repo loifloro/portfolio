@@ -8,7 +8,7 @@ import React from "react";
 
 export default function Description() {
     return (
-        <Container aria-label="about">
+        <Container aria-labelledby="about-heading">
             <div className="min-h-screen grid md:grid-cols-2 items-center py-4 my-4">
                 <div className="flex flex-col min-h-full justify-evenly xl:max-w-[90%] md:mx-0 mx-auto items-center md:items-start">
                     <div className="flex flex-col items-center md:items-start self-end md:text-left text-center">
@@ -22,6 +22,7 @@ export default function Description() {
                         />
                         <Subtitle>About Lois</Subtitle>
                         <Heading
+                            id="about-heading"
                             element="h1"
                             className="uppercase text-heading-3 leading-heading-3 font-normal tracking-heading-3 text-rich-black mb-2"
                         >
