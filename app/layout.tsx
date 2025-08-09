@@ -2,6 +2,7 @@ import "./globals.css";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { GeistSans } from "geist/font/sans";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter, Space_Mono, Space_Grotesk } from "next/font/google";
 import ProgressBarProvider from "utils/providers/ProgressBarProvider";
 import type { Metadata } from "next";
@@ -47,6 +48,7 @@ export default function RootLayout({
             lang="en"
             className={`${GeistSans.className} ${space_mono.variable} ${space_grotesk.variable} ${inter.variable}`}
         >
+            <GoogleTagManager gtmId="G-NQ05DRJK4X" />
             <body className="relative" id="app">
                 <ProgressBarProvider>{children}</ProgressBarProvider>
             </body>
