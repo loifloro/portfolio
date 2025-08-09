@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import CareerBackground from "./components/CareerBackground";
-import CareerTechStack from "./components/CareerTechStack";
-import Description from "./components/Description";
+import CareerBackground from "./_components/CareerBackground";
+import CareerTechStack from "./_components/CareerTechStack";
+import Description from "./_components/Description";
 import React from "react";
-import SoftSkills from "./components/SoftSkills";
-import WorkProcess from "./components/WorkProcess";
+import SoftSkills from "./_components/SoftSkills";
+import WorkProcess from "./_components/WorkProcess";
 
 export const metadata: Metadata = {
     title: "About | Lois Floro",

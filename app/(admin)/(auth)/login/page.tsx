@@ -17,6 +17,8 @@ type FormInputs = {
 
 export default function Page() {
     const router = useRouter();
+    const supabase = createClient();
+
     const {
         handleSubmit,
         control,
@@ -32,7 +34,6 @@ export default function Page() {
 
     const onSubmit = async (data: FormInputs) => {
         try {
-            const supabase = createClient();
             const { error } = await supabase.auth.signInWithPassword(data);
 
             if (!isNil(error)) {
@@ -47,15 +48,33 @@ export default function Page() {
         }
     };
 
+    const handleGoogle = async () => {
+        await supabase.auth.signInWithOAuth({
+            provider: "google",
+            options: {
+                redirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/callback?next=protected`,
+            },
+        });
+    };
+
     return (
-        <main className="min-h-svh grid place-content-center">
+        <main className="min-h-svh grid place-content-center py-[10svh] md:py-0 px-5">
             <section aria-label="login" className="w-full md:w-sm">
+                <div className="flex items-center justify-center">
+                    <Image
+                        src="/svg/icon.svg"
+                        height={48}
+                        width={48}
+                        alt="Loix Logo"
+                    />
+                </div>
                 <div className="flex flex-col mb-20 items-center">
                     <h1 className="uppercase text-center mt-10 text-heading-2 font-semibold tracking-heading-1 ml-[var(--spacing-heading-1)]">
                         Login
                     </h1>
-                    <p className="text-battleship-gray font-light max-w-screen-md mx-auto text-pretty">
-                        Lorem ipsum dolor sit amet consectetur. Vitae fringilla
+                    <p className="text-battleship-gray font-light text-center max-w-screen-md mx-auto text-pretty">
+                        Converting designs into real life applications with care
+                        and commitment
                     </p>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -122,9 +141,9 @@ export default function Page() {
                         <span className="text-battleship-gray">or</span>
                         <Button
                             color="primary"
+                            onPress={handleGoogle}
                             radius="sm"
                             variant="solid"
-                            type="submit"
                             fullWidth
                             startContent={
                                 <Image

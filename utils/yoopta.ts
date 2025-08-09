@@ -13,7 +13,7 @@ import ActionMenuList, {
 } from "@yoopta/action-menu-list";
 import { createClient } from "./supabase/client";
 import { Elements } from "@yoopta/editor";
-import { kebabCase } from "lodash";
+import { kebabCase, uniqueId } from "lodash";
 import Blockquote from "@yoopta/blockquote";
 import Callout from "@yoopta/callout";
 import Code from "@yoopta/code";
@@ -56,7 +56,7 @@ export const PLUGINS = [
         elementProps: {
             divider: (props) => ({
                 ...props,
-                color: "#007aff",
+                color: "#92949e",
             }),
         },
     }),
@@ -72,14 +72,24 @@ export const PLUGINS = [
     Link,
     Embed,
     Image.extend({
+        elementProps: {
+            image: (props) => ({
+                ...props,
+                sizes: { width: "100%", height: "auto" },
+            }),
+        },
         options: {
+            maxSizes: {
+                maxWidth: "100%",
+                maxHeight: "max-content",
+            },
             onUpload: async (file) => {
                 const supabase = createClient();
 
                 const { data } = await supabase.storage
-                    .from("blog-assets")
+                    .from(process.env.BLOG_ASSETS_STORAGE!)
                     .upload(
-                        `${kebabCase(`${file.name}-${new Date().toUTCString()}`).toUpperCase()}`,
+                        `${kebabCase(`${file.name}-${uniqueId()}`).toUpperCase()}`,
                         file
                     );
 
@@ -97,7 +107,7 @@ export const PLUGINS = [
                     const imageElement = Elements.getElement(editor, blockId);
 
                     await supabase.storage
-                        .from("blog-assets")
+                        .from(process.env.BLOG_ASSETS_STORAGE!)
                         .remove([`${imageElement?.props.alt}`]);
                 } catch (e) {
                     console.error(e);

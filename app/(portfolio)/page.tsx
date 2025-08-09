@@ -1,8 +1,8 @@
-import Blogs from "@/components/Blogs";
-import FrontendMentor from "@/components/FrontendMentor";
-import Hero from "@/components/Hero";
-import RecentProjects from "@/components/RecentProjects";
-import TechStack from "@/components/TechStack";
+import Blogs from "./_components/Blogs";
+import FrontendMentor from "./_components/FrontendMentor";
+import Hero from "./_components/Hero";
+import RecentProjects from "./_components/RecentProjects";
+import TechStack from "./_components/TechStack";
 
 export default function Home() {
     return (

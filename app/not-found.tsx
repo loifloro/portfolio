@@ -1,6 +1,7 @@
-import ArrowLink from "./components/button/ArrowLink";
-import Container from "./components/container/Container";
-import GradientLine from "./components/GradientLine";
+import "./portfolio.css";
+import ArrowLink from "@/components/button/ArrowLink";
+import Container from "@/components/container/Container";
+import GradientLine from "@/components/GradientLine";
 import React from "react";
 
 export default function NotFound() {
