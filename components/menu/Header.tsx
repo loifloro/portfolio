@@ -109,7 +109,7 @@ export default function Header() {
                             url="#get-in-touch"
                         />
                     </li>
-                    <li>
+                    <li className="lg:hidden block">
                         <MobileNavigation />
                     </li>
                 </ul>

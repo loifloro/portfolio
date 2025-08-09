@@ -13,7 +13,7 @@ export default function MobileNavigation() {
     return (
         <Fragment>
             <div
-                className="lg:hidden flex uppercase font-mono tracking-widest text-rich-black font-light items-center gap-[6px]"
+                className="flex uppercase font-mono tracking-widest text-rich-black font-light items-center gap-[6px]"
                 onClick={handleClick}
             >
                 <span role="button">Menu</span>
