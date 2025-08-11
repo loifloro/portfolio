@@ -6,6 +6,7 @@ import { createClient } from "utils/supabase/server";
 import { isUndefined, kebabCase } from "lodash";
 import { Prisma } from "@prisma/client";
 import { revalidatePath } from "next/cache";
+import { connection } from "next/server";
 import prisma from "utils/prisma";
 import z from "zod";
 
@@ -19,6 +20,8 @@ export const fetchBlog = cache(async (props: Prisma.BlogWhereInput = {}) => {
 
 export async function fetchBlogs(props: Prisma.BlogWhereInput = {}) {
     try {
+        await connection();
+
         return await prisma.blog.findMany({ where: props });
     } catch (error) {
         console.error(error);
