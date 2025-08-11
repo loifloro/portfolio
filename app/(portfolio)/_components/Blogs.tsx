@@ -25,7 +25,7 @@ function BlogItem({
             >
                 {String(id).padStart(2, "0")}
             </span>
-            <h4 className="font-light md:w-[90%] line-clamp-2">{title}</h4>
+            <h3 className="font-light md:w-[90%] line-clamp-2">{title}</h3>
             <div className="relative h-[320px] md:h-[340px] my-5 transition filter brightness-[.3] grayscale hover:grayscale-0 hover:brightness-100 duration-700 ease-in-out">
                 <Image
                     src={`${process.env.NEXT_PUBLIC_SUPABASE_STORAGE}/${thumbnailUrl}`}
