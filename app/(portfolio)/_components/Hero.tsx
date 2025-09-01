@@ -8,7 +8,7 @@ import React from "react";
 export default function Hero() {
     const data = {
         currentJob: "Frontend Developer",
-        currentCompany: "Golden Bell Future",
+        currentCompany: "Norwegian Training Center",
         headline: "Lois Floro",
         description:
             "Lois is passionate in converting designs into real life applications with care and commitment. He loves the process of designing/developing applications and tweaking it to its fullest potential.",
