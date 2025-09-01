@@ -84,7 +84,12 @@ export default function ProjectItem({
                         <p className="lg:hidden block">{shortDescription}</p>
                     </div>
                 </div>
-                <Link href={projectPage} className="self-center">
+                <Link
+                    href={projectPage}
+                    className="self-center"
+                    onFocusCapture={() => setIsShown(true)}
+                    onBlur={() => setIsShown(false)}
+                >
                     <motion.div
                         className="relative z-10 md:-mt-16 md:left-[95%] lg:left-[unset] md:-translate-x-[50%] lg:-translate-x-0 lg:top-1/2 lg:-translate-y-1/2 pointer-events-none md:max-h-[110px]"
                         animate={{ opacity: isShown ? 1 : 0 }}

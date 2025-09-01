@@ -44,15 +44,23 @@ function CareerBackgroundSection({
 export default function CareerBackground() {
     const workExperience = [
         {
-            id: 1,
-            companyName: "The Golden Bell Future",
-            position: "Frontend Developer / Designer",
-            dateStarted: 2023,
+            id: 3,
+            companyName: "Norwegian Training Center",
+            position: "Frontend Developer",
+            dateStarted: 2025,
             dateEnded: "Present",
-            logoPath: "/svg/golden-bell-future-logo.svg",
+            logoPath: "/png/ntc-logo.png",
         },
         {
             id: 2,
+            companyName: "The Golden Bell Future",
+            position: "Frontend Developer / Designer",
+            dateStarted: 2023,
+            dateEnded: "2025",
+            logoPath: "/svg/golden-bell-future-logo.svg",
+        },
+        {
+            id: 1,
             companyName: "Axandra Ventures",
             position: "QA Intern",
             dateStarted: 2023,
