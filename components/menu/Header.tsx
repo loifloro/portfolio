@@ -1,8 +1,15 @@
 "use client";
 
-import { isUndefined } from "lodash";
+import { addToast } from "@heroui/react";
+import {
+    adminNavigationBarItems,
+    portfolioNavigationBarItems,
+} from "datasets/navigation";
+import { createClient } from "utils/supabase/client";
+import { isNull, isUndefined } from "lodash";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { navigationBarItems } from "datasets/navigation";
+import { SignOut } from "@phosphor-icons/react";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import ArrowLink from "../button/ArrowLink";
 import clsx from "clsx";
@@ -40,8 +47,35 @@ function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
 }
 
 export default function Header() {
-    const { scrollY } = useScroll();
+    const router = useRouter();
+    const pathname = usePathname();
     const [isShown, setIsShown] = useState(true);
+
+    const { scrollY } = useScroll();
+
+    const supabase = createClient();
+
+    const handleSignout = async () => {
+        const { error } = await supabase.auth.signOut({ scope: "local" });
+
+        if (!isNull(error)) {
+            addToast({
+                title: "Failed to log out",
+                description: error.message,
+                color: "danger",
+            });
+
+            return;
+        }
+
+        addToast({
+            title: "Successfully logged out",
+            description: "Please log in again to continue.",
+            color: "success",
+        });
+
+        router.push("/login");
+    };
 
     const variants = {
         shown: {
@@ -90,24 +124,44 @@ export default function Header() {
                     </li>
                     <li className="lg:block hidden gap-16">
                         <ul className="flex gap-16">
-                            {navigationBarItems.map(
-                                ({ name, comingSoon, url }) => (
+                            {!pathname.includes("protected") &&
+                                portfolioNavigationBarItems.map(
+                                    ({ name, comingSoon, url }) => (
+                                        <HeaderItem
+                                            key={url}
+                                            name={name}
+                                            isComingSoon={comingSoon}
+                                            url={url}
+                                        />
+                                    )
+                                )}
+                            {pathname.includes("protected") &&
+                                adminNavigationBarItems.map(({ name, url }) => (
                                     <HeaderItem
                                         key={url}
                                         name={name}
-                                        isComingSoon={comingSoon}
                                         url={url}
                                     />
-                                )
-                            )}
+                                ))}
                         </ul>
                     </li>
-                    <li>
-                        <ArrowLink
-                            className="lg:flex hidden"
-                            name="Get in Touch"
-                            url="#get-in-touch"
-                        />
+                    <li className="lg:flex hidden">
+                        {!pathname.includes("protected") && (
+                            <ArrowLink
+                                name="Get in Touch"
+                                url="#get-in-touch"
+                            />
+                        )}
+                        {pathname.includes("protected") && (
+                            <button
+                                name="signout-btn"
+                                onClick={handleSignout}
+                                className="flex md:text-base text-sm items-center gap-1 uppercase font-light tracking-widest font-mono min-w-fit text-nowrap text-red-700"
+                            >
+                                Sign out
+                                <SignOut size={22} />
+                            </button>
+                        )}
                     </li>
                     <li className="lg:hidden block">
                         <MobileNavigation />

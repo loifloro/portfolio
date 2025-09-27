@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Hero() {
     const data = {
-        currentJob: "Frontend Developer",
+        currentJob: "Frontend Developer Consultant",
         currentCompany: "Norwegian Training Center",
         headline: "Lois Floro",
         description:

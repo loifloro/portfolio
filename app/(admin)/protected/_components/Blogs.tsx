@@ -10,9 +10,13 @@ export default async function Blogs() {
     const blogs = await fetchBlogs();
 
     return (
-        <Container aria-label="welcome-message" className="px-32">
+        <Container
+            aria-labelledby="blog-heading"
+            className="px-4 px-md-16 px-lg-32"
+        >
             <div className="flex justify-between mb-16">
                 <Heading
+                    id="blog-heading"
                     element="h2"
                     className="uppercase text-heading-3 leading-heading-3 font-semibold tracking-[.25em]"
                 >

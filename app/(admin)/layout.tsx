@@ -18,11 +18,11 @@ export default function AdminLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main>
+        <>
             <HeroUIProvider>
                 <ToastProvider placement="top-center" toastOffset={10} />
                 {children}
             </HeroUIProvider>
-        </main>
+        </>
     );
 }
