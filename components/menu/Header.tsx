@@ -17,6 +17,7 @@ import GradientLine from "../GradientLine";
 import Link from "next/link";
 import Logo from "../Logo";
 import MobileNavigation from "./MobileNavigation";
+import Image from "next/image";
 
 type HeaderItemProps = {
     name: string;
@@ -25,6 +26,9 @@ type HeaderItemProps = {
 };
 
 function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
+    const pathname = usePathname();
+    const isOnProtectedPage = pathname.includes("protected");
+
     return (
         <li>
             <Link
@@ -32,7 +36,7 @@ function HeaderItem({ name, isComingSoon = false, url }: HeaderItemProps) {
                 className="text-sm uppercase font-light tracking-widest text-rich-black relative"
             >
                 <span
-                    className={`inline-block ${isComingSoon && "pointer-events-none text-battleship-gray before:w-[calc(100%+20px)] before:h-[.6px] before:bg-battleship-gray before:relative before:block before:right-3 before:top-3"}`}
+                    className={`inline-block ${isOnProtectedPage && "text-battleship-gray"} ${isComingSoon && "pointer-events-none before:w-[calc(100%+20px)] before:h-[.6px] before:bg-battleship-gray before:relative before:block before:right-3 before:top-3"}`}
                 >
                     {name}
                 </span>
@@ -52,6 +56,8 @@ export default function Header() {
     const [isShown, setIsShown] = useState(true);
 
     const { scrollY } = useScroll();
+
+    const isOnProtectedPage = pathname.includes("protected");
 
     const supabase = createClient();
 
@@ -120,11 +126,20 @@ export default function Header() {
                     )}
                 >
                     <li className="min-w-32">
-                        <Logo />
+                        {!isOnProtectedPage && <Logo />}
+                        {isOnProtectedPage && (
+                            <Image
+                                src="/svg/logo-black.svg"
+                                className="block"
+                                width={50}
+                                height={26}
+                                alt="Lois Logo"
+                            />
+                        )}
                     </li>
                     <li className="lg:block hidden gap-16">
                         <ul className="flex gap-16">
-                            {!pathname.includes("protected") &&
+                            {!isOnProtectedPage &&
                                 portfolioNavigationBarItems.map(
                                     ({ name, comingSoon, url }) => (
                                         <HeaderItem
@@ -135,7 +150,7 @@ export default function Header() {
                                         />
                                     )
                                 )}
-                            {pathname.includes("protected") &&
+                            {isOnProtectedPage &&
                                 adminNavigationBarItems.map(({ name, url }) => (
                                     <HeaderItem
                                         key={url}
@@ -146,13 +161,13 @@ export default function Header() {
                         </ul>
                     </li>
                     <li className="lg:flex hidden">
-                        {!pathname.includes("protected") && (
+                        {!isOnProtectedPage && (
                             <ArrowLink
                                 name="Get in Touch"
                                 url="#get-in-touch"
                             />
                         )}
-                        {pathname.includes("protected") && (
+                        {isOnProtectedPage && (
                             <button
                                 name="signout-btn"
                                 onClick={handleSignout}

@@ -41,7 +41,7 @@ export default async function Blogs() {
                             >
                                 {title}
                             </Heading>
-                            <p className="text-battleship-gray">
+                            <p className="text-battleship-gray truncate">
                                 {description}
                             </p>
                         </div>
