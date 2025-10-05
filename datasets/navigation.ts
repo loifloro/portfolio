@@ -30,16 +30,11 @@ export const adminNavigationBarItems = [
     {
         name: "Projects",
         comingSoon: false,
-        url: "/#projects",
-    },
-    {
-        name: "About",
-        comingSoon: false,
-        url: "/about",
+        url: "/protected/#protected",
     },
     {
         name: "Blog",
         comingSoon: false,
-        url: "/#blogs",
+        url: "/protected/#blogs",
     },
 ];

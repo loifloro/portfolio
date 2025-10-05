@@ -65,7 +65,7 @@ export default function MobileMenu({
 
     return createPortal(
         <aside
-            className={`lg:hidden fixed top-0 bg-pale-white z-[999] w-full min-h-lvh origin-top transition-transform ease-in-out duration-100 ${isOpened ? "-translate-y-0 top-0" : "-translate-y-full delay-300"}`}
+            className={`lg:hidden fixed top-0 bg-pale-white z-[999] w-full min-h-svh origin-top transition-transform ease-in-out duration-100 ${isOpened ? "-translate-y-0 top-0" : "-translate-y-full delay-300"}`}
         >
             <div
                 className={`flex flex-col justify-between md:px-8 px-4 py-6 min-h-lvh transition-opacity ease-in-out duration-300 ${isOpened ? "opacity-100 delay-300" : "opacity-0"}`}
