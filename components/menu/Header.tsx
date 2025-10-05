@@ -125,7 +125,7 @@ export default function Header() {
                             "bg-opacity-[0.002] backdrop-blur-sm"
                     )}
                 >
-                    <li className="min-w-32">
+                    <li className="grow min-w-32">
                         {!isOnProtectedPage && <Logo />}
                         {isOnProtectedPage && (
                             <Image
@@ -137,7 +137,7 @@ export default function Header() {
                             />
                         )}
                     </li>
-                    <li className="lg:block hidden gap-16">
+                    <li className="lg:block hidden grow gap-16">
                         <ul className="flex gap-16">
                             {!isOnProtectedPage &&
                                 portfolioNavigationBarItems.map(
@@ -160,7 +160,7 @@ export default function Header() {
                                 ))}
                         </ul>
                     </li>
-                    <li className="lg:flex hidden">
+                    <li className="lg:flex hidden grow">
                         {!isOnProtectedPage && (
                             <ArrowLink
                                 name="Get in Touch"

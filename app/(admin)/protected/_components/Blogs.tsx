@@ -12,7 +12,7 @@ export default async function Blogs() {
     return (
         <Container
             aria-labelledby="blog-heading"
-            className="px-4 px-md-16 px-lg-32"
+            className="px-4 md:px-16 lg:px-32"
         >
             <div className="flex justify-between mb-16">
                 <Heading

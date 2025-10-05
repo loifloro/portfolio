@@ -13,7 +13,7 @@ export default function Page() {
         <main>
             <Container
                 aria-label="welcome-message"
-                className="px-4 px-md-16 px-lg-32 my-40"
+                className="px-4 md:px-16 lg:px-32 my-40"
             >
                 <Heading
                     element="h1"
