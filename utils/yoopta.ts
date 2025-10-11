@@ -87,7 +87,7 @@ export const PLUGINS = [
                 const supabase = createClient();
 
                 const { data } = await supabase.storage
-                    .from(process.env.BLOG_ASSETS_STORAGE!)
+                    .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
                     .upload(
                         `${kebabCase(`${file.name}-${uniqueId()}`).toUpperCase()}`,
                         file

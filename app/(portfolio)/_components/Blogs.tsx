@@ -1,6 +1,7 @@
 import { Blog } from "@prisma/client";
+import { connection } from "next/server";
 import { fetchBlogs } from "utils/actions/blog";
-import { kebabCase } from "lodash";
+import { isEmpty, kebabCase } from "lodash";
 import ArrowLink from "@/components/button/ArrowLink";
 import Container from "@/components/container/Container";
 import Heading from "@/components/display/Heading";
@@ -43,7 +44,12 @@ function BlogItem({
 }
 
 export default async function Blogs() {
+    await connection();
     const blogs = await fetchBlogs({ isPublished: true });
+
+    if (isEmpty(blogs)) {
+        return null;
+    }
 
     return (
         <Container id="blogs" aria-labelledby="blog-heading" fullWidth>

@@ -1,4 +1,5 @@
 import { BlogActionMenu } from "./ActionMenu";
+import { connection } from "next/server";
 import { fetchBlogs } from "utils/actions/blog";
 import { kebabCase } from "lodash";
 import ArrowLink from "@/components/button/ArrowLink";
@@ -7,6 +8,7 @@ import Heading from "@/components/display/Heading";
 import React from "react";
 
 export default async function Blogs() {
+    await connection();
     const blogs = await fetchBlogs();
 
     return (
