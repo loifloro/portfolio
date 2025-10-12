@@ -19,7 +19,10 @@ export const fetchBlog = cache(async (props: Prisma.BlogWhereInput = {}) => {
 
 export async function fetchBlogs(props: Prisma.BlogWhereInput = {}) {
     try {
-        return await prisma.blog.findMany({ where: props });
+        return await prisma.blog.findMany({
+            where: props,
+            orderBy: { createdAt: "desc" },
+        });
     } catch (error) {
         console.error(error);
     }
