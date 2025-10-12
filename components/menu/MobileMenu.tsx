@@ -127,7 +127,9 @@ export default function MobileMenu({
                         </>
                     )}
                 </ul>
-                <div className="flex flex-row justify-between items-center gap-5">
+                <div
+                    className={`flex flex-row items-center gap-5 ${pathname.includes("protected") ? "justify-between" : "justify-center"}`}
+                >
                     <p className="font-mono uppercase text-sm text-battleship-gray">
                         Lois Floro
                     </p>
