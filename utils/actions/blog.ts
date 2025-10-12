@@ -39,14 +39,14 @@ export async function createBlog(formData: z.infer<typeof createBlogSchema>) {
         } = formData;
 
         const { data: headerData } = await supabase.storage
-            .from(process.env.BLOG_ASSETS_STORAGE!)
+            .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
             .upload(
                 `${kebabCase(new Date().toUTCString()).toUpperCase()}`,
                 headerImg
             );
 
         const { data: thumbnailData } = await supabase.storage
-            .from(process.env.BLOG_ASSETS_STORAGE!)
+            .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
             .upload(
                 `${kebabCase(new Date().toUTCString()).toUpperCase()}`,
                 thumbnailImg
@@ -189,11 +189,11 @@ export async function updateBlog(formData: z.infer<typeof updateBlogSchema>) {
 
         if (!isUndefined(headerImg)) {
             await supabase.storage
-                .from(process.env.BLOG_ASSETS_STORAGE!)
+                .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
                 .remove([headerImgUrl.split("/")[1]]);
 
             const { data: _headerData } = await supabase.storage
-                .from(process.env.BLOG_ASSETS_STORAGE!)
+                .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
                 .upload(
                     `${kebabCase(new Date().toUTCString()).toUpperCase()}`,
                     headerImg
@@ -204,11 +204,11 @@ export async function updateBlog(formData: z.infer<typeof updateBlogSchema>) {
 
         if (!isUndefined(thumbnailImg)) {
             await supabase.storage
-                .from(process.env.BLOG_ASSETS_STORAGE!)
+                .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
                 .remove([thumbnailImgUrl.split("/")[1]]);
 
             const { data: _thumbnailData } = await supabase.storage
-                .from(process.env.BLOG_ASSETS_STORAGE!)
+                .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
                 .upload(
                     `${kebabCase(new Date().toUTCString()).toUpperCase()}`,
                     thumbnailImg

@@ -107,7 +107,7 @@ export const PLUGINS = [
                     const imageElement = Elements.getElement(editor, blockId);
 
                     await supabase.storage
-                        .from(process.env.BLOG_ASSETS_STORAGE!)
+                        .from(process.env.NEXT_PUBLIC_BLOG_ASSETS_STORAGE!)
                         .remove([`${imageElement?.props.alt}`]);
                 } catch (e) {
                     console.error(e);
