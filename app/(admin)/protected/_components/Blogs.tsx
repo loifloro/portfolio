@@ -1,4 +1,5 @@
 import { BlogActionMenu } from "./ActionMenu";
+import { connection } from "next/server";
 import { fetchBlogs } from "utils/actions/blog";
 import { kebabCase } from "lodash";
 import ArrowLink from "@/components/button/ArrowLink";
@@ -7,12 +8,17 @@ import Heading from "@/components/display/Heading";
 import React from "react";
 
 export default async function Blogs() {
+    await connection();
     const blogs = await fetchBlogs();
 
     return (
-        <Container aria-label="welcome-message" className="px-32">
+        <Container
+            aria-labelledby="blog-heading"
+            className="px-4 md:px-16 lg:px-32"
+        >
             <div className="flex justify-between mb-16">
                 <Heading
+                    id="blog-heading"
                     element="h2"
                     className="uppercase text-heading-3 leading-heading-3 font-semibold tracking-[.25em]"
                 >
@@ -37,7 +43,7 @@ export default async function Blogs() {
                             >
                                 {title}
                             </Heading>
-                            <p className="text-battleship-gray">
+                            <p className="text-battleship-gray truncate">
                                 {description}
                             </p>
                         </div>

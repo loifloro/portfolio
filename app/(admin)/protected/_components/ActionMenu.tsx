@@ -105,7 +105,7 @@ function ActionMenu({
 
     return (
         <>
-            <div className="flex gap-2 items-center px-8">
+            <div className="flex gap-2 items-end items-md-center px-md-8">
                 <Link
                     href={editUrl}
                     title="Edit"

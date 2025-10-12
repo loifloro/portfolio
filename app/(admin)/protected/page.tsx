@@ -11,7 +11,10 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <main>
-            <Container aria-label="welcome-message" className="px-32 my-40">
+            <Container
+                aria-label="welcome-message"
+                className="px-4 md:px-16 lg:px-32 my-40"
+            >
                 <Heading
                     element="h1"
                     className="uppercase text-heading-2 leading-heading-2 font-semibold tracking-[.25em]"

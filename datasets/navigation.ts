@@ -1,4 +1,4 @@
-export const navigationBarItems = [
+export const portfolioNavigationBarItems = [
     {
         name: "Home",
         comingSoon: false,
@@ -18,5 +18,23 @@ export const navigationBarItems = [
         name: "Blog",
         comingSoon: false,
         url: "/#blogs",
+    },
+];
+
+export const adminNavigationBarItems = [
+    {
+        name: "Home",
+        comingSoon: false,
+        url: "/protected",
+    },
+    {
+        name: "Projects",
+        comingSoon: false,
+        url: "/protected/#protected",
+    },
+    {
+        name: "Blog",
+        comingSoon: false,
+        url: "/protected/#blogs",
     },
 ];
