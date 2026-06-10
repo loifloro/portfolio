@@ -219,11 +219,10 @@ export const recentProjects = <ProjectList>[
             "A marketing website for Casa de Matilda with a built-in booking system, allowing guests to explore the property and schedule visits with ease.",
         tags: [
             { id: 1, name: "Landing Page" },
-            { id: 2, name: "PWA" },
+            { id: 6, name: "Material UI" },
             { id: 3, name: "Next JS" },
             { id: 4, name: "MongoDB" },
             { id: 5, name: "AWS Ses" },
-            { id: 6, name: "Material UI" },
         ],
         liveUrl: "https://casa-de-matilda.vercel.app/",
         thumbnail: "thumbnail.webp",
